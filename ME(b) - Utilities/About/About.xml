@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+  <name>ME(b) - Utilities</name>
+  <author>BobnikTheIII</author>
+  <supportedVersions>
+    <li>1.5</li>
+  </supportedVersions>
+  <packageId>BobnikTheIII.MebUtilities</packageId>
+
+  <description>Just some utilities for my Mass Effect related mods.
+Mostly category declarations or some other stuff connecting all the mods in the code.</description>
+
+  <modDependencies>
+    <li>
+      <packageId>ludeon.rimworld.biotech</packageId>
+      <displayName>Biotech</displayName>
+    </li>
+  </modDependencies>
+  
+</ModMetaData>

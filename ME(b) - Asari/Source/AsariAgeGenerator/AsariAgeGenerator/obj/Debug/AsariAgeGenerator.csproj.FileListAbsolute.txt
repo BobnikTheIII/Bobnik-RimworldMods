@@ -1,0 +1,5 @@
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\ME(b) - Asari\Assemblies\AsariAgeGenerator.dll
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\ME(b) - Asari\Source\AsariAgeGenerator\AsariAgeGenerator\obj\Debug\AsariAgeGenerator.csproj.AssemblyReference.cache
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\ME(b) - Asari\Source\AsariAgeGenerator\AsariAgeGenerator\obj\Debug\AsariAgeGenerator.csproj.CoreCompileInputs.cache
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\ME(b) - Asari\Source\AsariAgeGenerator\AsariAgeGenerator\obj\Debug\AsariAge.142EB917.Up2Date
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\ME(b) - Asari\Source\AsariAgeGenerator\AsariAgeGenerator\obj\Debug\AsariAgeGenerator.dll

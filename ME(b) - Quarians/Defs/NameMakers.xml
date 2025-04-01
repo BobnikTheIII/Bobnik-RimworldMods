@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>MebQuarianMaleNamer</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[firstname] '[lastname]</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>firstname->Names/QuarianPawnFirstNames_Male</li>
+        <li>lastname->Names/QuarianPawnLastNames</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>MebQuarianFemaleNamer</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[firstname] '[lastname]</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>firstname->Names/QuarianPawnFirstNames_Female</li>
+        <li>lastname->Names/QuarianPawnLastNames</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

@@ -1,0 +1,4 @@
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\Startup\Assemblies\bbkStart.dll
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\Startup\Source\Start\Start\obj\Debug\Start.csproj.AssemblyReference.cache
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\Startup\Source\Start\Start\obj\Debug\Start.csproj.CoreCompileInputs.cache
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\Startup\Source\Start\Start\obj\Debug\bbkStart.dll

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- Head Accesories -->
+
+<GeneDef ParentName="GeneHeadboneBase">
+    <defName>Asari_Crest</defName>
+    <label>asari crest</label>
+    <description>Carriers of this gene possess semi-flexible, cartilage-based scalp-crests.</description>
+    <iconPath>Things/Pawn/Humanlike/HeadAttachments/Asari/Asari_Crest_south</iconPath>
+    <displayCategory>MebUtility</displayCategory>
+    <displayOrderInCategory>11</displayOrderInCategory>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/Asari/Asari_Crest</texPath>
+        <colorType>Skin</colorType>
+        <parentTagDef>Head</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <useRottenColor>true</useRottenColor>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>60</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <!-- Traits -->
+
+  <GeneDef>
+      <defName>Bisexual</defName>
+      <label>bisexual</label>
+      <description>Road is road.</description>
+      <iconPath>Icons/Bisexual_Icon</iconPath>
+      <displayCategory>MebUtility</displayCategory>
+      <displayOrderInCategory>71</displayOrderInCategory>
+      <forcedTraits>
+          <li>
+              <def>Bisexual</def>
+          </li>
+      </forcedTraits>
+  </GeneDef>
+
+  </Defs>

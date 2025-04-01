@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Pawns -->
+
+  <RulePackDef>
+    <defName>MebAsariNamer</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[firstname] [prefixLastname]</li>
+
+        <li>prefixLastname->[prefix][lastname]</li>
+
+        <li>prefix->T'</li>
+        <li>prefix->D'</li>
+        <li>prefix->V'</li>
+        <li>prefix->M'</li>
+        <li>prefix->Yh'</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>firstname->Names/AsariPawnFirstNames</li>
+        <li>lastname->Names/AsariPawnLastNames</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+  <!-- Factions -->
+
+  <RulePackDef>
+    <defName>NamerFactionAsariOutlander</defName>
+    <include>
+      <li>OutlanderPlaceNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[planetOrigin] [nameEnd]</li>
+        <li>nameEnd->Coalition</li>
+        <li>nameEnd->Haven</li>
+        <li>nameEnd->Asylum</li>
+        <li>nameEnd->Republics</li>
+        <li>nameEnd->Sanctuary</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>planetOrigin->Names/AsariFactionOutlanderNames</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerFactionAsariEmpire</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->Thessian Coalition</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!-- Settlements -->
+
+</Defs>

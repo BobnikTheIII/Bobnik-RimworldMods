@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TattooDef>
+    <defName>AsariTattoo1</defName>
+    <label>crest</label>
+    <texPath>Things/Pawn/Humanlike/Tattoos/Tattoo1/Tattoo1</texPath>
+    <tattooType>Face</tattooType>
+    <category>Asari</category>
+  </TattooDef>
+
+  <TattooDef>
+    <defName>AsariTattoo2</defName>
+    <label>pusher</label>
+    <texPath>Things/Pawn/Humanlike/Tattoos/Tattoo2/Tattoo2</texPath>
+    <tattooType>Face</tattooType>
+    <category>Asari</category>
+  </TattooDef>
+
+  <TattooDef>
+    <defName>AsariTattoo3</defName>
+    <label>scout</label>
+    <texPath>Things/Pawn/Humanlike/Tattoos/Tattoo3/Tattoo3</texPath>
+    <tattooType>Face</tattooType>
+    <category>Asari</category>
+    <visibleNorth>false</visibleNorth>
+  </TattooDef>
+
+  <TattooDef>
+    <defName>AsariTattoo4</defName>
+    <label>webbed</label>
+    <texPath>Things/Pawn/Humanlike/Tattoos/Tattoo4/Tattoo4</texPath>
+    <tattooType>Face</tattooType>
+    <category>Asari</category>
+    <visibleNorth>false</visibleNorth>
+  </TattooDef>
+
+  <TattooDef>
+    <defName>AsariTattoo5</defName>
+    <label>freckled</label>
+    <texPath>Things/Pawn/Humanlike/Tattoos/Tattoo5/Tattoo5</texPath>
+    <tattooType>Face</tattooType>
+    <category>Asari</category>
+    <visibleNorth>false</visibleNorth>
+  </TattooDef>
+
+  <TattooDef>
+    <defName>AsariTattoo6</defName>
+    <label>butterfly</label>
+    <texPath>Things/Pawn/Humanlike/Tattoos/Tattoo6/Tattoo6</texPath>
+    <tattooType>Face</tattooType>
+    <category>Asari</category>
+    <visibleNorth>false</visibleNorth>
+  </TattooDef>
+
+  <TattooDef>
+    <defName>AsariTattoo7</defName>
+    <label>encoded</label>
+    <texPath>Things/Pawn/Humanlike/Tattoos/Tattoo7/Tattoo7</texPath>
+    <tattooType>Face</tattooType>
+    <category>Asari</category>
+    <visibleNorth>false</visibleNorth>
+  </TattooDef>
+
+  <TattooDef>
+    <defName>AsariTattoo8</defName>
+    <label>grudge</label>
+    <texPath>Things/Pawn/Humanlike/Tattoos/Tattoo8/Tattoo8</texPath>
+    <tattooType>Face</tattooType>
+    <category>Asari</category>
+    <visibleNorth>false</visibleNorth>
+  </TattooDef>
+
+  <TattooDef>
+    <defName>AsariTattoo9</defName>
+    <label>bladestar</label>
+    <texPath>Things/Pawn/Humanlike/Tattoos/Tattoo9/Tattoo9</texPath>
+    <tattooType>Face</tattooType>
+    <category>Asari</category>
+    <visibleNorth>false</visibleNorth>
+  </TattooDef>
+
+  <TattooDef>
+    <defName>AsariTattoo10</defName>
+    <label>visor</label>
+    <texPath>Things/Pawn/Humanlike/Tattoos/Tattoo10/Tattoo10</texPath>
+    <tattooType>Face</tattooType>
+    <category>Asari</category>
+    <visibleNorth>false</visibleNorth>
+  </TattooDef>
+
+  <TattooDef>
+    <defName>AsariTattoo11</defName>
+    <label>warcry</label>
+    <texPath>Things/Pawn/Humanlike/Tattoos/Tattoo11/Tattoo11</texPath>
+    <tattooType>Face</tattooType>
+    <category>Asari</category>
+    <visibleNorth>false</visibleNorth>
+  </TattooDef>
+
+  <TattooDef>
+    <defName>AsariTattoo12</defName>
+    <label>carnival</label>
+    <texPath>Things/Pawn/Humanlike/Tattoos/Tattoo12/Tattoo12</texPath>
+    <tattooType>Face</tattooType>
+    <category>Asari</category>
+    <visibleNorth>false</visibleNorth>
+  </TattooDef>
+
+  <TattooDef>
+    <defName>AsariTattoo13</defName>
+    <label>ladette</label>
+    <texPath>Things/Pawn/Humanlike/Tattoos/Tattoo13/Tattoo13</texPath>
+    <tattooType>Face</tattooType>
+    <category>Asari</category>
+    <visibleNorth>false</visibleNorth>
+  </TattooDef>
+
+  <TattooDef>
+    <defName>AsariTattoo14</defName>
+    <label>wrath</label>
+    <texPath>Things/Pawn/Humanlike/Tattoos/Tattoo14/Tattoo14</texPath>
+    <tattooType>Face</tattooType>
+    <category>Asari</category>
+    <visibleNorth>false</visibleNorth>
+  </TattooDef>
+
+  <TattooDef>
+    <defName>AsariTattoo15</defName>
+    <label>winged</label>
+    <texPath>Things/Pawn/Humanlike/Tattoos/Tattoo15/Tattoo15</texPath>
+    <tattooType>Face</tattooType>
+    <category>Asari</category>
+    <visibleNorth>false</visibleNorth>
+  </TattooDef>
+
+  <TattooDef>
+    <defName>AsariTattoo16</defName>
+    <label>ripple</label>
+    <texPath>Things/Pawn/Humanlike/Tattoos/Tattoo16/Tattoo16</texPath>
+    <tattooType>Face</tattooType>
+    <category>Asari</category>
+    <visibleNorth>false</visibleNorth>
+  </TattooDef>
+
+</Defs>

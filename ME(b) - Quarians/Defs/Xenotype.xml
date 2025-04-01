@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <XenotypeDef>
+    <defName>Quarian</defName>
+    <label>quarian</label>
+    <description>Quarians are generally shorter and of slighter build than humans. They also have three thick fingers on both hands which include a thumb, an index finger, and a long finger, as well as three toes on each foot, and bright white eyes. Quarian immune systems have always been relatively weak, on the other end they have been gifted with unusually robust physiology, being able to sustain more damage than an average baseliner.</description>
+    <descriptionShort>Quarians are of slighter build than most xenotypes, rendering them weaker in strength, yet this allows them to survive on less calories. Their bodies are more resilient to damage, but their immune system has never been their strong suit.</descriptionShort>
+    <iconPath>Icons/Quarian_XenotypeIcon</iconPath>
+    <inheritable>true</inheritable>
+    <nameMaker>MebQuarianMaleNamer</nameMaker>
+    <nameMakerFemale>MebQuarianFemaleNamer</nameMakerFemale>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <genes> 
+      <li>Hands_Quarian</li>
+      <li>Eyes_White</li>
+      <li>Quarian_Crest</li>
+      <li>Skin_QuarianPale</li>
+      <li>Skin_QuarianPink</li>
+      <li>Skin_QuarianPurple</li>
+      <li>Immunity_Weak</li>
+      <li>Robust</li>
+      <li>MeleeDamage_Weak</li>
+      <li>Body_Standard</li>
+      <li>Body_Thin</li>
+    </genes>
+  </XenotypeDef>
+</Defs>

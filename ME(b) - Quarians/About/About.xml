@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+  <name>ME(b) - Quarians</name>
+  <author>BobnikTheIII</author>
+  <supportedVersions>
+    <li>1.5</li>
+  </supportedVersions>
+  <packageId>BobnikTheIII.MebQuarians</packageId>
+
+  <description>Vanilla oriented xenotype race based on BioWare's Mass Effect Series.</description>
+
+  <modDependencies>
+    <li>
+      <packageId>ludeon.rimworld.biotech</packageId>
+      <displayName>Biotech</displayName>
+    </li>
+    <li>
+      <packageId>BobnikTheIII.MebUtilities</packageId>
+      <displayName>ME(b) Utilities</displayName>
+    </li>
+  </modDependencies>
+
+  <loadAfter>
+    <li>BobnikTheIII.MebUtilities</li>
+  </loadAfter>
+  
+</ModMetaData>

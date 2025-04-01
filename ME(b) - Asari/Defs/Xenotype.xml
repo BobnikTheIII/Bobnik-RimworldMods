@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <XenotypeDef>
+    <defName>Asari</defName>
+    <label>asari</label>
+    <description>A mono-gender xenotype, the asari are distinctly feminine in appearance. Renowned for their elegance, longevity, and psychic prowess.</description>
+    <descriptionShort>A mono-gender feminine xenotype. Renowned for their century-lasting longevity, and psychic prowess.</descriptionShort>
+    <iconPath>Icons/Asari_XenotypeIcon</iconPath>
+    <inheritable>true</inheritable>
+    <nameMaker>MebAsariNamer</nameMaker>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <genes>
+      <li>Hair_BaldOnly</li>
+      <li>Beard_NoBeardOnly</li>
+      <li>PsychicAbility_Enhanced</li>
+      <li>Skin_Blue</li>
+      <li>Skin_Purple</li>
+      <li>Skin_Green</li>
+      <li>Asari_Crest</li>
+      <li>Bisexual</li>
+      <li>FemaleOnly</li>
+      <li>ExtremeLifespanExtension</li>
+      <li>Body_Standard</li>
+    </genes>
+  </XenotypeDef>
+</Defs>

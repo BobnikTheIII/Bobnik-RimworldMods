@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Trait categories -->
+
+  <GeneCategoryDef>
+      <defName>MebUtility</defName>
+      <label>ME(b) Utility</label>
+      <displayPriorityInXenotype>393</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+</Defs>

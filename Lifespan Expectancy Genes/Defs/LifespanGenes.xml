@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Spectrum declaration  -->
+  <GeneDef Name="GeneLifespanBase" Abstract="True">
+  <displayCategory>Lifespan</displayCategory>
+    <exclusionTags>
+      <li>Lifespan</li>
+    </exclusionTags>
+  </GeneDef>
+
+
+  <!-- Gene with a 0.75 lifespan multiplier -->
+  <GeneDef ParentName="GeneLifespanBase">
+    <defName>ShortLifespan</defName>
+    <label>Short-lived</label>
+    <description>Carriers of this gene experience the effects of aging earlier in life, averaging their lifespan to approximately 60 years.</description>
+    <iconPath>GeneIcons/Gene_ShorterLifespan</iconPath>
+    <displayOrderInCategory>10</displayOrderInCategory>
+    <statFactors>
+      <LifespanFactor>0.75</LifespanFactor>
+    </statFactors>
+    <biostatMet>+2</biostatMet>
+    <biostatCpx>1</biostatCpx>
+  </GeneDef>
+
+  <!-- Gene with a 0.5 lifespan multiplier -->
+  <GeneDef ParentName="GeneLifespanBase">
+    <defName>ShortestLifespan</defName>
+    <label>Ephemeral Lifespan</label>
+    <description>Carriers of this gene have a very short lifespan, passing through life in a relatively brief period. Usually won't exceed much further beyond 40 years.</description>
+    <iconPath>GeneIcons/Gene_ShortestLifespan</iconPath>
+    <displayOrderInCategory>0</displayOrderInCategory>
+    <statFactors>
+      <LifespanFactor>0.5</LifespanFactor>
+    </statFactors>
+    <biostatMet>+3</biostatMet>
+    <biostatCpx>1</biostatCpx>
+  </GeneDef>
+
+  <!-- Gene with a 1.25 lifespan multiplier -->
+  <GeneDef ParentName="GeneLifespanBase">
+    <defName>LongerLifespan</defName>
+    <label>Long-Lived</label>
+    <description>Carriers of this gene live a long lifespan, maintaining steady health and presence over many years. Their time spans around a century, providing ample opportunity to experience a variety of life stages.</description>
+    <iconPath>GeneIcons/Gene_LongerLifespan</iconPath>
+    <displayOrderInCategory>20</displayOrderInCategory>
+    <statFactors>
+      <LifespanFactor>1.25</LifespanFactor>
+    </statFactors>
+    <biostatMet>-2</biostatMet>
+    <biostatCpx>1</biostatCpx>
+  </GeneDef>
+
+  <!-- Gene with a 1.5 lifespan multiplier -->
+  <GeneDef ParentName="GeneLifespanBase">
+    <defName>LongestLifespan</defName>
+    <label>Remarkable Lifespan</label>
+    <description>Carriers of this gene enjoy an extended lifespan, surpassing the typical human span. Their existence continues for a long time, often lasting well beyond the usual duration of most lives.</description>
+    <iconPath>GeneIcons/Gene_LongestLifespan</iconPath>
+    <displayOrderInCategory>30</displayOrderInCategory>
+    <statFactors>
+      <LifespanFactor>1.5</LifespanFactor>
+    </statFactors>
+    <biostatMet>-3</biostatMet>
+    <biostatCpx>1</biostatCpx>
+  </GeneDef>
+
+  <!-- Gene with a 10x lifespan multiplier -->
+  <GeneDef ParentName="GeneLifespanBase">
+    <defName>ExtremeLifespanExtension</defName>
+    <label>Immense Lifespan</label>
+    <description>Carriers of this gene have an exceptionally long lifespan, stretching far beyond typical boundaries. Though not infinite, their time seems to stretch indefinitely, enduring across generations.</description>
+    <iconPath>GeneIcons/Gene_ExtremeLifespan</iconPath>
+    <displayOrderInCategory>40</displayOrderInCategory>
+    <statFactors>
+      <LifespanFactor>10</LifespanFactor>
+    </statFactors>
+    <biostatCpx>3</biostatCpx>
+    <biostatArc>1</biostatArc>
+  </GeneDef>
+</Defs>

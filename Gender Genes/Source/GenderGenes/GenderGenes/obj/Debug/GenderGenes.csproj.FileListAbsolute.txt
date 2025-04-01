@@ -1,0 +1,5 @@
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\Gender Genes\Source\GenderGenes\GenderGenes\obj\Debug\GenderGenes.csproj.AssemblyReference.cache
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\Gender Genes\Source\GenderGenes\GenderGenes\obj\Debug\GenderGenes.csproj.CoreCompileInputs.cache
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\Gender Genes\Assemblies\GenderGenes.dll
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\Gender Genes\Source\GenderGenes\GenderGenes\obj\Debug\GenderGe.FF8DF9C4.Up2Date
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\Gender Genes\Source\GenderGenes\GenderGenes\obj\Debug\GenderGenes.dll

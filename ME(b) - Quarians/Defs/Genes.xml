@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Head (no context) -->
+
+  <GeneDef ParentName="GeneHeadboneBase">
+    <defName>Quarian_Crest</defName>
+    <label>quarian crest</label>
+    <description>Carriers of this gene possess noticeable lines across their heads.</description>
+    <iconPath>Things/Pawn/Humanlike/HeadAttachments/Crest/Quarian_Crest_south</iconPath>
+    <displayCategory>MebUtility</displayCategory>
+    <displayOrderInCategory>12</displayOrderInCategory>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/Crest/Quarian_Crest</texPath>
+        <parentTagDef>Head</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>60</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <!-- Hands -->
+
+  <GeneDef ParentName="GeneHandsBase">
+    <defName>Hands_Quarian</defName>
+    <label>quarian hands</label>
+    <description>Carriers of this gene have only 3 fingers on each hand. This negatively affects their complex manipulation abilities.</description>
+    <iconPath>Icons/placeholder</iconPath>
+    <displayCategory>MebUtility</displayCategory>
+    <displayOrderInCategory>41</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <capMods>
+      <li>
+        <capacity>Manipulation</capacity>
+        <postFactor>0.85</postFactor>
+      </li>
+    </capMods>
+  </GeneDef>
+
+  <!-- Eyes -->
+
+  <GeneDef ParentName="GeneEyeColor">
+    <defName>Eyes_White</defName>
+    <label>white eyes</label>
+    <labelShortAdj>white-eyed</labelShortAdj>
+    <description>Carriers of this gene have deeply white-pigmented eyes.</description>
+    <iconPath>Icons/placeholder</iconPath>
+    <displayCategory>MebUtility</displayCategory>
+    <displayOrderInCategory>51</displayOrderInCategory>
+    <renderNodeProperties>
+      <li Class="PawnRenderNodeProperties_Eye">
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/WhiteEyes/Male/WhiteEyes_Male</texPath>
+        <texPathFemale>Things/Pawn/Humanlike/HeadAttachments/WhiteEyes/Female/WhiteEyes_Female</texPathFemale>
+        <anchorTag>RightEye</anchorTag>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <parentTagDef>Head</parentTagDef>
+        <drawSize>0.2</drawSize>
+        <side>Right</side>
+        <drawData>
+          <defaultData>
+            <layer>54</layer>
+            <offset>(0, 0, -0.25)</offset>
+          </defaultData>
+        </drawData>
+      </li>
+      <li Class="PawnRenderNodeProperties_Eye">
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/WhiteEyes/Male/WhiteEyes_Male</texPath>
+        <texPathFemale>Things/Pawn/Humanlike/HeadAttachments/WhiteEyes/Female/WhiteEyes_Female</texPathFemale>
+        <anchorTag>LeftEye</anchorTag>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <parentTagDef>Head</parentTagDef>
+        <drawSize>0.2</drawSize>
+        <side>Left</side>
+        <drawData>
+          <defaultData>
+            <layer>54</layer>
+            <offset>(0, 0, -0.25)</offset>
+            <flip>true</flip>
+          </defaultData>
+          <dataWest>
+            <flip>false</flip>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <!-- Skin Color -->
+
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>Skin_QuarianPale</defName>
+    <label>pale quarian skin</label>
+    <labelShortAdj>pale</labelShortAdj>
+    <description>Carriers of this gene produce a pigment that turns their skin a pale color.</description>
+    <skinColorOverride>(245, 225, 242)</skinColorOverride>
+    <displayCategory>MebUtility</displayCategory>
+    <displayOrderInCategory>31</displayOrderInCategory>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>Skin_QuarianPink</defName>
+    <label>pink quarian skin</label>
+    <labelShortAdj>pink</labelShortAdj>
+    <description>Carriers of this gene produce a pigment that turns their skin a pink color.</description>
+    <skinColorOverride>(255, 207, 238)</skinColorOverride>
+    <displayCategory>MebUtility</displayCategory>
+    <displayOrderInCategory>32</displayOrderInCategory>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>Skin_QuarianPurple</defName>
+    <label>purple quarian skin</label>
+    <labelShortAdj>purple</labelShortAdj>
+    <description>Carriers of this gene produce a pigment that turns their skin a purple color.</description>
+    <skinColorOverride>(226, 192, 228)</skinColorOverride>
+    <displayCategory>MebUtility</displayCategory>
+    <displayOrderInCategory>33</displayOrderInCategory>
+  </GeneDef>
+
+</Defs>

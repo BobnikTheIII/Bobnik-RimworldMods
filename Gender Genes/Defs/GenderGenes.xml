@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Categoty -->
+  <GeneCategoryDef>
+    <defName>Gender</defName>
+    <label>Gender</label>
+    <displayPriorityInXenotype>493</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+  <!-- Spectrum declaration  -->
+  <GeneDef Name="GeneGenderBase" Abstract="True">
+  <displayCategory>Gender</displayCategory>
+    <exclusionTags>
+      <li>Gender</li>
+    </exclusionTags>
+  </GeneDef>
+
+  <!-- Genes -->
+  <GeneDef ParentName="GeneGenderBase">
+    <defName>FemaleOnly</defName>
+    <label>female only</label>
+    <description>This gene ensures that the carrier is always female.</description>
+    <iconPath>GeneIcons/womanoid</iconPath>
+    <biostatMet>0</biostatMet>
+    <biostatCpx>1</biostatCpx>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneGenderBase">
+    <defName>MaleOnly</defName>
+    <label>male only</label>
+    <description>This gene ensures that the carrier is always male.</description>
+    <iconPath>GeneIcons/manoid</iconPath>
+    <biostatMet>0</biostatMet>
+    <biostatCpx>1</biostatCpx>
+  </GeneDef>
+</Defs>

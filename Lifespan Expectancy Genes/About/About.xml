@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+  <name>Lifespan Expectancy Genes</name>
+  <author>BobnikTheIII</author>
+  <supportedVersions>
+    <li>1.5</li>
+  </supportedVersions>
+  <packageId>BobnikTheIII.LifespanExpectancyGenes</packageId>
+
+  <description> A simple mod adding genes to alter lifespan expectancy.
+  Preferably to enchance the variety of your custom races in biotech.
+  
+  Credit to Tynan for art, all of it is based off his work.</description>
+
+    <modDependencies>
+    <li>
+      <packageId>ludeon.rimWorld.biotech</packageId>
+      <displayName>Biotech</displayName>
+    </li>
+  </modDependencies>
+  
+</ModMetaData>
