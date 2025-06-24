@@ -10,8 +10,9 @@
     <nameMaker>MebAsariNamer</nameMaker>
     <chanceToUseNameMaker>1</chanceToUseNameMaker>
     <genes>
-      <li>Hair_BaldOnly</li>
+      <!-- <li>Hair_BaldOnly</li> -->
       <li>Beard_NoBeardOnly</li>
+      <li>MatriarchGene</li>
       <li>PsychicAbility_Enhanced</li>
       <li>Skin_Blue</li>
       <li>Skin_Purple</li>

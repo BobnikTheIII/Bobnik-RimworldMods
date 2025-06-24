@@ -8,4 +8,23 @@
       <displayPriorityInXenotype>393</displayPriorityInXenotype>
   </GeneCategoryDef>
 
+  <GeneDef Name="GeneMebUtilityCrestsBase" Abstract="True">
+    <biostatCpx>0</biostatCpx>
+    <endogeneCategory>Headbone</endogeneCategory>
+    <displayCategory>MebUtility</displayCategory>
+    <displayOrderInCategory>110</displayOrderInCategory>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <!-- <randomChosen>true</randomChosen> -->
+    <exclusionTags>
+      <li>Headbone</li>
+      <li>HairStyle</li>
+    </exclusionTags>
+    <hairTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>Bald</li>
+      </tags>
+    </hairTagFilter>
+  </GeneDef>
+
 </Defs>

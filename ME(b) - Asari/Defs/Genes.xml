@@ -3,13 +3,29 @@
 
 <!-- Head Accesories -->
 
-<GeneDef ParentName="GeneHeadboneBase">
+<GeneDef ParentName="GeneMebUtilityCrestsBase">
     <defName>Asari_Crest</defName>
     <label>asari crest</label>
     <description>Carriers of this gene possess semi-flexible, cartilage-based scalp-crests.</description>
     <iconPath>Things/Pawn/Humanlike/HeadAttachments/Asari/Asari_Crest_south</iconPath>
     <displayCategory>MebUtility</displayCategory>
     <displayOrderInCategory>11</displayOrderInCategory>
+    <!-- <exclusionTags>
+      <li>HairStyle</li>
+      <li>BeardStyle</li>
+    </exclusionTags> -->
+    <!-- <hairTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>Bald</li>
+      </tags>
+    </hairTagFilter> -->
+    <!-- <beardTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>NoBeard</li>
+      </tags>
+    </beardTagFilter> -->
     <renderNodeProperties>
       <li>
         <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
@@ -45,4 +61,15 @@
       </forcedTraits>
   </GeneDef>
 
-  </Defs>
+  <!-- Inheritance -->
+
+  <GeneDef>
+      <defName>MatriarchGene</defName>
+      <label>matriarchal genome</label>
+      <description>Causes the children beared by this pawn to get the exact copy of their genes</description>
+      <iconPath>Icons/Gene_MatriarchalGenome</iconPath>
+      <displayCategory>MebUtility</displayCategory>
+      <displayOrderInCategory>76</displayOrderInCategory>
+  </GeneDef>
+
+</Defs>

@@ -9,7 +9,7 @@ namespace AsariAgeGenerator
     {
         static AsariAgeGenerator()
         {
-            var harmony = new Harmony("com/bobniktheiii.asari.agegenerator");
+            var harmony = new Harmony("com.bobniktheiii.asari.agegenerator");
             harmony.Patch(
                 original: AccessTools.Method(typeof(PawnGenerator), "GeneratePawn", new[] { typeof(PawnGenerationRequest) }),
                 postfix: new HarmonyMethod(typeof(GeneratePawnPatch), nameof(GeneratePawnPatch.Postfix))
@@ -26,30 +26,27 @@ namespace AsariAgeGenerator
                 XenotypeDef asariXenotype = DefDatabase<XenotypeDef>.GetNamed("Asari", errorOnFail: false);
                 if (asariXenotype == null)
                 {
-                    Log.Warning("Asari xenotype not found in the database.");
+                    //Log.Warning("Asari xenotype not found in the database.");
                     return;
                 }
 
                 if (__result.RaceProps.Humanlike && __result.genes.Xenotype == asariXenotype)
                 {
-                    Log.Message($"Asari pawn detected: {__result.Name?.ToStringShort ?? "Unnamed"}");
+                    //Log.Message($"Asari pawn detected: {__result.Name?.ToStringShort ?? "Unnamed"}");
 
                     long ageTicks;
 
                     if (request.AllowedDevelopmentalStages.HasFlag(DevelopmentalStage.Baby))
                     {
-                        // Explicit newborn age range: 0-3 years
-                        ageTicks = (long)(Rand.RangeInclusive(0, 3) * 3600000f);
+                        ageTicks = (long)(Rand.RangeInclusive(0, 2) * 3600000f);
                     }
                     else if (request.AllowedDevelopmentalStages.HasFlag(DevelopmentalStage.Child))
                     {
-                        // Child age range: 3-13 years
-                        ageTicks = (long)(Rand.RangeInclusive(3, 13) * 3600000f);
+                        ageTicks = (long)(Rand.RangeInclusive(3, 12) * 3600000f);
                     }
                     else
                     {
-                        // Adult age range: 50-1000 years
-                        ageTicks = (long)(Rand.RangeInclusive(50, 1000) * 3600000f);
+                        ageTicks = (long)(Rand.RangeInclusive(18, 1000) * 3600000f);
                     }
                     // Set biological age
                     long biologicalAgeTicks = ageTicks;

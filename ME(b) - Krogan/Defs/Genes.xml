@@ -3,19 +3,37 @@
 
 <!-- Head Accesories -->
 
-<GeneDef ParentName="GeneHeadboneBase">
-    <defName>Krogan_Crest_Red</defName>
-    <label>krogan red crest</label>
-    <description>Carriers of this gene possess semi-flexible, cartilage-based scalp-crests.</description>
-    <iconPath>Things/Pawn/Humanlike/HeadAttachments/KroganRed/KroganCrest_Red_east</iconPath>
+  <GeneDef ParentName="GeneMebUtilityCrestsBase">
+    <defName>Krogan_Crest</defName>
+    <label>krogan crest</label>
+    <description>Carriers of this gene possess a hard strucured, scaled crests.</description>
+    <iconPath>Things/Pawn/Humanlike/HeadAttachments/KroganWhite/KroganCrest_White_south</iconPath>
     <displayCategory>MebUtility</displayCategory>
-    <displayOrderInCategory>12</displayOrderInCategory>
+    <displayOrderInCategory>14</displayOrderInCategory>
+    <!-- <exclusionTags>
+      <li>HairStyle</li>
+      <li>BeardStyle</li>
+    </exclusionTags>
+    <hairTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>Bald</li>
+      </tags>
+    </hairTagFilter>
+    <beardTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>NoBeard</li>
+      </tags>
+    </beardTagFilter> -->
     <renderNodeProperties>
       <li>
         <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
         <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-        <texPath>Things/Pawn/Humanlike/HeadAttachments/KroganRed/KroganCrest_Red</texPath>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/KroganWhite/KroganCrest_White</texPath>
+        <colorType>Skin</colorType>
         <parentTagDef>Head</parentTagDef>
+        <useSkinShader>true</useSkinShader>
         <useRottenColor>true</useRottenColor>
         <rotDrawMode>Fresh, Rotting</rotDrawMode>
         <drawData>
@@ -27,28 +45,19 @@
     </renderNodeProperties>
   </GeneDef>
 
-  <GeneDef ParentName="GeneHeadboneBase">
-    <defName>Krogan_Crest_White</defName>
-    <label>krogan white crest</label>
-    <description>Carriers of this gene possess semi-flexible, cartilage-based scalp-crests.</description>
-    <iconPath>Things/Pawn/Humanlike/HeadAttachments/KroganWhite/KroganCrest_White_east</iconPath>
+<!-- FERTILITY -->
+
+  <GeneDef ParentName="FertilityBase">
+    <defName>Genouphaged</defName>
+    <label>genouphaged</label>
+    <description>Carriers of this gene have serious difficulties reproducting.</description>
+    <iconPath>UI/Icons/Genes/Gene_Sterile</iconPath>
     <displayCategory>MebUtility</displayCategory>
-    <displayOrderInCategory>14</displayOrderInCategory>
-    <renderNodeProperties>
-      <li>
-        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
-        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-        <texPath>Things/Pawn/Humanlike/HeadAttachments/KroganWhite/KroganCrest_White</texPath>
-        <parentTagDef>Head</parentTagDef>
-        <useRottenColor>true</useRottenColor>
-        <rotDrawMode>Fresh, Rotting</rotDrawMode>
-        <drawData>
-          <defaultData>
-            <layer>60</layer>
-          </defaultData>
-        </drawData>
-      </li>
-    </renderNodeProperties>
+    <biostatMet>1</biostatMet>
+    <displayOrderInCategory>100</displayOrderInCategory>
+    <statFactors>
+      <Fertility>0.1</Fertility>
+    </statFactors>
   </GeneDef>
 
   </Defs>

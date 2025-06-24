@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HeadTypeDef Name="SalarianHeadBaseMeb" ParentName="NarrowBase" Abstract="True">
+    <randomChosen>false</randomChosen>
+    <gender>None</gender>
+    <requiredGenes>
+      <li>Salarian_Head</li>
+    </requiredGenes>
+    <eyeOffsetEastWest>(0.15, 0, 0.17)</eyeOffsetEastWest>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="SalarianHeadBaseMeb">
+    <defName>Salarian_HeadType</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/FurCovered_Narrow1_Normal</graphicPath>
+  </HeadTypeDef>
+
+</Defs>

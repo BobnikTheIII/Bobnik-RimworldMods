@@ -1,0 +1,4 @@
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\ME(b) - Asari\Source\MatriarchalGene\MatriarchalGene\obj\Debug\MatriarchalGene.csproj.AssemblyReference.cache
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\ME(b) - Asari\Source\MatriarchalGene\MatriarchalGene\obj\Debug\MatriarchalGene.csproj.CoreCompileInputs.cache
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\ME(b) - Asari\Assemblies\MatriarchalGene.dll
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\ME(b) - Asari\Source\MatriarchalGene\MatriarchalGene\obj\Debug\MatriarchalGene.dll

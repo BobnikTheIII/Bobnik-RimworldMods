@@ -31,15 +31,15 @@
     <defName>Hands_Quarian</defName>
     <label>quarian hands</label>
     <description>Carriers of this gene have only 3 fingers on each hand. This negatively affects their complex manipulation abilities.</description>
-    <iconPath>Icons/placeholder</iconPath>
+    <iconPath>Icons/Gene_QuarianHands</iconPath>
     <displayCategory>MebUtility</displayCategory>
     <displayOrderInCategory>41</displayOrderInCategory>
     <biostatCpx>1</biostatCpx>
-    <biostatMet>1</biostatMet>
+    <biostatMet>2</biostatMet>
     <capMods>
       <li>
         <capacity>Manipulation</capacity>
-        <postFactor>0.85</postFactor>
+        <postFactor>0.95</postFactor>
       </li>
     </capMods>
   </GeneDef>
@@ -51,7 +51,7 @@
     <label>white eyes</label>
     <labelShortAdj>white-eyed</labelShortAdj>
     <description>Carriers of this gene have deeply white-pigmented eyes.</description>
-    <iconPath>Icons/placeholder</iconPath>
+    <iconPath>Icons/Gene_WhiteEyes</iconPath>
     <displayCategory>MebUtility</displayCategory>
     <displayOrderInCategory>51</displayOrderInCategory>
     <renderNodeProperties>

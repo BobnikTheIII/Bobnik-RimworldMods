@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- Head Accesories -->
+
+  <GeneDef ParentName="GeneMebUtilityCrestsBase">
+    <defName>Salarian_Crest</defName>
+    <label>salarian crest</label>
+    <description>Carriers of this gene possess a hard strucured, scaled crests.</description>
+    <!-- <iconPath>Things/Pawn/Humanlike/HeadAttachments/KroganWhite/KroganCrest_White_south</iconPath> -->
+    <iconPath>Icons/placeholder</iconPath>
+    <displayCategory>MebUtility</displayCategory>
+    <displayOrderInCategory>15</displayOrderInCategory>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/KroganWhite/KroganCrest_White</texPath>
+        <colorType>Skin</colorType>
+        <parentTagDef>Head</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <useRottenColor>true</useRottenColor>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>60</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  </Defs>

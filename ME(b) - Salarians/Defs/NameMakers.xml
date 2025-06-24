@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>MebKroganMaleNamer</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[firstname] [lastname]</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>firstname->Names/KroganPawnFirstNames_Male</li>
+        <li>lastname->Names/KroganPawnLastNames</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>MebKroganFemaleNamer</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[firstname] [lastname]</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>firstname->Names/KroganPawnFirstNames_Female</li>
+        <li>lastname->Names/KroganPawnLastNames</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>
