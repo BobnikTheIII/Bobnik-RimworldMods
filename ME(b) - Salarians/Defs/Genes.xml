@@ -30,4 +30,27 @@
     </renderNodeProperties>
   </GeneDef>
 
-  </Defs>
+  <GeneDef>
+    <defName>Salarian_Head</defName>
+    <label>salarian head</label>
+    <labelShortAdj>salarian</labelShortAdj>
+    <description>Carriers of this possess a thin elongated head.</description>
+    <biostatCpx>1</biostatCpx>
+    <!-- <biostatMet>-1</biostatMet> -->
+    <displayCategory>MebUtility</displayCategory>
+    <displayOrderInCategory>400</displayOrderInCategory>
+    <iconPath>UI/Icons/placeholder</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <forcedHeadTypes>
+      <li>Salarian_HeadType</li>
+    </forcedHeadTypes>
+    <beardTagFilter>
+      <whitelist>true</whitelist>
+    </beardTagFilter>
+    <exclusionTags>
+      <li>Fur</li>
+      <li>BeardStyle</li>
+    </exclusionTags>
+  </GeneDef>
+
+</Defs>

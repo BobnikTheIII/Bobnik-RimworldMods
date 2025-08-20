@@ -5,11 +5,11 @@
   <author>BobnikTheIII</author>
   <supportedVersions>
     <li>1.5</li>
+    <li>1.6</li>
   </supportedVersions>
   <packageId>BobnikTheIII.MebUtilities</packageId>
 
-  <description>Just some utilities for my Mass Effect related mods.
-Mostly category declarations or some other stuff connecting all the mods in the code.</description>
+  <description>Just some utilities for my Mass Effect related mods.</description>
 
   <modDependencies>
     <li>

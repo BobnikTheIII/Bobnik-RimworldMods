@@ -38,11 +38,11 @@ namespace StatsAdjustments
                 var harmony = new Harmony("com.bobniktheiii.rimworld.statsadjustments");
                 harmony.PatchAll();
                 if (debugLogging)
-                    Log.Message("[StatsAdjustments] Harmony patches applied.");
+                    Log.Message("[LifespanGenes] Harmony patches applied.");
             }
             catch (Exception ex)
             {
-                Log.Error("[StatsAdjustments] Failed to apply Harmony patches:\n" + ex);
+                Log.Error("[LifespanGenes] Failed to apply Harmony patches:\n" + ex);
             }
         }
     }
@@ -60,7 +60,7 @@ namespace StatsAdjustments
             bool doLog = StatsAdjustments_Mod.debugLogging && loggedPawnIDs.Add(pawn.thingIDNumber);
 
             if (doLog)
-                Log.Message($"[StatsAdjustments] AgeFactor patch for {pawn.LabelShort} (ID {pawn.thingIDNumber})");
+                Log.Message($"[LifespanGenes] AgeFactor patch for {pawn.LabelShort} (ID {pawn.thingIDNumber})");
 
             // Retrieve correct curve
             SimpleCurve curve = null;
@@ -72,22 +72,22 @@ namespace StatsAdjustments
 
                 if (field == null)
                 {
-                    if (doLog) Log.Warning("[StatsAdjustments] Curve field not found.");
+                    if (doLog) Log.Warning("[LifespanGenes] Curve field not found.");
                     return true;
                 }
 
                 curve = field.GetValue(__instance) as SimpleCurve;
                 if (curve == null)
                 {
-                    if (doLog) Log.Warning("[StatsAdjustments] Curve is null.");
+                    if (doLog) Log.Warning("[LifespanGenes] Curve is null.");
                     return true;
                 }
 
-                if (doLog) Log.Message($"[StatsAdjustments] Retrieved curve with {curve.Points.Count} points.");
+                if (doLog) Log.Message($"[LifespanGenes] Retrieved curve with {curve.Points.Count} points.");
             }
             catch (Exception ex)
             {
-                if (doLog) Log.Error("[StatsAdjustments] Reflection error: " + ex);
+                if (doLog) Log.Error("[LifespanGenes] Reflection error: " + ex);
                 return true;
             }
 
@@ -102,7 +102,7 @@ namespace StatsAdjustments
                     {
                         lifespanFactor *= ext.lifespanFactor;
                         if (doLog)
-                            Log.Message($"[StatsAdjustments] Gene {gene.def.defName} → lifespanFactor *= {ext.lifespanFactor} → {lifespanFactor}");
+                            Log.Message($"[LifespanGenes] Gene {gene.def.defName} → lifespanFactor *= {ext.lifespanFactor} → {lifespanFactor}");
                     }
                 }
             }
@@ -115,7 +115,7 @@ namespace StatsAdjustments
                 : lifespanFactor > 0f ? lifespanFactor * lifespanFactor : 0f;
 
             if (doLog)
-                Log.Message($"[StatsAdjustments] Effective declineFactor = {declineFactor}");
+                Log.Message($"[LifespanGenes] Effective declineFactor = {declineFactor}");
 
             var sorted = curve.Points.OrderBy(p => p.x).ToList();
             var adjusted = new SimpleCurve();
@@ -132,14 +132,14 @@ namespace StatsAdjustments
                 {
                     adjusted.Add(new CurvePoint(pt.x, pt.y));
                     if (doLog)
-                        Log.Message($"[StatsAdjustments] Keep point (x={pt.x}, y={pt.y})");
+                        Log.Message($"[LifespanGenes] Keep point (x={pt.x}, y={pt.y})");
                 }
                 else
                 {
                     float newX = pt.x * declineFactor;
                     adjusted.Add(new CurvePoint(newX, pt.y));
                     if (doLog)
-                        Log.Message($"[StatsAdjustments] Adjust point: {pt.x} → {newX} (y={pt.y})");
+                        Log.Message($"[LifespanGenes] Adjust point: {pt.x} → {newX} (y={pt.y})");
                 }
             }
 
@@ -150,13 +150,13 @@ namespace StatsAdjustments
                 __result = factor;
 
                 if (doLog)
-                    Log.Message($"[StatsAdjustments] Age = {age}, Fertility factor = {factor}");
+                    Log.Message($"[LifespanGenes] Age = {age}, Fertility factor = {factor}");
 
                 return false;
             }
             catch (Exception ex)
             {
-                Log.Warning("[StatsAdjustments] Error evaluating curve: " + ex);
+                Log.Warning("[LifespanGenes] Error evaluating curve: " + ex);
                 return true;
             }
         }

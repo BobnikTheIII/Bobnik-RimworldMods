@@ -23,7 +23,13 @@
       <li>Robust</li>
       <li>Pain_Reduced</li>
       <li>Genouphaged</li>
-      <li>Krogan_Crest</li>
+      <li>Krogan_Crest_White</li>
+      <li>Krogan_Crest_Red</li>
+      <li>Krogan_Crest_Blue</li>
+      <li>Krogan_Crest_Yellow</li>
+      <li>Krogan_Crest_Grey</li>
+      <li>Krogan_Crest_Dark</li>
+      <li>Krogan_Head</li>
       <!-- <li>Hair_BaldOnly</li> -->
       <li>Beard_NoBeardOnly</li>
       <li>VoiceRoar</li>

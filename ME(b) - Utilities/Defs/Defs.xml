@@ -27,4 +27,37 @@
     </hairTagFilter>
   </GeneDef>
 
+    <!-- Traits -->
+
+  <GeneDef>
+      <defName>Bisexual</defName>
+      <label>bisexual</label>
+      <description>Road is road.</description>
+      <iconPath>Icons/Bisexual_Icon</iconPath>
+      <displayCategory>MebUtility</displayCategory>
+      <displayOrderInCategory>71</displayOrderInCategory>
+      <forcedTraits>
+          <li>
+              <def>Bisexual</def>
+          </li>
+      </forcedTraits>
+  </GeneDef>
+
+    <!-- Traits -->
+
+  <GeneDef>
+      <defName>Industrious</defName>
+      <label>industrious</label>
+      <description>Very quick in work.</description>
+      <iconPath>Icons/meb_industrious_icon</iconPath>
+      <displayCategory>MebUtility</displayCategory>
+      <displayOrderInCategory>75</displayOrderInCategory>
+      <forcedTraits>
+          <li>
+              <def>Industriousness</def>
+              <degree>2</degree>
+          </li>
+      </forcedTraits>
+  </GeneDef>
+
 </Defs>

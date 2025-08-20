@@ -3,10 +3,56 @@
 
 <!-- Head Accesories -->
 
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_MEb_Krogan_HeadType</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Female_MEb_Krogan</graphicPath>
+    <randomChosen>false</randomChosen>
+    <gender>None</gender>
+    <requiredGenes>
+      <li>Krogan_Head</li>
+    </requiredGenes>
+    <eyeOffsetEastWest>(0.15, 0, 0.17)</eyeOffsetEastWest>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_MEb_Krogan_HeadType</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Male_MEb_Krogan</graphicPath>
+    <randomChosen>false</randomChosen>
+    <gender>None</gender>
+    <requiredGenes>
+      <li>Krogan_Head</li>
+    </requiredGenes>
+    <eyeOffsetEastWest>(0.15, 0, 0.17)</eyeOffsetEastWest>
+  </HeadTypeDef>
+
+  <GeneDef>
+    <defName>Krogan_Head</defName>
+    <label>krogan head</label>
+    <labelShortAdj>krogan</labelShortAdj>
+    <description>Carriers of this possess a grunty wide head.</description>
+    <biostatCpx>1</biostatCpx>
+    <!-- <biostatMet>-1</biostatMet> -->
+    <displayCategory>MebUtility</displayCategory>
+    <displayOrderInCategory>401</displayOrderInCategory>
+    <iconPath>UI/Icons/Krogan_XenotypeIcon</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <forcedHeadTypes>
+      <li>Female_MEb_Krogan_HeadType</li>
+      <li>Male_MEb_Krogan_HeadType</li>
+    </forcedHeadTypes>
+    <beardTagFilter>
+      <whitelist>true</whitelist>
+    </beardTagFilter>
+    <exclusionTags>
+      <li>Fur</li>
+      <li>BeardStyle</li>
+    </exclusionTags>
+  </GeneDef>
+
   <GeneDef ParentName="GeneMebUtilityCrestsBase">
-    <defName>Krogan_Crest</defName>
-    <label>krogan crest</label>
-    <description>Carriers of this gene possess a hard strucured, scaled crests.</description>
+    <defName>Krogan_Crest_White</defName>
+    <label>white krogan crest</label>
+    <description>Carriers of this gene possess a white hard strucured, scaled crests.</description>
     <iconPath>Things/Pawn/Humanlike/HeadAttachments/KroganWhite/KroganCrest_White_south</iconPath>
     <displayCategory>MebUtility</displayCategory>
     <displayOrderInCategory>14</displayOrderInCategory>
@@ -30,8 +76,8 @@
       <li>
         <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
         <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-        <texPath>Things/Pawn/Humanlike/HeadAttachments/KroganWhite/KroganCrest_White</texPath>
-        <colorType>Skin</colorType>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/KroganWhite/MEb_KroganCrest_White</texPath>
+        <!-- <colorType>Skin</colorType> -->
         <parentTagDef>Head</parentTagDef>
         <useSkinShader>true</useSkinShader>
         <useRottenColor>true</useRottenColor>
@@ -44,6 +90,132 @@
       </li>
     </renderNodeProperties>
   </GeneDef>
+
+  <GeneDef ParentName="GeneMebUtilityCrestsBase">
+    <defName>Krogan_Crest_Red</defName>
+    <label>red krogan crest</label>
+    <description>Carriers of this gene possess a hard strucured, scaled crests.</description>
+    <iconPath>Things/Pawn/Humanlike/HeadAttachments/KroganRed/KroganCrest_Red_south</iconPath>
+    <displayCategory>MebUtility</displayCategory>
+    <displayOrderInCategory>15</displayOrderInCategory>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/KroganRed/MEb_KroganCrest_Red</texPath>
+        <parentTagDef>Head</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <useRottenColor>true</useRottenColor>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>60</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneMebUtilityCrestsBase">
+    <defName>Krogan_Crest_Blue</defName>
+    <label>blue krogan crest</label>
+    <description>Carriers of this gene possess a hard strucured, scaled crests.</description>
+    <iconPath>Things/Pawn/Humanlike/HeadAttachments/KroganBlue/KroganCrest_Blue_south</iconPath>
+    <displayCategory>MebUtility</displayCategory>
+    <displayOrderInCategory>15</displayOrderInCategory>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/KroganBlue/MEb_KroganCrest_Blue</texPath>
+        <parentTagDef>Head</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <useRottenColor>true</useRottenColor>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>60</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneMebUtilityCrestsBase">
+    <defName>Krogan_Crest_Yellow</defName>
+    <label>yellow krogan crest</label>
+    <description>Carriers of this gene possess a hard strucured, scaled crests.</description>
+    <iconPath>Things/Pawn/Humanlike/HeadAttachments/KroganYellow/KroganCrest_Yellow_south</iconPath>
+    <displayCategory>MebUtility</displayCategory>
+    <displayOrderInCategory>15</displayOrderInCategory>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/KroganYellow/MEb_KroganCrest_Yellow</texPath>
+        <parentTagDef>Head</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <useRottenColor>true</useRottenColor>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>60</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneMebUtilityCrestsBase">
+    <defName>Krogan_Crest_Dark</defName>
+    <label>dark krogan crest</label>
+    <description>Carriers of this gene possess a hard strucured, scaled crests.</description>
+    <iconPath>Things/Pawn/Humanlike/HeadAttachments/KroganDark/KroganCrest_Dark_south</iconPath>
+    <displayCategory>MebUtility</displayCategory>
+    <displayOrderInCategory>15</displayOrderInCategory>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/KroganDark/MEb_KroganCrest_Dark</texPath>
+        <parentTagDef>Head</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <useRottenColor>true</useRottenColor>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>60</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneMebUtilityCrestsBase">
+    <defName>Krogan_Crest_Grey</defName>
+    <label>grey krogan crest</label>
+    <description>Carriers of this gene possess a hard strucured, scaled crests.</description>
+    <iconPath>Things/Pawn/Humanlike/HeadAttachments/KroganGrey/KroganCrest_Grey_south</iconPath>
+    <displayCategory>MebUtility</displayCategory>
+    <displayOrderInCategory>15</displayOrderInCategory>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/KroganGrey/MEb_KroganCrest_Grey</texPath>
+        <parentTagDef>Head</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <useRottenColor>true</useRottenColor>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>60</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
 
 <!-- FERTILITY -->
 

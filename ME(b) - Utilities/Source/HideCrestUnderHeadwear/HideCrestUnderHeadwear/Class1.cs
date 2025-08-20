@@ -14,8 +14,9 @@ namespace HideCrestUnderHeadwear
         private static readonly string[] GeneNames = new[]
         {
             "Asari_Crest",
-            "Krogan_Crest",
-            "Salarian_Crest"
+            "Salarian_Crest",
+            "Krogan_Crest_White",
+            "Krogan_Crest_Red"
         };
         // ======================================
 

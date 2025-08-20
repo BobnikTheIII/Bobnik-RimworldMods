@@ -1,44 +1,35 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <XenotypeDef>
-    <defName>Krogan</defName>
-    <label>krogan</label>
+    <defName>Salarian</defName>
+    <label>salarian</label>
     <description>Krogans, known for their hulking bodies and primal aggression. Designed for battle, they thrive in extreme environments, and recover from wounds that would kill others. Their melee prowess is unmatched, supported by reduced pain sensitivity and innate resistance to harsh temperatures and enviromental toxins. However, their hyper-aggressive instincts and difficulty with intellectual and social tasks make them volatile and poor fits for peaceful colonies. Krogans fight fiercely, but all are cursed with a heritable sterility—an engineered affliction known as the genophage—leaving most with difficulties to reproduce naturally. This, combined with their slow learning and instability, has left many isolated, bitter, and always ready for a fight. They can have varying shades of thick, reptilian skin and are easily identified by their distinctive head crests and low, guttural voices.</description>
     <descriptionShort>Hyper-aggressive, heat-hardened warriors evolved for survival and combat. Incredibly tough, painfully slow learners, and haunted by a sterilizing genetic curse.</descriptionShort>
     <iconPath>Icons/Krogan_XenotypeIcon</iconPath>
     <inheritable>true</inheritable>
-    <nameMaker>MebKroganMaleNamer</nameMaker>
+    <!-- <nameMaker>MebKroganMaleNamer</nameMaker>
     <nameMakerFemale>MebKroganFemaleNamer</nameMakerFemale>
-    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker> -->
     <genes>
-      <li>Body_Hulk</li>
-      <li>Unstoppable</li>
-      <li>NakedSpeed</li>
-      <li>PsychicAbility_Deaf</li>
-      <li>MinTemp_LargeDecrease</li>
-      <li>MaxTemp_LargeIncrease</li>
-      <li>ToxicEnvironmentResistance_Total</li>
-      <li>Aggression_HyperAggressive</li>
-      <li>MeleeDamage_Strong</li>
-      <li>Robust</li>
-      <li>Pain_Reduced</li>
-      <li>Genouphaged</li>
-      <li>Krogan_Crest</li>
-      <!-- <li>Hair_BaldOnly</li> -->
-      <li>Beard_NoBeardOnly</li>
-      <li>VoiceRoar</li>
-      <li>Skin_PaleYellow</li>
-      <li>Skin_Orange</li>
+      <li>Industrious</li>
+      <li>PsychicAbility_Dull</li>
+      <li>LowSleep</li>
+      <li>Libido_Low</li>
+      <li>ShortestLifespan</li>
+      <li>Body_Thin</li>
+      <li>Skin_InkBlack</li>
+      <li>Skin_SlateGray</li>
+      <li>Skin_LightGray</li>
+      <li>Skin_Blue</li>
       <li>Skin_PaleRed</li>
       <li>Skin_DeepRed</li>
-      <li>Skin_LightGray</li>
-      <li>Learning_Slow</li>
-      <li>Instability_Mild</li>
-      <li>AptitudeStrong_Shooting</li>
-      <li>AptitudeStrong_Melee</li>
-      <li>AptitudeTerrible_Artistic</li>
-      <li>AptitudePoor_Social</li>
-      <li>AptitudeTerrible_Intellectual</li>
+      <li>Skin_PaleYellow</li>
+      <li>Skin_DeepYellow</li>
+      <li>Skin_Orange</li>
+      <li>Salarian_Crest</li>
+      <li>Salarian_Head</li>
+      <!-- <li>Hair_BaldOnly</li> -->
+      <li>Beard_NoBeardOnly</li>
     </genes>
   </XenotypeDef>
 </Defs>

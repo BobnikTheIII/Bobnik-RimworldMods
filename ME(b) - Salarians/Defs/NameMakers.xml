@@ -2,27 +2,27 @@
 <Defs>
 
   <RulePackDef>
-    <defName>MebKroganMaleNamer</defName>
+    <defName>MebSalarianMaleNamer</defName>
     <rulePack>
       <rulesStrings>
         <li>r_name->[firstname] [lastname]</li>
       </rulesStrings>
       <rulesFiles>
-        <li>firstname->Names/KroganPawnFirstNames_Male</li>
-        <li>lastname->Names/KroganPawnLastNames</li>
+        <li>firstname->Names/SalarianPawnFirstNames_Male</li>
+        <li>lastname->Names/SalarianPawnLastNames</li>
       </rulesFiles>
     </rulePack>
   </RulePackDef>
 
   <RulePackDef>
-    <defName>MebKroganFemaleNamer</defName>
+    <defName>MebSalarianFemaleNamer</defName>
     <rulePack>
       <rulesStrings>
         <li>r_name->[firstname] [lastname]</li>
       </rulesStrings>
       <rulesFiles>
-        <li>firstname->Names/KroganPawnFirstNames_Female</li>
-        <li>lastname->Names/KroganPawnLastNames</li>
+        <li>firstname->Names/SalarianPawnFirstNames_Female</li>
+        <li>lastname->Names/SalarianPawnLastNames</li>
       </rulesFiles>
     </rulePack>
   </RulePackDef>

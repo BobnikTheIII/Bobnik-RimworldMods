@@ -45,22 +45,6 @@
     </renderNodeProperties>
   </GeneDef>
 
-  <!-- Traits -->
-
-  <GeneDef>
-      <defName>Bisexual</defName>
-      <label>bisexual</label>
-      <description>Road is road.</description>
-      <iconPath>Icons/Bisexual_Icon</iconPath>
-      <displayCategory>MebUtility</displayCategory>
-      <displayOrderInCategory>71</displayOrderInCategory>
-      <forcedTraits>
-          <li>
-              <def>Bisexual</def>
-          </li>
-      </forcedTraits>
-  </GeneDef>
-
   <!-- Inheritance -->
 
   <GeneDef>
