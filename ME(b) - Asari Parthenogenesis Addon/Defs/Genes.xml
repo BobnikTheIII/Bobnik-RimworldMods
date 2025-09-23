@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <GeneDef>
+      <defName>MEbParthenogenesisGene</defName>
+      <label>asari parthenogenesis</label>
+      <description>Allows reproduction with women for the carriers of this gene.</description>
+      <iconPath>Icons/Gene_Parthenogenesis</iconPath>
+      <displayCategory>MebUtility</displayCategory>
+      <displayOrderInCategory>78</displayOrderInCategory>
+  </GeneDef>
+
+</Defs>

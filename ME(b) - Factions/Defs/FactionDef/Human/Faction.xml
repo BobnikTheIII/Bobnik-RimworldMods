@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef ParentName="FactionBase">
+    <defName>Cerberus</defName>
+    <label>cerberus</label>
+    <categoryTag>Empire</categoryTag>
+    <description>Cerberus is a human-supremacist paramilitary organization. Cerberus' core belief is that humans deserve a greater role in the galactic community, and supports the principle that any methods of advancing humanity's ascension are entirely justified, including illegal or dangerous experimentation, terrorism, sabotage and assassination.</description>
+    <pawnSingular>cerberus</pawnSingular>
+    <pawnsPlural>cerberus</pawnsPlural>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>Illusive Leader</leaderTitle>
+    <royalFavorLabel>favour</royalFavorLabel>
+    <royalFavorIconPath>UI/Icons/RoyalFavor</royalFavorIconPath>
+    <factionIconPath>Icons/Cerberus_Town</factionIconPath>
+    <factionNameMaker>NamerFactionCerberus</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <allowedCultures><li>Sophian</li></allowedCultures>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+    </requiredMemes>
+    <allowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">FemaleSupremacy</li>
+    </allowedMemes>
+    <disallowedPrecepts>
+      <li>Slavery_Classic</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Disapproved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Horrible</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Abhorrent</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Abhorrent</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Horrible</li>
+    </disallowedPrecepts>
+    <structureMemeWeights>
+      <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+    </structureMemeWeights>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.99</Baseliner>
+      </xenotypeChances>
+    </xenotypeSet>
+    <permanentEnemyToEveryoneExcept>
+      <li>OutlanderCivil</li>
+      <li>TribeCivil</li>
+      <li>PlayerTribe</li>
+      <li>PlayerColony</li>
+      <li>Ancients</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Beggars</li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">ResearchExpedition</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">GravshipCrew</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">TradersGuild</li>
+    </permanentEnemyToEveryoneExcept>
+    <techLevel>Ultra</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <apparelStuffFilter>
+      <stuffCategoriesToAllow>
+        <li>Metallic</li>
+        <li>Fabric</li>
+      </stuffCategoriesToAllow>
+      <disallowedThingDefs>
+        <li>DevilstrandCloth</li>
+      </disallowedThingDefs>
+    </apparelStuffFilter>
+    <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <colorSpectrum>
+      <li>(1.00, 0.87, 0.49)</li>
+    </colorSpectrum>
+    <fixedLeaderKinds>
+      <li>Cerberus_Royal_Stellarch</li>
+    </fixedLeaderKinds>
+    <royalTitleTags>
+      <li>EmpireTitle</li>
+    </royalTitleTags>
+    <baseTraderKinds>
+      <li>Base_Empire_Standard</li>
+    </baseTraderKinds>
+    <caravanTraderKinds>
+      <li>Empire_Caravan_TraderGeneral</li>
+    </caravanTraderKinds>
+    <royalTitleInheritanceWorkerClass>RoyalTitleInheritanceWorker</royalTitleInheritanceWorkerClass>
+    <royalTitleInheritanceRelations>
+      <li>Child</li>
+      <li>Grandchild</li>
+      <li>GreatGrandchild</li>
+      <li>NephewOrNiece</li>
+      <li>Spouse</li>
+      <li>Sibling</li>
+      <li>HalfSibling</li>
+      <li>Cousin</li>
+      <li>Parent</li>
+      <li>UncleOrAunt</li>
+    </royalTitleInheritanceRelations>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 1)</li> <!--Constant 1 at all points levels-->
+      </points>
+    </raidCommonalityFromPointsCurve>
+    <raidLootMaker>EmpireRaidLootMaker</raidLootMaker>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(500, 100)</li> <!-- Can always use relatively strong pawns, because empire doesn't really have weak ones -->
+        <li>(1000, 150)</li> <!-- Smart words Ty -->
+        <li>(2000, 250)</li>
+        <li>(2001, 10000)</li> <!-- Smart people talking above me, i have no idea what these funny numbers mean but im having fun too -->
+      </points>                   <!-- Actually i just realised this was my own comment from like half i year ago, but nah im keepin my schizophremia documented -->
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <!-- Traders -->
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <Empire_Common_Trader>1</Empire_Common_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2</Alpaca>
+          <Elephant>1</Elephant>
+        </carriers>
+        <guards>
+          <Villager>3</Villager>
+          <Empire_Fighter_Trooper>10</Empire_Fighter_Trooper>
+          <Empire_Fighter_Cataphract>1.5</Empire_Fighter_Cataphract>
+          <Empire_Fighter_Janissary>7</Empire_Fighter_Janissary>
+          <Empire_Fighter_Champion>10</Empire_Fighter_Champion>
+        </guards>
+      </li>
+      <li>
+        <!-- Normal fights -->
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <Empire_Fighter_Trooper>5</Empire_Fighter_Trooper>
+          <Empire_Fighter_Janissary>3.5</Empire_Fighter_Janissary>
+          <Empire_Fighter_Cataphract>2</Empire_Fighter_Cataphract>
+          <Empire_Fighter_Champion>4</Empire_Fighter_Champion>
+        </options>
+      </li>
+      <li>
+        <!-- breach fights -->
+        <kindDef>Combat</kindDef>
+        <commonality>10</commonality>
+        <options>
+          <Empire_Fighter_Grenadier>2</Empire_Fighter_Grenadier>
+          <Empire_Fighter_Trooper>5</Empire_Fighter_Trooper>
+          <Empire_Fighter_Janissary>3.5</Empire_Fighter_Janissary>
+          <Empire_Fighter_Cataphract>2</Empire_Fighter_Cataphract>
+          <Empire_Fighter_Champion>4</Empire_Fighter_Champion>
+        </options>
+      </li>
+      <li>
+        <!-- Base defense, mainly ranged with melee mix-ins -->
+        <kindDef>Settlement</kindDef>
+        <options>
+          <Empire_Fighter_Trooper>5</Empire_Fighter_Trooper>
+          <Empire_Fighter_Janissary>3.5</Empire_Fighter_Janissary>
+          <Empire_Fighter_Cataphract>2</Empire_Fighter_Cataphract>
+          <Empire_Fighter_Champion>4</Empire_Fighter_Champion>
+      </options>
+      </li>
+    </pawnGroupMakers>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>70</configurationListOrderPriority>
+    <disallowedRaidAgeRestrictions>
+      <li MayRequire="Ludeon.RimWorld.Biotech">Children</li>
+    </disallowedRaidAgeRestrictions>
+  </FactionDef>
+
+</Defs>

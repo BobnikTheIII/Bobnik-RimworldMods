@@ -13,6 +13,7 @@
       <!-- <li>Hair_BaldOnly</li> -->
       <li>Beard_NoBeardOnly</li>
       <li>MatriarchGene</li>
+      <li MayRequire="BobnikTheIII.MebAsariReproductionAddon">MEbParthenogenesisGene</li>
       <li>PsychicAbility_Enhanced</li>
       <li>Skin_Blue</li>
       <li>Skin_Purple</li>

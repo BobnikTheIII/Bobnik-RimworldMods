@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Factions -->
+
+  <RulePackDef>
+    <defName>NamerFactionKroganOutlander</defName>
+    <include>
+      <li>OutlanderPlaceNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->tuchanka [nameEnd]</li>
+        <li>nameEnd->Coalition</li>
+        <li>nameEnd->Empire</li>
+        <li>nameEnd->State Union</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

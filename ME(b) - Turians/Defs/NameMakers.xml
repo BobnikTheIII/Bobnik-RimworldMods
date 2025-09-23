@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>MebTurianMaleNamer</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[firstname] [lastname]</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>firstname->Names/TurianPawnFirstNames_Male</li>
+        <li>lastname->Names/TurianPawnLastNames</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>MebTurianFemaleNamer</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[firstname] [lastname]</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>firstname->Names/TurianPawnFirstNames_Female</li>
+        <li>lastname->Names/TurianPawnLastNames</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- Head -->
+
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_MEb_Turian_HeadType</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Female_MEb_Turian</graphicPath>
+    <randomChosen>false</randomChosen>
+    <gender>Female</gender>
+    <requiredGenes>
+      <li>Turian_Head</li>
+    </requiredGenes>
+    <eyeOffsetEastWest>(0.15, 0.1, 0.17)</eyeOffsetEastWest>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_MEb_Turian_HeadType</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Male_MEb_Turian</graphicPath>
+    <randomChosen>false</randomChosen>
+    <gender>Male</gender>
+    <requiredGenes>
+      <li>Turian_Head</li>
+    </requiredGenes>
+    <eyeOffsetEastWest>(0.15, 0.1, 0.17)</eyeOffsetEastWest>
+  </HeadTypeDef>
+
+  <GeneDef>
+    <defName>Turian_Head</defName>
+    <label>turian head</label>
+    <labelShortAdj>turian</labelShortAdj>
+    <description>Carriers of this possess a avian head with mandibles and prominent facial plating.</description>
+    <biostatCpx>1</biostatCpx>
+    <!-- <biostatMet>-1</biostatMet> -->
+    <displayCategory>MebUtility</displayCategory>
+    <displayOrderInCategory>401</displayOrderInCategory>
+    <iconPath>Icons/Turian_XenotypeIcon</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <forcedHeadTypes>
+      <li>Female_MEb_Turian_HeadType</li>
+      <li>Male_MEb_Turian_HeadType</li>
+    </forcedHeadTypes>
+    <beardTagFilter>
+      <whitelist>true</whitelist>
+    </beardTagFilter>
+    <hairTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>Bald</li>
+      </tags>
+    </hairTagFilter>
+    <exclusionTags>
+      <li>Fur</li>
+      <li>BeardStyle</li>
+      <li>HairStyle</li>
+    </exclusionTags>
+  </GeneDef>
+
+  <!-- SKIN COLOUR -->
+
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>Skin_TurianBlue</defName>
+    <label>blue turian skin</label>
+    <labelShortAdj>dark blue</labelShortAdj>
+    <description>Carriers of this gene produce a pigment that turns their skin a dark blue color.</description>
+    <skinColorOverride>(90, 104, 120)</skinColorOverride>
+    <displayCategory>MebUtility</displayCategory>
+    <displayOrderInCategory>31</displayOrderInCategory>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>Skin_TurianBrown</defName>
+    <label>brown turian skin</label>
+    <labelShortAdj>pale brown</labelShortAdj>
+    <description>Carriers of this gene produce a pigment that turns their skin a pale brown color.</description>
+    <skinColorOverride>(128, 110, 96)</skinColorOverride>
+    <displayCategory>MebUtility</displayCategory>
+    <displayOrderInCategory>31</displayOrderInCategory>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>Skin_TurianGreen</defName>
+    <label>green turian skin</label>
+    <labelShortAdj>pale green</labelShortAdj>
+    <description>Carriers of this gene produce a pigment that turns their skin a pale green color.</description>
+    <skinColorOverride>(105, 118, 111)</skinColorOverride>
+    <displayCategory>MebUtility</displayCategory>
+    <displayOrderInCategory>31</displayOrderInCategory>
+  </GeneDef>
+
+</Defs>

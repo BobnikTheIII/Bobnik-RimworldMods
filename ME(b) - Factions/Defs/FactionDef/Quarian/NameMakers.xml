@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Factions -->
+
+  <RulePackDef>
+    <defName>NamerFactionQuarianOutlander</defName>
+    <include>
+      <li>OutlanderPlaceNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->rannoch conclave</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

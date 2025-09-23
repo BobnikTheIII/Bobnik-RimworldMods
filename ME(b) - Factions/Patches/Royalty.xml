@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Royalty</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/FactionDef[defName="Empire"]/permanentEnemyToEveryoneExcept</xpath>
+      <value>
+        <li MayRequire="BobnikTheIII.MebAsari">Asari_Republics</li>
+        <li>Cerberus</li>
+        <li MayRequire="BobnikTheIII.MebKrogan">Krogan_Empire</li>
+        <li MayRequire="BobnikTheIII.MebQuarians">Quarian_Conclave</li>
+        <li MayRequire="BobnikTheIII.MebSalarians">Salarian_Union</li>
+      </value>
+    </match>
+  </Operation>
+</Patch>

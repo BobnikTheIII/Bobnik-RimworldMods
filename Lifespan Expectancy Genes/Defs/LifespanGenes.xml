@@ -86,6 +86,6 @@
       </li>
     </modExtensions>
     <biostatCpx>3</biostatCpx>
-    <biostatArc>1</biostatArc>
+    <!-- <biostatArc>1</biostatArc> -->
   </GeneDef>
 </Defs>

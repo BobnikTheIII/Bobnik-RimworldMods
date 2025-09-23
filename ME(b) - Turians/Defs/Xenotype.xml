@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <XenotypeDef>
+    <defName>Turian</defName>
+    <label>turian</label>
+    <description>Turians description placeholder, does anybody read this stuff?</description>
+    <descriptionShort></descriptionShort>
+    <iconPath>Icons/Turian_XenotypeIcon</iconPath>
+    <inheritable>true</inheritable>
+    <nameMaker>MebTurianMaleNamer</nameMaker>
+    <nameMakerFemale>MebTurianFemaleNamer</nameMakerFemale>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <genes>
+      <!-- <li>PsychicAbility_Dull</li> -->
+      <li>MinTemp_SmallIncrease</li>
+      <li>Mood_Optimist</li>
+      <li>Body_Standard</li>
+      <li>Pain_Reduced</li>
+      <li>Skin_SlateGray</li>
+      <li>Skin_LightGray</li>
+      <li>Skin_SheerWhite</li>
+      <li>Skin_TurianBlue</li>
+      <li>Skin_TurianBrown</li>
+      <li>Skin_TurianGreen</li>
+      <li>Turian_Head</li>
+      <!-- <li>Hair_BaldOnly</li> -->
+      <li>Beard_NoBeardOnly</li>
+      <li>AptitudeRemarkable_Shooting</li>
+      <li>AptitudeTerrible_Artistic</li>
+    </genes>
+  </XenotypeDef>
+</Defs>

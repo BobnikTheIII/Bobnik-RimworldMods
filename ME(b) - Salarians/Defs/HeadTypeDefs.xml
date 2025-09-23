@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <HeadTypeDef ParentName="NarrowBase">
+  <HeadTypeDef ParentName="AverageBase">
     <defName>Salarian_HeadType</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/MEb_Salarian</graphicPath>
     <randomChosen>false</randomChosen>

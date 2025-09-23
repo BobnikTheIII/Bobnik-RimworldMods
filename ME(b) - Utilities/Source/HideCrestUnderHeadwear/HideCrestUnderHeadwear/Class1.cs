@@ -16,7 +16,11 @@ namespace HideCrestUnderHeadwear
             "Asari_Crest",
             "Salarian_Crest",
             "Krogan_Crest_White",
-            "Krogan_Crest_Red"
+            "Krogan_Crest_Red",
+            "Krogan_Crest_Blue",
+            "Krogan_Crest_Yellow",
+            "Krogan_Crest_Grey",
+            "Krogan_Crest_Dark"
         };
         // ======================================
 

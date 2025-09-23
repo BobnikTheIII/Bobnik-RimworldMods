@@ -21,10 +21,16 @@
       <displayName>ME(b) Utilities</displayName>
       <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3524634575</steamWorkshopUrl>
     </li>
+    <li>
+      <packageId>BobnikTheIII.LifespanExpectancyGenes</packageId>
+      <displayName>Lifespan Expectancy Genes</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3364691662</steamWorkshopUrl>
+    </li>
   </modDependencies>
 
   <loadAfter>
     <li>BobnikTheIII.MebUtilities</li>
+    <li>BobnikTheIII.LifespanExpectancyGenes</li>
   </loadAfter>
   
 </ModMetaData>

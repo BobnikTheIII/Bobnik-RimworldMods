@@ -3,13 +3,13 @@
   <XenotypeDef>
     <defName>Salarian</defName>
     <label>salarian</label>
-    <description>Krogans, known for their hulking bodies and primal aggression. Designed for battle, they thrive in extreme environments, and recover from wounds that would kill others. Their melee prowess is unmatched, supported by reduced pain sensitivity and innate resistance to harsh temperatures and enviromental toxins. However, their hyper-aggressive instincts and difficulty with intellectual and social tasks make them volatile and poor fits for peaceful colonies. Krogans fight fiercely, but all are cursed with a heritable sterility—an engineered affliction known as the genophage—leaving most with difficulties to reproduce naturally. This, combined with their slow learning and instability, has left many isolated, bitter, and always ready for a fight. They can have varying shades of thick, reptilian skin and are easily identified by their distinctive head crests and low, guttural voices.</description>
-    <descriptionShort>Hyper-aggressive, heat-hardened warriors evolved for survival and combat. Incredibly tough, painfully slow learners, and haunted by a sterilizing genetic curse.</descriptionShort>
-    <iconPath>Icons/Krogan_XenotypeIcon</iconPath>
+    <description>Most known for their hyperfast metabolisms that allows them to stay awake and energized for long periods of time, at the cost of their lifespans.</description>
+    <descriptionShort>Most known for their hyperfast metabolisms that allows them to stay awake and energized for long periods of time, at the cost of their lifespans.</descriptionShort>
+    <iconPath>Icons/Salarian_XenotypeIcon</iconPath>
     <inheritable>true</inheritable>
-    <!-- <nameMaker>MebKroganMaleNamer</nameMaker>
-    <nameMakerFemale>MebKroganFemaleNamer</nameMakerFemale>
-    <chanceToUseNameMaker>1</chanceToUseNameMaker> -->
+    <nameMaker>MebSalarianMaleNamer</nameMaker>
+    <nameMakerFemale>MebSalarianFemaleNamer</nameMakerFemale>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
     <genes>
       <li>Industrious</li>
       <li>PsychicAbility_Dull</li>

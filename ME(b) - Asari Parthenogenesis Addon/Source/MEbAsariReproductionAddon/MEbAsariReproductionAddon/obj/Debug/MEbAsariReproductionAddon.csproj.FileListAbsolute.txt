@@ -1,0 +1,4 @@
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\ME(b) - Asari Parthenogenesis Addon\Assemblies\MEbAsariReproductionAddon.dll
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\ME(b) - Asari Parthenogenesis Addon\Source\MEbAsariReproductionAddon\MEbAsariReproductionAddon\obj\Debug\MEbAsariReproductionAddon.csproj.AssemblyReference.cache
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\ME(b) - Asari Parthenogenesis Addon\Source\MEbAsariReproductionAddon\MEbAsariReproductionAddon\obj\Debug\MEbAsariReproductionAddon.csproj.CoreCompileInputs.cache
+E:\Gry\Steam\steamapps\common\RimWorld\Mods\ME(b) - Asari Parthenogenesis Addon\Source\MEbAsariReproductionAddon\MEbAsariReproductionAddon\obj\Debug\MEbAsariReproductionAddon.dll

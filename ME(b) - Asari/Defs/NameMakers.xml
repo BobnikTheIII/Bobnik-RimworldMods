@@ -24,37 +24,4 @@
     </rulePack>
   </RulePackDef>
 
-  <!-- Factions -->
-
-  <RulePackDef>
-    <defName>NamerFactionAsariOutlander</defName>
-    <include>
-      <li>OutlanderPlaceNameUtility</li>
-    </include>
-    <rulePack>
-      <rulesStrings>
-        <li>r_name->[planetOrigin] [nameEnd]</li>
-        <li>nameEnd->Coalition</li>
-        <li>nameEnd->Haven</li>
-        <li>nameEnd->Asylum</li>
-        <li>nameEnd->Republics</li>
-        <li>nameEnd->Sanctuary</li>
-      </rulesStrings>
-      <rulesFiles>
-        <li>planetOrigin->Names/AsariFactionOutlanderNames</li>
-      </rulesFiles>
-    </rulePack>
-  </RulePackDef>
-
-  <RulePackDef>
-    <defName>NamerFactionAsariEmpire</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_name->Thessian Coalition</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <!-- Settlements -->
-
 </Defs>
