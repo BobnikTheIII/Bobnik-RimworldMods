@@ -310,6 +310,15 @@
       </points>
     </maxPawnCostPerTotalPointsCurve>
     <pawnGroupMakers>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <Villager>20</Villager>
+          <Villager_Child MayRequire="Ludeon.RimWorld.Biotech">10</Villager_Child>
+          <Town_Guard>10</Town_Guard>
+          <Town_Councilman>10</Town_Councilman>
+        </options>
+      </li>
       <!-- Traders -->
       <li>
         <kindDef>Trader</kindDef>

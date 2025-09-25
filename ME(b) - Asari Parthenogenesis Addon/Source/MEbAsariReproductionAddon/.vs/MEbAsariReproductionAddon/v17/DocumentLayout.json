@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "E:\\Gry\\Steam\\steamapps\\common\\RimWorld\\Mods\\ME(b) - Asari Parthenogenesis Addon\\Source\\MEbAsariReproductionAddon\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9EA029A3-6114-4AF2-85BE-4E67C151D338}|MEbAsariReproductionAddon\\MEbAsariReproductionAddon.csproj|e:\\gry\\steam\\steamapps\\common\\rimworld\\mods\\me(b) - asari parthenogenesis addon\\source\\mebasarireproductionaddon\\mebasarireproductionaddon\\pregnancycaneverproducepatcher_forcepatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9EA029A3-6114-4AF2-85BE-4E67C151D338}|MEbAsariReproductionAddon\\MEbAsariReproductionAddon.csproj|solutionrelative:mebasarireproductionaddon\\pregnancycaneverproducepatcher_forcepatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EA029A3-6114-4AF2-85BE-4E67C151D338}|MEbAsariReproductionAddon\\MEbAsariReproductionAddon.csproj|e:\\gry\\steam\\steamapps\\common\\rimworld\\mods\\me(b) - asari parthenogenesis addon\\source\\mebasarireproductionaddon\\mebasarireproductionaddon\\pregnancycaneverproducepatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9EA029A3-6114-4AF2-85BE-4E67C151D338}|MEbAsariReproductionAddon\\MEbAsariReproductionAddon.csproj|solutionrelative:mebasarireproductionaddon\\pregnancycaneverproducepatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9EA029A3-6114-4AF2-85BE-4E67C151D338}|MEbAsariReproductionAddon\\MEbAsariReproductionAddon.csproj|E:\\Gry\\Steam\\steamapps\\common\\RimWorld\\Mods\\ME(b) - Asari Parthenogenesis Addon\\Source\\MEbAsariReproductionAddon\\mebasarireproductionaddon\\pendingpregnancymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9EA029A3-6114-4AF2-85BE-4E67C151D338}|MEbAsariReproductionAddon\\MEbAsariReproductionAddon.csproj|solutionrelative:mebasarireproductionaddon\\pendingpregnancymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{9EA029A3-6114-4AF2-85BE-4E67C151D338}|MEbAsariReproductionAddon\\MEbAsariReproductionAddon.csproj|solutionrelative:mebasarireproductionaddon\\pregnancyapplypatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EA029A3-6114-4AF2-85BE-4E67C151D338}|MEbAsariReproductionAddon\\MEbAsariReproductionAddon.csproj|e:\\gry\\steam\\steamapps\\common\\rimworld\\mods\\me(b) - asari parthenogenesis addon\\source\\mebasarireproductionaddon\\mebasarireproductionaddon\\asarireproductionmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9EA029A3-6114-4AF2-85BE-4E67C151D338}|MEbAsariReproductionAddon\\MEbAsariReproductionAddon.csproj|E:\\Gry\\Steam\\steamapps\\common\\RimWorld\\Mods\\ME(b) - Asari Parthenogenesis Addon\\Source\\MEbAsariReproductionAddon\\mebasarireproductionaddon\\asarireproductionmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9EA029A3-6114-4AF2-85BE-4E67C151D338}|MEbAsariReproductionAddon\\MEbAsariReproductionAddon.csproj|solutionrelative:mebasarireproductionaddon\\asarireproductionmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -27,6 +35,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PregnancyCanEverProducePatcher_ForcePatch.cs",
+              "DocumentMoniker": "E:\\Gry\\Steam\\steamapps\\common\\RimWorld\\Mods\\ME(b) - Asari Parthenogenesis Addon\\Source\\MEbAsariReproductionAddon\\MEbAsariReproductionAddon\\PregnancyCanEverProducePatcher_ForcePatch.cs",
+              "RelativeDocumentMoniker": "MEbAsariReproductionAddon\\PregnancyCanEverProducePatcher_ForcePatch.cs",
+              "ToolTip": "E:\\Gry\\Steam\\steamapps\\common\\RimWorld\\Mods\\ME(b) - Asari Parthenogenesis Addon\\Source\\MEbAsariReproductionAddon\\MEbAsariReproductionAddon\\PregnancyCanEverProducePatcher_ForcePatch.cs",
+              "RelativeToolTip": "MEbAsariReproductionAddon\\PregnancyCanEverProducePatcher_ForcePatch.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAwE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T14:58:47.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PregnancyCanEverProducePatcher.cs",
+              "DocumentMoniker": "E:\\Gry\\Steam\\steamapps\\common\\RimWorld\\Mods\\ME(b) - Asari Parthenogenesis Addon\\Source\\MEbAsariReproductionAddon\\MEbAsariReproductionAddon\\PregnancyCanEverProducePatcher.cs",
+              "RelativeDocumentMoniker": "MEbAsariReproductionAddon\\PregnancyCanEverProducePatcher.cs",
+              "ToolTip": "E:\\Gry\\Steam\\steamapps\\common\\RimWorld\\Mods\\ME(b) - Asari Parthenogenesis Addon\\Source\\MEbAsariReproductionAddon\\MEbAsariReproductionAddon\\PregnancyCanEverProducePatcher.cs",
+              "RelativeToolTip": "MEbAsariReproductionAddon\\PregnancyCanEverProducePatcher.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBEAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T14:49:23.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PendingPregnancyManager.cs",
               "DocumentMoniker": "E:\\Gry\\Steam\\steamapps\\common\\RimWorld\\Mods\\ME(b) - Asari Parthenogenesis Addon\\Source\\MEbAsariReproductionAddon\\MEbAsariReproductionAddon\\PendingPregnancyManager.cs",
               "RelativeDocumentMoniker": "MEbAsariReproductionAddon\\PendingPregnancyManager.cs",
@@ -34,12 +68,11 @@
               "RelativeToolTip": "MEbAsariReproductionAddon\\PendingPregnancyManager.cs",
               "ViewState": "AgIAADoAAAAAAAAAAAAgwEgAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T14:44:28.298Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-23T14:44:28.298Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "PregnancyApplyPatcher.cs",
               "DocumentMoniker": "E:\\Gry\\Steam\\steamapps\\common\\RimWorld\\Mods\\ME(b) - Asari Parthenogenesis Addon\\Source\\MEbAsariReproductionAddon\\MEbAsariReproductionAddon\\PregnancyApplyPatcher.cs",
               "RelativeDocumentMoniker": "MEbAsariReproductionAddon\\PregnancyApplyPatcher.cs",
@@ -47,12 +80,11 @@
               "RelativeToolTip": "MEbAsariReproductionAddon\\PregnancyApplyPatcher.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T08:48:45.86Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-23T08:48:45.86Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "AsariReproductionMod.cs",
               "DocumentMoniker": "E:\\Gry\\Steam\\steamapps\\common\\RimWorld\\Mods\\ME(b) - Asari Parthenogenesis Addon\\Source\\MEbAsariReproductionAddon\\MEbAsariReproductionAddon\\AsariReproductionMod.cs",
               "RelativeDocumentMoniker": "MEbAsariReproductionAddon\\AsariReproductionMod.cs",
@@ -60,8 +92,7 @@
               "RelativeToolTip": "MEbAsariReproductionAddon\\AsariReproductionMod.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T12:22:30.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-21T12:22:30.664Z"
             }
           ]
         }

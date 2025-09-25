@@ -56,6 +56,8 @@
     <Compile Include="AsariReproductionMod.cs" />
     <Compile Include="PendingPregnancyManager.cs" />
     <Compile Include="PregnancyApplyPatcher.cs" />
+    <Compile Include="PregnancyCanEverProducePatcher.cs" />
+    <Compile Include="PregnancyCanEverProducePatcher_ForcePatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
