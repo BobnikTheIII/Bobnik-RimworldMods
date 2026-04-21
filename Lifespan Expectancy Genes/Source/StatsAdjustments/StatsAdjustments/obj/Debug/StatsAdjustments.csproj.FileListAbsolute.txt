@@ -3,3 +3,8 @@ E:\Gry\Steam\steamapps\common\RimWorld\Mods\Lifespan Expectancy Genes\Source\Sta
 E:\Gry\Steam\steamapps\common\RimWorld\Mods\Lifespan Expectancy Genes\Source\StatsAdjustments\StatsAdjustments\obj\Debug\StatsAdjustments.csproj.CoreCompileInputs.cache
 E:\Gry\Steam\steamapps\common\RimWorld\Mods\Lifespan Expectancy Genes\Source\StatsAdjustments\StatsAdjustments\obj\Debug\StatsAdjustments.dll
 E:\Gry\Steam\steamapps\common\RimWorld\Mods\Lifespan Expectancy Genes\Source\StatsAdjustments\StatsAdjustments\obj\Debug\StatsAdj.A72189BE.Up2Date
+C:\Workspace\Bobnik-RimworldMods\Lifespan Expectancy Genes\Assemblies\StatsAdjustments.dll
+C:\Workspace\Bobnik-RimworldMods\Lifespan Expectancy Genes\Source\StatsAdjustments\StatsAdjustments\obj\Debug\StatsAdjustments.csproj.AssemblyReference.cache
+C:\Workspace\Bobnik-RimworldMods\Lifespan Expectancy Genes\Source\StatsAdjustments\StatsAdjustments\obj\Debug\StatsAdjustments.csproj.CoreCompileInputs.cache
+C:\Workspace\Bobnik-RimworldMods\Lifespan Expectancy Genes\Source\StatsAdjustments\StatsAdjustments\obj\Debug\StatsAdj.A72189BE.Up2Date
+C:\Workspace\Bobnik-RimworldMods\Lifespan Expectancy Genes\Source\StatsAdjustments\StatsAdjustments\obj\Debug\StatsAdjustments.dll
