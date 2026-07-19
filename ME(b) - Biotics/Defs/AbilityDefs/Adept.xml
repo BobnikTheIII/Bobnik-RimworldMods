@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
   <!-- L1 Throw: biotic force burst - blunt damage + stagger. -->
@@ -6,7 +6,7 @@
     <defName>MebBiotic_Throw</defName>
     <label>throw</label>
     <description>Hurls a target with a burst of biotic force, dealing blunt damage and briefly staggering them. A cheap, spammable opener.</description>
-    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <iconPath>Abilities/Meb/Throw</iconPath>
     <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
     <castTime>20</castTime>
     <range>24.9</range>
@@ -46,7 +46,7 @@
     <defName>MebBiotic_Lift</defName>
     <label>lift</label>
     <description>Suspends a target helplessly in a biotic field, unable to move or act for a few seconds. Duration scales with the caster's psychic sensitivity.</description>
-    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <iconPath>Abilities/Meb/Lift</iconPath>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <castTime>25</castTime>
     <range>24.9</range>
@@ -67,7 +67,7 @@
         <entropyGain>30</entropyGain>
         <psychic>true</psychic>
         <prerequisites>
-          <li>MebBiotic_Throw</li>
+          <li>MebBiotic_Pull</li>
         </prerequisites>
       </li>
       <li Class="VEF.Abilities.AbilityExtension_Hediff">
@@ -82,7 +82,7 @@
     <defName>MebBiotic_Stasis</defName>
     <label>stasis</label>
     <description>Seals a target in a stasis bubble, removing them from the fight entirely for a short time. Deals no damage - pure lockdown.</description>
-    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <iconPath>Abilities/Meb/Stasis</iconPath>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <castTime>25</castTime>
     <range>24.9</range>
@@ -117,7 +117,7 @@
     <defName>MebBiotic_Focus</defName>
     <label>biotic focus</label>
     <description>Focuses the caster's biotic potential, temporarily raising their psychic sensitivity so their powers hit harder and last longer.</description>
-    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <iconPath>Abilities/Meb/Focus</iconPath>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <targetMode>Self</targetMode>
     <castTime>15</castTime>
@@ -125,11 +125,14 @@
     <modExtensions>
       <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
         <path>VPE_MebAdept</path>
-        <level>1</level>
+        <level>2</level>
         <order>2</order>
         <psyfocusCost>0.06</psyfocusCost>
         <entropyGain>10</entropyGain>
         <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Throw</li>
+        </prerequisites>
       </li>
       <li Class="VEF.Abilities.AbilityExtension_Hediff">
         <hediff>MebBiotic_Focus</hediff>
@@ -143,7 +146,7 @@
     <defName>MebBiotic_Lash</defName>
     <label>lash</label>
     <description>Snaps out a tendril of dark energy that batters a single target and staggers them.</description>
-    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <iconPath>Abilities/Meb/Lash</iconPath>
     <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
     <castTime>20</castTime>
     <range>24.9</range>
@@ -160,10 +163,13 @@
       <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
         <path>VPE_MebAdept</path>
         <level>2</level>
-        <order>2</order>
+        <order>3</order>
         <psyfocusCost>0.05</psyfocusCost>
         <entropyGain>18</entropyGain>
         <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Throw</li>
+        </prerequisites>
       </li>
       <li Class="VEF.Abilities.AbilityExtension_Explosion">
         <explosionRadius>1.5</explosionRadius>
@@ -183,7 +189,7 @@
     <defName>MebBiotic_HeavyThrow</defName>
     <label>heavy throw</label>
     <description>A far more powerful biotic throw, blasting a wider area for heavier damage and a stronger knockback.</description>
-    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <iconPath>Abilities/Meb/HeavyThrow</iconPath>
     <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
     <castTime>22</castTime>
     <range>24.9</range>
@@ -206,7 +212,7 @@
         <entropyGain>26</entropyGain>
         <psychic>true</psychic>
         <prerequisites>
-          <li>MebBiotic_Throw</li>
+          <li>MebBiotic_Lash</li>
         </prerequisites>
       </li>
       <li Class="VEF.Abilities.AbilityExtension_Explosion">
@@ -227,7 +233,7 @@
     <defName>MebBiotic_Pull</defName>
     <label>pull</label>
     <description>Yanks a target off their feet and drags them several cells toward the caster, interrupting whatever they were doing.</description>
-    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <iconPath>Abilities/Meb/Pull</iconPath>
     <abilityClass>MebBiotics.Ability_Pull</abilityClass>
     <castTime>20</castTime>
     <range>24.9</range>
@@ -246,6 +252,9 @@
         <psyfocusCost>0.05</psyfocusCost>
         <entropyGain>16</entropyGain>
         <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Throw</li>
+        </prerequisites>
       </li>
     </modExtensions>
   </VEF.Abilities.AbilityDef>
@@ -255,7 +264,7 @@
     <defName>MebBiotic_LiftGrenade</defName>
     <label>lift grenade</label>
     <description>Detonates a burst of dark energy over an area, suspending every enemy caught in it. Duration scales with the caster's psychic sensitivity.</description>
-    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <iconPath>Abilities/Meb/LiftGrenade</iconPath>
     <abilityClass>MebBiotics.Ability_AoEHediff</abilityClass>
     <castTime>30</castTime>
     <range>24.9</range>
@@ -276,6 +285,7 @@
         <psychic>true</psychic>
         <prerequisites>
           <li>MebBiotic_Lift</li>
+          <li>MebBiotic_HeavyThrow</li>
         </prerequisites>
       </li>
       <li Class="MebBiotics.AbilityExtension_AoEHediff">
@@ -290,7 +300,7 @@
     <defName>MebBiotic_AnnihilationField</defName>
     <label>annihilation field</label>
     <description>Wreathes the caster in a seething field of dark energy that continuously tears at every enemy nearby while it lasts.</description>
-    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <iconPath>Abilities/Meb/AnnihilationField</iconPath>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <targetMode>Self</targetMode>
     <castTime>25</castTime>
@@ -298,13 +308,13 @@
     <modExtensions>
       <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
         <path>VPE_MebAdept</path>
-        <level>5</level>
-        <order>1</order>
+        <level>4</level>
+        <order>3</order>
         <psyfocusCost>0.25</psyfocusCost>
         <entropyGain>50</entropyGain>
         <psychic>true</psychic>
         <prerequisites>
-          <li>MebBiotic_Stasis</li>
+          <li>MebBiotic_HeavyThrow</li>
         </prerequisites>
       </li>
       <li Class="VEF.Abilities.AbilityExtension_Hediff">
@@ -319,7 +329,7 @@
     <defName>MebBiotic_Singularity</defName>
     <label>singularity</label>
     <description>Launches a sphere of dark energy that warps gravity around it, suspending everyone nearby until it collapses. The singularity does not discriminate - keep your own people out of it.</description>
-    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <iconPath>Abilities/Meb/Singularity</iconPath>
     <abilityClass>VEF.Abilities.Ability_Spawn</abilityClass>
     <needsTicking>true</needsTicking>
     <castTime>60</castTime>
@@ -331,11 +341,12 @@
       <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
         <path>VPE_MebAdept</path>
         <level>5</level>
-        <order>2</order>
+        <order>1</order>
         <psyfocusCost>0.40</psyfocusCost>
         <entropyGain>70</entropyGain>
         <psychic>true</psychic>
         <prerequisites>
+          <li>MebBiotic_Stasis</li>
           <li>MebBiotic_LiftGrenade</li>
         </prerequisites>
       </li>

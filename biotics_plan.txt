@@ -33,12 +33,38 @@ Fixes to do: (please mark then as completed after completion)
 
 
 Longertm fixes and plans: (a note to not forget about them, necessary before publication)
--Graphifcs: Icons and UI (genes, psycasts windows background image)
--Visual effects of the biotics:
+[DONE] -Graphifcs: Icons and UI (genes, psycasts windows background image)
+  -> Every one of the 30 powers now has its own distinct icon (per-path colour + unique glyph),
+     new eezo-atom gene icon, new amp icon, and gradient path backgrounds with emblems
+     (950x1515; title text removed - it was covered by the UI and unreadable). Still programmatic
+     placeholders - hand-made art can swap in later, same paths.
+
+[DONE] -Visual effects of the biotics:
   +A visible barrier around a pawn (barrier psypower)
+  -> Barrier and Reinforced Barrier hediffs now render a glowing bubble on the pawn via VEF's
+     HediffCompProperties_Draw (Reinforced draws bigger, 2.2 vs 1.9). Texture: Things/Field/
+     BarrierBubble. VEF also ships HediffComp_Shield (real energy-pool shield with a bubble) -
+     noted as a future upgrade if we ever want absorb-pool barriers instead of armour offsets.
 
--Functionality of the amplifier and biotics (possible drawbacks if using biotics with no amp, but be careful to not affect regular psyscasts)
+[DONE] -Functionality of the amplifier and biotics (possible drawbacks if using biotics with no amp, but be careful to not affect regular psyscasts)
+  -> "Biotic strain": casting any power from the THREE BIOTIC PATHS ONLY without an installed amp
+     stacks a decaying hediff (+0.34/cast): pain 10%, above 0.67 severe (pain 25%, consciousness
+     -15%). Fades ~3 severity/day. Implemented as a Harmony postfix on VEF Ability.Cast gated by
+     the path defName, so vanilla/VPE psycasts are untouched (BioticStrain.cs).
 
--The trees are chaotically structured, this should be adressed after all unlocakble powers will be implemented
+[DONE] -The trees are chaotically structured, this should be adressed after all unlocakble powers will be implemented
+  -> Restructured in the visual style of VPE's own paths (analyzed all 16): varied row widths
+     (diamond shapes, not a uniform grid), EVERY non-entry power has prerequisites (so the UI
+     draws connecting lines everywhere), converging double-prerequisites for the woven look,
+     single capstones. Shapes:
+       Adept    1-3-2-3-1: Throw root -> Pull/Focus/Lash fan -> ... -> Singularity<-[Stasis+LiftGrenade]
+       Vanguard 1-3-3-2-1: Barrier root -> Flux/Charge/Leap -> ... -> Flare<-[Nova+Shockwave]
+       Sentinel 2-3-2-2-1: Warp+Mending roots (offense/support halves) -> BarrierSphere<-[ClusterWard+WarpField]
+     Some powers shifted a level to fit (Focus/Flux/Backlash down to L2, HeavyCharge to L3,
+     Ward to L3, Nova/ClusterWard/Annihilation to L4) - costs unchanged. Verified: 0 graph errors,
+     all prereqs point at lower-level same-path powers.
 
--Make the Asari xenotype potentially biotic since birth
+[DONE] -Make the Asari xenotype potentially biotic since birth
+  -> Already covered since slice 1: Patches/Asari_Xenotype.xml injects MebBioticGene into the
+     Asari XenotypeDef whenever ME(b) - Asari is loaded, so all asari (including newborns) carry
+     the gene. They still need an amp installed to cast safely (strain applies otherwise).

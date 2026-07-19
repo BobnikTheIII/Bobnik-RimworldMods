@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
   <!-- L1 Barrier: self biotic damage-reduction shield. -->
@@ -6,7 +6,7 @@
     <defName>MebBiotic_Barrier</defName>
     <label>barrier</label>
     <description>Wraps the caster in a biotic barrier, granting extra armour against all damage for a time. The foundation of the vanguard's aggressive style.</description>
-    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <iconPath>Abilities/Meb/Barrier</iconPath>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <targetMode>Self</targetMode>
     <castTime>15</castTime>
@@ -32,7 +32,7 @@
     <defName>MebBiotic_Slam</defName>
     <label>slam</label>
     <description>Lifts a single enemy and smashes them into the ground for heavy blunt damage and a knockdown.</description>
-    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <iconPath>Abilities/Meb/Slam</iconPath>
     <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
     <castTime>25</castTime>
     <range>24.9</range>
@@ -54,7 +54,7 @@
         <entropyGain>32</entropyGain>
         <psychic>true</psychic>
         <prerequisites>
-          <li>MebBiotic_Barrier</li>
+          <li>MebBiotic_Charge</li>
         </prerequisites>
       </li>
       <li Class="VEF.Abilities.AbilityExtension_Explosion">
@@ -75,7 +75,7 @@
     <defName>MebBiotic_Shockwave</defName>
     <label>shockwave</label>
     <description>Sends out a wave of biotic detonations, knocking up and staggering everyone caught in the blast.</description>
-    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <iconPath>Abilities/Meb/Shockwave</iconPath>
     <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
     <castTime>30</castTime>
     <range>24.9</range>
@@ -119,7 +119,7 @@
     <defName>MebBiotic_Nova</defName>
     <label>nova</label>
     <description>Discharges biotic energy in a violent explosion around the caster. The vanguard's signature finisher.</description>
-    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <iconPath>Abilities/Meb/Nova</iconPath>
     <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
     <targetMode>Self</targetMode>
     <castTime>20</castTime>
@@ -127,13 +127,13 @@
     <modExtensions>
       <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
         <path>VPE_MebVanguard</path>
-        <level>5</level>
-        <order>1</order>
+        <level>4</level>
+        <order>2</order>
         <psyfocusCost>0.20</psyfocusCost>
         <entropyGain>40</entropyGain>
         <psychic>true</psychic>
         <prerequisites>
-          <li>MebBiotic_Shockwave</li>
+          <li>MebBiotic_ReinforcedBarrier</li>
         </prerequisites>
       </li>
       <li Class="VEF.Abilities.AbilityExtension_Explosion">
@@ -152,7 +152,7 @@
     <defName>MebBiotic_Flux</defName>
     <label>biotic flux</label>
     <description>Channels mass effect fields into the legs for a short burst of movement speed - ideal for closing distance or repositioning.</description>
-    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <iconPath>Abilities/Meb/Flux</iconPath>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <targetMode>Self</targetMode>
     <castTime>15</castTime>
@@ -160,11 +160,14 @@
     <modExtensions>
       <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
         <path>VPE_MebVanguard</path>
-        <level>1</level>
-        <order>2</order>
+        <level>2</level>
+        <order>1</order>
         <psyfocusCost>0.10</psyfocusCost>
         <entropyGain>12</entropyGain>
         <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Barrier</li>
+        </prerequisites>
       </li>
       <li Class="VEF.Abilities.AbilityExtension_Hediff">
         <hediff>MebBiotic_Flux</hediff>
@@ -179,7 +182,7 @@
     <defName>MebBiotic_Charge</defName>
     <label>biotic charge</label>
     <description>Hurls the caster through space into a target, striking them on arrival and re-energizing the caster's biotic barrier. If the target dies, the charge carries on to the next nearest enemy.</description>
-    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <iconPath>Abilities/Meb/Charge</iconPath>
     <abilityClass>MebBiotics.Ability_BioticCharge</abilityClass>
     <castTime>25</castTime>
     <range>15.5</range>
@@ -190,10 +193,13 @@
       <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
         <path>VPE_MebVanguard</path>
         <level>2</level>
-        <order>1</order>
+        <order>2</order>
         <psyfocusCost>0.06</psyfocusCost>
         <entropyGain>28</entropyGain>
         <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Barrier</li>
+        </prerequisites>
       </li>
     </modExtensions>
   </VEF.Abilities.AbilityDef>
@@ -203,7 +209,7 @@
     <defName>MebBiotic_Leap</defName>
     <label>biotic leap</label>
     <description>A biotic-assisted leap to a chosen location, landing safely. Distance scales with psychic sensitivity.</description>
-    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <iconPath>Abilities/Meb/Leap</iconPath>
     <abilityClass>VanillaPsycastsExpanded.Ability_PowerLeap</abilityClass>
     <castTime>5</castTime>
     <targetMode>Location</targetMode>
@@ -216,10 +222,13 @@
       <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
         <path>VPE_MebVanguard</path>
         <level>2</level>
-        <order>2</order>
+        <order>3</order>
         <psyfocusCost>0.04</psyfocusCost>
         <entropyGain>16</entropyGain>
         <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Barrier</li>
+        </prerequisites>
       </li>
     </modExtensions>
   </VEF.Abilities.AbilityDef>
@@ -229,7 +238,7 @@
     <defName>MebBiotic_ReinforcedBarrier</defName>
     <label>reinforced barrier</label>
     <description>A denser biotic barrier that absorbs far more punishment and holds for longer.</description>
-    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <iconPath>Abilities/Meb/ReinforcedBarrier</iconPath>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <targetMode>Self</targetMode>
     <castTime>15</castTime>
@@ -258,7 +267,7 @@
     <defName>MebBiotic_HeavyCharge</defName>
     <label>heavy charge</label>
     <description>A more powerful biotic charge that crosses greater distances, re-energizes the caster's barrier, and keeps chaining between kills.</description>
-    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <iconPath>Abilities/Meb/HeavyCharge</iconPath>
     <abilityClass>MebBiotics.Ability_BioticCharge</abilityClass>
     <castTime>20</castTime>
     <range>22</range>
@@ -268,13 +277,14 @@
     <modExtensions>
       <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
         <path>VPE_MebVanguard</path>
-        <level>4</level>
-        <order>2</order>
+        <level>3</level>
+        <order>3</order>
         <psyfocusCost>0.10</psyfocusCost>
         <entropyGain>40</entropyGain>
         <psychic>true</psychic>
         <prerequisites>
           <li>MebBiotic_Charge</li>
+          <li>MebBiotic_Leap</li>
         </prerequisites>
       </li>
     </modExtensions>
@@ -285,7 +295,7 @@
     <defName>MebBiotic_Flare</defName>
     <label>flare</label>
     <description>Concentrates an enormous amount of dark energy into a single point and releases it in a devastating explosion.</description>
-    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <iconPath>Abilities/Meb/Flare</iconPath>
     <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
     <castTime>30</castTime>
     <range>24.9</range>
@@ -302,12 +312,13 @@
       <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
         <path>VPE_MebVanguard</path>
         <level>5</level>
-        <order>2</order>
+        <order>1</order>
         <psyfocusCost>0.35</psyfocusCost>
         <entropyGain>60</entropyGain>
         <psychic>true</psychic>
         <prerequisites>
           <li>MebBiotic_Nova</li>
+          <li>MebBiotic_Shockwave</li>
         </prerequisites>
       </li>
       <li Class="VEF.Abilities.AbilityExtension_Explosion">

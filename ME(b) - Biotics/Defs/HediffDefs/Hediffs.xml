@@ -2,7 +2,8 @@
 <Defs>
 
   <!-- Barrier: temporary biotic damage reduction. Applied to self (Barrier) or an ally (Ward,
-       Barrier Sphere). Duration is driven by the casting ability's durationTime. -->
+       Barrier Sphere). Duration is driven by the casting ability's durationTime. The Draw comp
+       renders a visible biotic bubble around the carrier (VEF draws it at the pawn's position). -->
   <HediffDef ParentName="PsycastHediffBase">
     <defName>MebBiotic_Barrier</defName>
     <label>biotic barrier</label>
@@ -17,6 +18,17 @@
         </statOffsets>
       </li>
     </stages>
+    <comps>
+      <li Class="VEF.Hediffs.HediffCompProperties_Draw">
+        <compClass>VEF.Hediffs.HediffComp_Draw</compClass>
+        <graphic>
+          <texPath>Things/Field/BarrierBubble</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <shaderType>MoteGlow</shaderType>
+          <drawSize>(1.9,1.9)</drawSize>
+        </graphic>
+      </li>
+    </comps>
   </HediffDef>
 
   <!-- Lift: suspends the target helplessly. Moving and Manipulation are pinned to zero. -->
@@ -164,6 +176,41 @@
     </comps>
   </HediffDef>
 
+  <!-- Biotic strain: accumulated by casting biotic powers WITHOUT an installed amp (applied by
+       the Harmony postfix in BioticStrain.cs, gated to the three biotic paths only). Decays on
+       its own; repeated ampless casting escalates from pain into dulled consciousness. -->
+  <HediffDef>
+    <defName>MebBiotic_Strain</defName>
+    <label>biotic strain</label>
+    <description>Unfocused mass effect fields channeled through bare nerve tissue. Casting biotics without an implanted amp is painful, and keeps getting worse. Fades over a few hours of rest.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <maxSeverity>1</maxSeverity>
+    <initialSeverity>0.01</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-3</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>strained</label>
+        <painOffset>0.10</painOffset>
+      </li>
+      <li>
+        <minSeverity>0.67</minSeverity>
+        <label>severe strain</label>
+        <painOffset>0.25</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
   <!-- ===== Expansion self-buffs ===== -->
 
   <!-- Biotic Focus (Adept): raises psychic sensitivity, strengthening subsequent casts. -->
@@ -196,7 +243,7 @@
     </stages>
   </HediffDef>
 
-  <!-- Reinforced Barrier (Vanguard): a stronger, longer Barrier. -->
+  <!-- Reinforced Barrier (Vanguard): a stronger, longer Barrier, with a denser bubble. -->
   <HediffDef ParentName="PsycastHediffBase">
     <defName>MebBiotic_ReinforcedBarrier</defName>
     <label>reinforced barrier</label>
@@ -211,6 +258,17 @@
         </statOffsets>
       </li>
     </stages>
+    <comps>
+      <li Class="VEF.Hediffs.HediffCompProperties_Draw">
+        <compClass>VEF.Hediffs.HediffComp_Draw</compClass>
+        <graphic>
+          <texPath>Things/Field/BarrierBubble</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <shaderType>MoteGlow</shaderType>
+          <drawSize>(2.2,2.2)</drawSize>
+        </graphic>
+      </li>
+    </comps>
   </HediffDef>
 
   <!-- Backlash (Sentinel): brief frontal biotic guard - very high armour for a short time. -->
