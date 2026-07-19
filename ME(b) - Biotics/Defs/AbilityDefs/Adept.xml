@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- L1 Throw: biotic force burst - blunt damage + stagger. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Throw</defName>
+    <label>throw</label>
+    <description>Hurls a target with a burst of biotic force, dealing blunt damage and briefly staggering them. A cheap, spammable opener.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
+    <castTime>20</castTime>
+    <range>24.9</range>
+    <radius>1.9</radius>
+    <durationTime>30</durationTime>
+    <goodwillImpact>-30</goodwillImpact>
+    <targetingParameters>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetHumans>true</canTargetHumans>
+      <canTargetAnimals>true</canTargetAnimals>
+      <canTargetMechs>true</canTargetMechs>
+    </targetingParameters>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebAdept</path>
+        <level>1</level>
+        <order>1</order>
+        <psyfocusCost>0.05</psyfocusCost>
+        <entropyGain>12</entropyGain>
+        <psychic>true</psychic>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Explosion">
+        <explosionRadius>1.9</explosionRadius>
+        <explosionDamageDef>Blunt</explosionDamageDef>
+        <casterImmune>true</casterImmune>
+        <explosionDamageAmount>8</explosionDamageAmount>
+        <explosionSound>Explosion_Stun</explosionSound>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Stun">
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L3 Lift: suspend a single target helplessly. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Lift</defName>
+    <label>lift</label>
+    <description>Suspends a target helplessly in a biotic field, unable to move or act for a few seconds. Duration scales with the caster's psychic sensitivity.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+    <castTime>25</castTime>
+    <range>24.9</range>
+    <durationTime>300</durationTime>
+    <goodwillImpact>-30</goodwillImpact>
+    <targetingParameters>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetHumans>true</canTargetHumans>
+      <canTargetAnimals>true</canTargetAnimals>
+      <canTargetMechs>true</canTargetMechs>
+    </targetingParameters>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebAdept</path>
+        <level>3</level>
+        <order>1</order>
+        <psyfocusCost>0.10</psyfocusCost>
+        <entropyGain>30</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Throw</li>
+        </prerequisites>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>MebBiotic_Lift</hediff>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L4 Stasis: full lockdown of a single target (stun). -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Stasis</defName>
+    <label>stasis</label>
+    <description>Seals a target in a stasis bubble, removing them from the fight entirely for a short time. Deals no damage - pure lockdown.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+    <castTime>25</castTime>
+    <range>24.9</range>
+    <durationTime>360</durationTime>
+    <goodwillImpact>-30</goodwillImpact>
+    <targetingParameters>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetHumans>true</canTargetHumans>
+      <canTargetAnimals>true</canTargetAnimals>
+      <canTargetMechs>true</canTargetMechs>
+    </targetingParameters>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebAdept</path>
+        <level>4</level>
+        <order>1</order>
+        <psyfocusCost>0.12</psyfocusCost>
+        <entropyGain>35</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Lift</li>
+        </prerequisites>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Stun">
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L1 Biotic Focus: self buff, raises psychic sensitivity. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Focus</defName>
+    <label>biotic focus</label>
+    <description>Focuses the caster's biotic potential, temporarily raising their psychic sensitivity so their powers hit harder and last longer.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+    <targetMode>Self</targetMode>
+    <castTime>15</castTime>
+    <durationTime>900</durationTime>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebAdept</path>
+        <level>1</level>
+        <order>2</order>
+        <psyfocusCost>0.06</psyfocusCost>
+        <entropyGain>10</entropyGain>
+        <psychic>true</psychic>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>MebBiotic_Focus</hediff>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L2 Lash: single-target biotic whip (small biotic burst + stagger). -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Lash</defName>
+    <label>lash</label>
+    <description>Snaps out a tendril of dark energy that batters a single target and staggers them.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
+    <castTime>20</castTime>
+    <range>24.9</range>
+    <radius>1.5</radius>
+    <durationTime>30</durationTime>
+    <goodwillImpact>-30</goodwillImpact>
+    <targetingParameters>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetHumans>true</canTargetHumans>
+      <canTargetAnimals>true</canTargetAnimals>
+      <canTargetMechs>true</canTargetMechs>
+    </targetingParameters>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebAdept</path>
+        <level>2</level>
+        <order>2</order>
+        <psyfocusCost>0.05</psyfocusCost>
+        <entropyGain>18</entropyGain>
+        <psychic>true</psychic>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Explosion">
+        <explosionRadius>1.5</explosionRadius>
+        <explosionDamageDef>Blunt</explosionDamageDef>
+        <casterImmune>true</casterImmune>
+        <explosionDamageAmount>10</explosionDamageAmount>
+        <explosionSound>Explosion_Stun</explosionSound>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Stun">
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L3 Heavy Throw: upgraded Throw - bigger burst + stronger knockback. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_HeavyThrow</defName>
+    <label>heavy throw</label>
+    <description>A far more powerful biotic throw, blasting a wider area for heavier damage and a stronger knockback.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
+    <castTime>22</castTime>
+    <range>24.9</range>
+    <radius>2.4</radius>
+    <durationTime>30</durationTime>
+    <goodwillImpact>-30</goodwillImpact>
+    <targetingParameters>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetHumans>true</canTargetHumans>
+      <canTargetAnimals>true</canTargetAnimals>
+      <canTargetMechs>true</canTargetMechs>
+      <canTargetLocations>true</canTargetLocations>
+    </targetingParameters>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebAdept</path>
+        <level>3</level>
+        <order>2</order>
+        <psyfocusCost>0.08</psyfocusCost>
+        <entropyGain>26</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Throw</li>
+        </prerequisites>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Explosion">
+        <explosionRadius>2.4</explosionRadius>
+        <explosionDamageDef>Blunt</explosionDamageDef>
+        <casterImmune>true</casterImmune>
+        <explosionDamageAmount>16</explosionDamageAmount>
+        <explosionSound>Explosion_Stun</explosionSound>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Stun">
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L2 Pull: yank the target toward the caster (custom mover + stagger, no damage). -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Pull</defName>
+    <label>pull</label>
+    <description>Yanks a target off their feet and drags them several cells toward the caster, interrupting whatever they were doing.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>MebBiotics.Ability_Pull</abilityClass>
+    <castTime>20</castTime>
+    <range>24.9</range>
+    <goodwillImpact>-30</goodwillImpact>
+    <targetingParameters>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetHumans>true</canTargetHumans>
+      <canTargetAnimals>true</canTargetAnimals>
+      <canTargetMechs>true</canTargetMechs>
+    </targetingParameters>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebAdept</path>
+        <level>2</level>
+        <order>1</order>
+        <psyfocusCost>0.05</psyfocusCost>
+        <entropyGain>16</entropyGain>
+        <psychic>true</psychic>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L4 Lift Grenade: area Lift - suspend every enemy in the target zone. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_LiftGrenade</defName>
+    <label>lift grenade</label>
+    <description>Detonates a burst of dark energy over an area, suspending every enemy caught in it. Duration scales with the caster's psychic sensitivity.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>MebBiotics.Ability_AoEHediff</abilityClass>
+    <castTime>30</castTime>
+    <range>24.9</range>
+    <radius>3.4</radius>
+    <durationTime>300</durationTime>
+    <durationTimeStatFactors>
+      <PsychicSensitivity>1</PsychicSensitivity>
+    </durationTimeStatFactors>
+    <goodwillImpact>-40</goodwillImpact>
+    <targetMode>Location</targetMode>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebAdept</path>
+        <level>4</level>
+        <order>2</order>
+        <psyfocusCost>0.14</psyfocusCost>
+        <entropyGain>42</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Lift</li>
+        </prerequisites>
+      </li>
+      <li Class="MebBiotics.AbilityExtension_AoEHediff">
+        <hediff>MebBiotic_Lift</hediff>
+        <affectEnemies>true</affectEnemies>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L5 Annihilation Field: mobile damage aura around the caster. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_AnnihilationField</defName>
+    <label>annihilation field</label>
+    <description>Wreathes the caster in a seething field of dark energy that continuously tears at every enemy nearby while it lasts.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+    <targetMode>Self</targetMode>
+    <castTime>25</castTime>
+    <durationTime>900</durationTime>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebAdept</path>
+        <level>5</level>
+        <order>1</order>
+        <psyfocusCost>0.25</psyfocusCost>
+        <entropyGain>50</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Stasis</li>
+        </prerequisites>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>MebBiotic_AnnihilationField</hediff>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L5 Singularity (capstone): spawn a gravity well that Lifts everything inside. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Singularity</defName>
+    <label>singularity</label>
+    <description>Launches a sphere of dark energy that warps gravity around it, suspending everyone nearby until it collapses. The singularity does not discriminate - keep your own people out of it.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Spawn</abilityClass>
+    <needsTicking>true</needsTicking>
+    <castTime>60</castTime>
+    <range>24.9</range>
+    <radius>3.9</radius>
+    <goodwillImpact>-50</goodwillImpact>
+    <targetMode>Location</targetMode>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebAdept</path>
+        <level>5</level>
+        <order>2</order>
+        <psyfocusCost>0.40</psyfocusCost>
+        <entropyGain>70</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_LiftGrenade</li>
+        </prerequisites>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Spawn">
+        <thing>MebBiotic_SingularityField</thing>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+</Defs>

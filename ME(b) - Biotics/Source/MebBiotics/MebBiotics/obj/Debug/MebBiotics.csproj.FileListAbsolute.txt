@@ -1,0 +1,4 @@
+c:\Workspace\Bobnik-RimworldMods\ME(b) - Biotics\Source\MebBiotics\MebBiotics\obj\Debug\MebBiotics.csproj.AssemblyReference.cache
+c:\Workspace\Bobnik-RimworldMods\ME(b) - Biotics\Source\MebBiotics\MebBiotics\obj\Debug\MebBiotics.csproj.CoreCompileInputs.cache
+C:\Workspace\Bobnik-RimworldMods\ME(b) - Biotics\Assemblies\MebBiotics.dll
+C:\Workspace\Bobnik-RimworldMods\ME(b) - Biotics\Source\MebBiotics\MebBiotics\obj\Debug\MebBiotics.dll

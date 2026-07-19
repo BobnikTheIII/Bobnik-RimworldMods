@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Eezo Nodules: the "biotic potential" gate. Grants no power by itself - it unlocks the
+       biotic psycast paths (via PsycasterPathDef.requiredGene) and raises hunger (biotics burn
+       calories fast). The Biotic Amp implant is what actually enables casting. -->
+  <GeneDef>
+    <defName>MebBioticGene</defName>
+    <label>eezo nodules</label>
+    <description>Nodules of element zero are woven through this carrier's nervous system, giving them the potential to manipulate mass effect fields. On its own the gene does nothing - a biotic amp implant is required to actually channel biotic power. Unlocks the Adept, Vanguard and Sentinel biotic psycast paths.</description>
+    <iconPath>GeneIcons/MebBioticGene</iconPath>
+    <displayCategory>MebBiotics</displayCategory>
+    <displayOrderInCategory>0</displayOrderInCategory>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <marketValueFactor>1.2</marketValueFactor>
+  </GeneDef>
+
+</Defs>

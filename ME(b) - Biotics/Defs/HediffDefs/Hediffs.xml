@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Barrier: temporary biotic damage reduction. Applied to self (Barrier) or an ally (Ward,
+       Barrier Sphere). Duration is driven by the casting ability's durationTime. -->
+  <HediffDef ParentName="PsycastHediffBase">
+    <defName>MebBiotic_Barrier</defName>
+    <label>biotic barrier</label>
+    <description>A shimmering biotic field absorbs incoming damage, granting extra armour until it fades.</description>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.40</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Lift: suspends the target helplessly. Moving and Manipulation are pinned to zero. -->
+  <HediffDef ParentName="PsycastHediffBase">
+    <defName>MebBiotic_Lift</defName>
+    <label>lifted</label>
+    <description>Suspended in a biotic mass effect field, unable to move or act.</description>
+    <isBad>true</isBad>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0</setMax>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <setMax>0</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Warp: biotic DoT + armour shred. The ticking damage ignores armour (MebBiotics DoT comp);
+       the stat offsets soften the target for follow-up fire. -->
+  <HediffDef ParentName="PsycastHediffBase">
+    <defName>MebBiotic_Warp</defName>
+    <label>warped</label>
+    <description>A tearing biotic field rips at armour and flesh, dealing continuous damage and leaving the target badly exposed.</description>
+    <isBad>true</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Sharp>-0.30</ArmorRating_Sharp>
+          <ArmorRating_Blunt>-0.30</ArmorRating_Blunt>
+          <ArmorRating_Heat>-0.30</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="MebBiotics.HediffCompProperties_BioticDoT">
+        <damagePerInterval>2</damagePerInterval>
+        <tickInterval>60</tickInterval>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Reave: stronger short DoT; the caster's self heal-over-time is a separate hediff applied
+       via applyToCaster on the ability. -->
+  <HediffDef ParentName="PsycastHediffBase">
+    <defName>MebBiotic_Reave</defName>
+    <label>reaved</label>
+    <description>Dark energy siphons the target's life force, dealing continuous damage.</description>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="MebBiotics.HediffCompProperties_BioticDoT">
+        <damagePerInterval>2.5</damagePerInterval>
+        <tickInterval>60</tickInterval>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Reave's stolen vitality, applied to the caster. -->
+  <HediffDef ParentName="PsycastHediffBase">
+    <defName>MebBiotic_ReaveVigor</defName>
+    <label>reave vigor</label>
+    <description>Life force siphoned from a reaved target knits the caster's wounds.</description>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="MebBiotics.HediffCompProperties_BioticHoT">
+        <healPerInterval>3</healPerInterval>
+        <tickInterval>60</tickInterval>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Dark Channel: long DoT that jumps to a nearby member of the victim's group on death. -->
+  <HediffDef ParentName="PsycastHediffBase">
+    <defName>MebBiotic_DarkChannel</defName>
+    <label>dark channel</label>
+    <description>A persistent lance of dark energy gnaws at the target. When its victim dies, it leaps to a nearby ally of theirs.</description>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="MebBiotics.HediffCompProperties_BioticDoT">
+        <damagePerInterval>2.6</damagePerInterval>
+        <tickInterval>60</tickInterval>
+        <jumpOnDeath>true</jumpOnDeath>
+        <jumpRadius>8.9</jumpRadius>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Biotic Mending: gentle heal-over-time for an ally. -->
+  <HediffDef ParentName="PsycastHediffBase">
+    <defName>MebBiotic_Mending</defName>
+    <label>biotic mending</label>
+    <description>Carefully modulated mass effect fields knit wounds closed over time.</description>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="MebBiotics.HediffCompProperties_BioticHoT">
+        <healPerInterval>0.5</healPerInterval>
+        <tickInterval>60</tickInterval>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Annihilation Field: mobile damage aura carried by the caster. -->
+  <HediffDef ParentName="PsycastHediffBase">
+    <defName>MebBiotic_AnnihilationField</defName>
+    <label>annihilation field</label>
+    <description>A seething field of dark energy surrounds the carrier, continuously tearing at every enemy nearby.</description>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="MebBiotics.HediffCompProperties_BioticAura">
+        <radius>3.9</radius>
+        <damagePerInterval>1.5</damagePerInterval>
+        <tickInterval>60</tickInterval>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Biotic Amp implant: permanent brain implant. Grants psylink level 1 on install (the entry
+       ticket into casting - higher levels stay on normal VPE progression) and boosts psychic
+       sensitivity, which lengthens biotic durations/CC and raises the neural-heat ceiling. -->
+  <HediffDef>
+    <defName>MebBiotic_AmpImplant</defName>
+    <label>biotic amp</label>
+    <description>An implanted biotic amplifier lets the carrier focus and channel mass effect fields. Grants a basic psylink and boosts psychic sensitivity.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.3, 0.8, 1)</defaultLabelColor>
+    <isBad>false</isBad>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages>
+      <li>
+        <statOffsets>
+          <PsychicSensitivity>0.25</PsychicSensitivity>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="MebBiotics.HediffCompProperties_GrantPsylink" />
+    </comps>
+  </HediffDef>
+
+  <!-- ===== Expansion self-buffs ===== -->
+
+  <!-- Biotic Focus (Adept): raises psychic sensitivity, strengthening subsequent casts. -->
+  <HediffDef ParentName="PsycastHediffBase">
+    <defName>MebBiotic_Focus</defName>
+    <label>biotic focus</label>
+    <description>Heightened biotic concentration - psychic sensitivity is temporarily raised, strengthening the caster's powers.</description>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <PsychicSensitivity>0.15</PsychicSensitivity>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Biotic Flux (Vanguard): burst of movement speed to reposition. -->
+  <HediffDef ParentName="PsycastHediffBase">
+    <defName>MebBiotic_Flux</defName>
+    <label>biotic flux</label>
+    <description>Mass effect fields lighten the body, granting a burst of movement speed.</description>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statFactors>
+          <MoveSpeed>1.6</MoveSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Reinforced Barrier (Vanguard): a stronger, longer Barrier. -->
+  <HediffDef ParentName="PsycastHediffBase">
+    <defName>MebBiotic_ReinforcedBarrier</defName>
+    <label>reinforced barrier</label>
+    <description>A denser biotic barrier, absorbing significantly more damage than a standard barrier.</description>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Sharp>0.60</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.60</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.60</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Backlash (Sentinel): brief frontal biotic guard - very high armour for a short time. -->
+  <HediffDef ParentName="PsycastHediffBase">
+    <defName>MebBiotic_Backlash</defName>
+    <label>backlash</label>
+    <description>A focused frontal biotic guard, briefly deflecting most incoming damage.</description>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.75</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

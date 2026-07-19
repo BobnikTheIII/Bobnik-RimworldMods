@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_MebAdept</defName>
+    <label>adept</label>
+    <description>Adept biotics focus on control: lifting, suspending and hurling enemies with mass effect fields to keep them helpless.</description>
+    <background>UI/Backgrounds/MebAdept</background>
+    <altBackground>UI/Backgrounds/MebAdept</altBackground>
+    <tab>Psycasts</tab>
+    <tooltip>Adepts are dedicated biotic controllers. Exposure to element zero lets them warp gravity itself - throwing, pulling and suspending their foes, and trapping whole squads in singularities. Requires the Eezo Nodules gene.</tooltip>
+    <requiredGene>MebBioticGene</requiredGene>
+    <lockedReason>Biotic only</lockedReason>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+
+  <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_MebVanguard</defName>
+    <label>vanguard</label>
+    <description>Vanguard biotics charge into the fight, wrapped in a biotic barrier, ending it with close-range detonations.</description>
+    <background>UI/Backgrounds/MebVanguard</background>
+    <altBackground>UI/Backgrounds/MebVanguard</altBackground>
+    <tab>Psycasts</tab>
+    <tooltip>Vanguards weaponise biotics up close. They shield themselves with barriers, close distance in an instant, and discharge that stored energy in devastating slams and novas. Requires the Eezo Nodules gene.</tooltip>
+    <requiredGene>MebBioticGene</requiredGene>
+    <lockedReason>Biotic only</lockedReason>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+
+  <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_MebSentinel</defName>
+    <label>sentinel</label>
+    <description>Sentinel biotics wear enemies down with warp fields and keep allies alive with defensive wards.</description>
+    <background>UI/Backgrounds/MebSentinel</background>
+    <altBackground>UI/Backgrounds/MebSentinel</altBackground>
+    <tab>Psycasts</tab>
+    <tooltip>Sentinels blend attrition and protection - shredding armour with warp, draining life with reave, and projecting protective biotic wards over their allies. Requires the Eezo Nodules gene.</tooltip>
+    <requiredGene>MebBioticGene</requiredGene>
+    <lockedReason>Biotic only</lockedReason>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+
+</Defs>

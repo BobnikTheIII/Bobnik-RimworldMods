@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Persistent biotic field things, spawned by VEF.Abilities.Ability_Spawn. The field behavior
+       (apply/refresh a hediff on every pawn in radius) is MebBiotics.CompBioticField; lifetime is
+       vanilla CompLifespan. Ethereal: untargetable scenery, not a building. -->
+
+  <ThingDef Name="MebBioticFieldBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+    <rotatable>false</rotatable>
+    <drawOffscreen>true</drawOffscreen>
+  </ThingDef>
+
+  <!-- Singularity: everything caught inside is Lifted for as long as it stays in the well. -->
+  <ThingDef ParentName="MebBioticFieldBase">
+    <defName>MebBiotic_SingularityField</defName>
+    <label>singularity</label>
+    <description>A sphere of dark energy warping gravity around it. Anyone caught inside is suspended helplessly.</description>
+    <graphicData>
+      <texPath>Things/Field/SingularityField</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>(8,8)</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>600</lifespanTicks>
+      </li>
+      <li Class="MebBiotics.CompProperties_BioticField">
+        <radius>3.9</radius>
+        <hediff>MebBiotic_Lift</hediff>
+        <tickInterval>30</tickInterval>
+        <hediffDuration>90</hediffDuration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Barrier Sphere: allies (and anyone else) standing inside keep a refreshed Barrier. -->
+  <ThingDef ParentName="MebBioticFieldBase">
+    <defName>MebBiotic_BarrierSphereField</defName>
+    <label>barrier sphere</label>
+    <description>A stationary dome of biotic energy. Anyone inside is wrapped in a protective barrier for as long as they remain.</description>
+    <graphicData>
+      <texPath>Things/Field/BarrierSphereField</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>(8,8)</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>900</lifespanTicks>
+      </li>
+      <li Class="MebBiotics.CompProperties_BioticField">
+        <radius>3.9</radius>
+        <hediff>MebBiotic_Barrier</hediff>
+        <tickInterval>30</tickInterval>
+        <hediffDuration>120</hediffDuration>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

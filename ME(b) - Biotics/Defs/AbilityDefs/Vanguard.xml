@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- L1 Barrier: self biotic damage-reduction shield. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Barrier</defName>
+    <label>barrier</label>
+    <description>Wraps the caster in a biotic barrier, granting extra armour against all damage for a time. The foundation of the vanguard's aggressive style.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+    <targetMode>Self</targetMode>
+    <castTime>15</castTime>
+    <durationTime>1800</durationTime>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebVanguard</path>
+        <level>1</level>
+        <order>1</order>
+        <psyfocusCost>0.10</psyfocusCost>
+        <entropyGain>14</entropyGain>
+        <psychic>true</psychic>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>MebBiotic_Barrier</hediff>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L3 Slam: lift and smash one enemy - high blunt + knockdown. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Slam</defName>
+    <label>slam</label>
+    <description>Lifts a single enemy and smashes them into the ground for heavy blunt damage and a knockdown.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
+    <castTime>25</castTime>
+    <range>24.9</range>
+    <radius>1.5</radius>
+    <durationTime>60</durationTime>
+    <goodwillImpact>-30</goodwillImpact>
+    <targetingParameters>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetHumans>true</canTargetHumans>
+      <canTargetAnimals>true</canTargetAnimals>
+      <canTargetMechs>true</canTargetMechs>
+    </targetingParameters>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebVanguard</path>
+        <level>3</level>
+        <order>1</order>
+        <psyfocusCost>0.08</psyfocusCost>
+        <entropyGain>32</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Barrier</li>
+        </prerequisites>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Explosion">
+        <explosionRadius>1.5</explosionRadius>
+        <explosionDamageDef>Blunt</explosionDamageDef>
+        <casterImmune>true</casterImmune>
+        <explosionDamageAmount>20</explosionDamageAmount>
+        <explosionSound>Explosion_Thump</explosionSound>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Stun">
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L4 Shockwave: radial biotic blast (approximates the ME ground line). -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Shockwave</defName>
+    <label>shockwave</label>
+    <description>Sends out a wave of biotic detonations, knocking up and staggering everyone caught in the blast.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
+    <castTime>30</castTime>
+    <range>24.9</range>
+    <radius>3.4</radius>
+    <durationTime>45</durationTime>
+    <goodwillImpact>-40</goodwillImpact>
+    <targetingParameters>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetHumans>true</canTargetHumans>
+      <canTargetAnimals>true</canTargetAnimals>
+      <canTargetMechs>true</canTargetMechs>
+      <canTargetLocations>true</canTargetLocations>
+    </targetingParameters>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebVanguard</path>
+        <level>4</level>
+        <order>1</order>
+        <psyfocusCost>0.10</psyfocusCost>
+        <entropyGain>40</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Slam</li>
+        </prerequisites>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Explosion">
+        <explosionRadius>3.4</explosionRadius>
+        <explosionDamageDef>Blunt</explosionDamageDef>
+        <casterImmune>true</casterImmune>
+        <explosionDamageAmount>12</explosionDamageAmount>
+        <explosionSound>Explosion_Stun</explosionSound>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Stun">
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L5 Nova: self-centred biotic explosion. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Nova</defName>
+    <label>nova</label>
+    <description>Discharges biotic energy in a violent explosion around the caster. The vanguard's signature finisher.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
+    <targetMode>Self</targetMode>
+    <castTime>20</castTime>
+    <radius>3.4</radius>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebVanguard</path>
+        <level>5</level>
+        <order>1</order>
+        <psyfocusCost>0.20</psyfocusCost>
+        <entropyGain>40</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Shockwave</li>
+        </prerequisites>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Explosion">
+        <explosionRadius>3.4</explosionRadius>
+        <onCaster>true</onCaster>
+        <explosionDamageDef>Blunt</explosionDamageDef>
+        <casterImmune>true</casterImmune>
+        <explosionDamageAmount>14</explosionDamageAmount>
+        <explosionSound>Explosion_Stun</explosionSound>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L1 Biotic Flux: self move-speed burst. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Flux</defName>
+    <label>biotic flux</label>
+    <description>Channels mass effect fields into the legs for a short burst of movement speed - ideal for closing distance or repositioning.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+    <targetMode>Self</targetMode>
+    <castTime>15</castTime>
+    <durationTime>1200</durationTime>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebVanguard</path>
+        <level>1</level>
+        <order>2</order>
+        <psyfocusCost>0.10</psyfocusCost>
+        <entropyGain>12</entropyGain>
+        <psychic>true</psychic>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>MebBiotic_Flux</hediff>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L2 Biotic Charge: teleport-strike (VPE Killskip behavior; chains on kill) that also
+       refreshes the caster's Barrier on cast - the signature vanguard loop. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Charge</defName>
+    <label>biotic charge</label>
+    <description>Hurls the caster through space into a target, striking them on arrival and re-energizing the caster's biotic barrier. If the target dies, the charge carries on to the next nearest enemy.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>MebBiotics.Ability_BioticCharge</abilityClass>
+    <castTime>25</castTime>
+    <range>15.5</range>
+    <targetMode>Pawn</targetMode>
+    <needsTicking>true</needsTicking>
+    <goodwillImpact>-30</goodwillImpact>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebVanguard</path>
+        <level>2</level>
+        <order>1</order>
+        <psyfocusCost>0.06</psyfocusCost>
+        <entropyGain>28</entropyGain>
+        <psychic>true</psychic>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L2 Biotic Leap: gap-closer to a location (reuses VPE PowerLeap). -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Leap</defName>
+    <label>biotic leap</label>
+    <description>A biotic-assisted leap to a chosen location, landing safely. Distance scales with psychic sensitivity.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VanillaPsycastsExpanded.Ability_PowerLeap</abilityClass>
+    <castTime>5</castTime>
+    <targetMode>Location</targetMode>
+    <range>14.9</range>
+    <rangeStatFactors>
+      <PsychicSensitivity>1</PsychicSensitivity>
+    </rangeStatFactors>
+    <castSound>VPE_PowerLeap_Cast</castSound>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebVanguard</path>
+        <level>2</level>
+        <order>2</order>
+        <psyfocusCost>0.04</psyfocusCost>
+        <entropyGain>16</entropyGain>
+        <psychic>true</psychic>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L3 Reinforced Barrier: stronger, longer self barrier. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_ReinforcedBarrier</defName>
+    <label>reinforced barrier</label>
+    <description>A denser biotic barrier that absorbs far more punishment and holds for longer.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+    <targetMode>Self</targetMode>
+    <castTime>15</castTime>
+    <durationTime>2400</durationTime>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebVanguard</path>
+        <level>3</level>
+        <order>2</order>
+        <psyfocusCost>0.14</psyfocusCost>
+        <entropyGain>30</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Barrier</li>
+        </prerequisites>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>MebBiotic_ReinforcedBarrier</hediff>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L4 Heavy Charge: upgraded Biotic Charge - longer range, harder hit, same barrier refresh. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_HeavyCharge</defName>
+    <label>heavy charge</label>
+    <description>A more powerful biotic charge that crosses greater distances, re-energizes the caster's barrier, and keeps chaining between kills.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>MebBiotics.Ability_BioticCharge</abilityClass>
+    <castTime>20</castTime>
+    <range>22</range>
+    <targetMode>Pawn</targetMode>
+    <needsTicking>true</needsTicking>
+    <goodwillImpact>-30</goodwillImpact>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebVanguard</path>
+        <level>4</level>
+        <order>2</order>
+        <psyfocusCost>0.10</psyfocusCost>
+        <entropyGain>40</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Charge</li>
+        </prerequisites>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L5 Flare: massive biotic explosion. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Flare</defName>
+    <label>flare</label>
+    <description>Concentrates an enormous amount of dark energy into a single point and releases it in a devastating explosion.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
+    <castTime>30</castTime>
+    <range>24.9</range>
+    <radius>4.9</radius>
+    <goodwillImpact>-40</goodwillImpact>
+    <targetingParameters>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetHumans>true</canTargetHumans>
+      <canTargetAnimals>true</canTargetAnimals>
+      <canTargetMechs>true</canTargetMechs>
+      <canTargetLocations>true</canTargetLocations>
+    </targetingParameters>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebVanguard</path>
+        <level>5</level>
+        <order>2</order>
+        <psyfocusCost>0.35</psyfocusCost>
+        <entropyGain>60</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Nova</li>
+        </prerequisites>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Explosion">
+        <explosionRadius>4.9</explosionRadius>
+        <explosionDamageDef>Blunt</explosionDamageDef>
+        <casterImmune>true</casterImmune>
+        <explosionDamageAmount>26</explosionDamageAmount>
+        <explosionSound>Explosion_Bomb</explosionSound>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+</Defs>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- Asari are naturally biotic: inject the eezo nodules gene into their xenotype, but only when
+       the ME(b) - Asari mod is loaded, so ME(b) - Biotics stays standalone and non-breaking. -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>ME(b) - Asari</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/XenotypeDef[defName="Asari"]/genes</xpath>
+      <value>
+        <li>MebBioticGene</li>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>

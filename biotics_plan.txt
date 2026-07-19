@@ -1,0 +1,44 @@
+A Rimworld mod that adds biotic powers from mass effect series (https://masseffect.fandom.com/wiki/Biotics) to rimworld.
+Their adaptation in the game should try to imitate the effect to the extent of the game's abilities.
+The mod should rely on the Vanilla Psycasts Expanded mod (https://github.com/Vanilla-Expanded/VanillaPsycastsExpanded) integrating itself into the gameplay aspects it offers.
+Please keep in mind balancing the game.
+
+Notes:
+[DONE] Ooze modules to have 0 metabolic efficiency, +2 complexity
+  -> MebBioticGene now: biostatMet 0, biostatCpx 2.
+
+Fixes to do: (please mark then as completed after completion)
+[DONE] -Locked button on psycasts page goes out of bounds of the card assigned to it (the text is too long).
+  -> lockedReason on all three paths set to "Biotic only".
+
+
+[DONE] -errors when using Throw, Slam, Schockwave, Nova psypower:
+  +"Tried to PlayOneShot with null SoundDef. Info=(World from (116, 0, 137), Map_0)"
+  -> AbilityExtension_Explosion has no sound fallback; added <explosionSound> (Explosion_Stun /
+     Explosion_Thump) and explicit <explosionDamageAmount> to all four explosion abilities.
+
+[DONE] -The missing image on the backround card of psycast trees in the psycasts window causes the whole tree to be squished, because the windows is scaled wrong.
+  -> VPE path backgrounds are 950x1515 (portrait); placeholders were 512x256. Regenerated at 950x1515.
+
+[DONE] -No "install AMP" otion in the operations list on a pawn
+  -> Recipe now inherits SurgeryInstallImplantBase (recipeUsers=Human) + removed invalid
+     <targetsBodyParts>. NOTE: the operation is gated behind the "biotic amplification" research
+     (MebBiotic_AmpResearch) - it won't show until that research is finished. Dev-complete it to test.
+
+[DONE] -Save error: "Ability_MebBiotic_Nova ... referenced (currentlyCasting) but is not deep-saved."
+  -> Nova is an onCaster explosion and casterImmune defaults to false, so the Vanguard was caught in
+     their own blast (self-damage), orphaning the cast state. Added <casterImmune>true</casterImmune>
+     to all 8 biotic explosions (a caster's own biotics no longer hurt them). Re-test: cast Nova,
+     save, reload - the reference error should be gone.
+
+
+Longertm fixes and plans: (a note to not forget about them, necessary before publication)
+-Graphifcs: Icons and UI (genes, psycasts windows background image)
+-Visual effects of the biotics:
+  +A visible barrier around a pawn (barrier psypower)
+
+-Functionality of the amplifier and biotics (possible drawbacks if using biotics with no amp, but be careful to not affect regular psyscasts)
+
+-The trees are chaotically structured, this should be adressed after all unlocakble powers will be implemented
+
+-Make the Asari xenotype potentially biotic since birth

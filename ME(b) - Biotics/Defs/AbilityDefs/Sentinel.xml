@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- L1 Warp (slice 1): biotic armour-shred debuff. DoT damage is added in the C# slice. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Warp</defName>
+    <label>warp</label>
+    <description>Tears at a target with an unstable biotic field, stripping their armour and leaving them exposed to follow-up damage. Especially effective against armoured and mechanoid foes.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+    <castTime>20</castTime>
+    <range>24.9</range>
+    <durationTime>300</durationTime>
+    <goodwillImpact>-30</goodwillImpact>
+    <targetingParameters>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetHumans>true</canTargetHumans>
+      <canTargetAnimals>true</canTargetAnimals>
+      <canTargetMechs>true</canTargetMechs>
+    </targetingParameters>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebSentinel</path>
+        <level>1</level>
+        <order>1</order>
+        <psyfocusCost>0.05</psyfocusCost>
+        <entropyGain>14</entropyGain>
+        <psychic>true</psychic>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>MebBiotic_Warp</hediff>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L4 Biotic Ward: project a barrier onto an ally. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Ward</defName>
+    <label>biotic ward</label>
+    <description>Projects a protective biotic barrier onto an ally, granting them extra armour for a time.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+    <castTime>30</castTime>
+    <range>24.9</range>
+    <durationTime>1800</durationTime>
+    <targetingParameters>
+      <canTargetSelf>true</canTargetSelf>
+      <canTargetHumans>true</canTargetHumans>
+      <canTargetAnimals>true</canTargetAnimals>
+      <canTargetMechs>false</canTargetMechs>
+    </targetingParameters>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebSentinel</path>
+        <level>4</level>
+        <order>2</order>
+        <psyfocusCost>0.10</psyfocusCost>
+        <entropyGain>40</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Warp</li>
+        </prerequisites>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>MebBiotic_Barrier</hediff>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L2 Lance: focused single-target biotic burst. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Lance</defName>
+    <label>lance</label>
+    <description>Fires a tight lance of dark energy at a single target for concentrated biotic damage.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
+    <castTime>20</castTime>
+    <range>28</range>
+    <radius>1.2</radius>
+    <goodwillImpact>-30</goodwillImpact>
+    <targetingParameters>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetHumans>true</canTargetHumans>
+      <canTargetAnimals>true</canTargetAnimals>
+      <canTargetMechs>true</canTargetMechs>
+    </targetingParameters>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebSentinel</path>
+        <level>2</level>
+        <order>2</order>
+        <psyfocusCost>0.06</psyfocusCost>
+        <entropyGain>22</entropyGain>
+        <psychic>true</psychic>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Explosion">
+        <explosionRadius>1.2</explosionRadius>
+        <explosionDamageDef>Blunt</explosionDamageDef>
+        <casterImmune>true</casterImmune>
+        <explosionDamageAmount>14</explosionDamageAmount>
+        <explosionSound>Explosion_Stun</explosionSound>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L3 Backlash: brief frontal biotic guard (very high self armour). -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Backlash</defName>
+    <label>backlash</label>
+    <description>Throws up a focused biotic guard that briefly deflects most incoming damage. (For now a strong all-round armour buff; true directional deflection comes with the C# slice.)</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+    <targetMode>Self</targetMode>
+    <castTime>15</castTime>
+    <durationTime>600</durationTime>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebSentinel</path>
+        <level>3</level>
+        <order>2</order>
+        <psyfocusCost>0.10</psyfocusCost>
+        <entropyGain>28</entropyGain>
+        <psychic>true</psychic>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>MebBiotic_Backlash</hediff>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L1 Biotic Mending: heal-over-time on an ally (or self). -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Mending</defName>
+    <label>biotic mending</label>
+    <description>Carefully modulated mass effect fields knit an ally's wounds closed over time. Cannot cure disease or regrow what is lost.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+    <castTime>30</castTime>
+    <range>24.9</range>
+    <durationTime>1800</durationTime>
+    <targetingParameters>
+      <canTargetSelf>true</canTargetSelf>
+      <canTargetHumans>true</canTargetHumans>
+      <canTargetAnimals>true</canTargetAnimals>
+      <canTargetMechs>false</canTargetMechs>
+    </targetingParameters>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebSentinel</path>
+        <level>1</level>
+        <order>2</order>
+        <psyfocusCost>0.10</psyfocusCost>
+        <entropyGain>12</entropyGain>
+        <psychic>true</psychic>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>MebBiotic_Mending</hediff>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L2 Reave: DoT on the target, stolen vitality (heal-over-time) on the caster. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_Reave</defName>
+    <label>reave</label>
+    <description>Siphons the target's life force with dark energy - damaging them over time while the stolen vitality knits the caster's own wounds.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+    <castTime>20</castTime>
+    <range>12.9</range>
+    <durationTime>240</durationTime>
+    <goodwillImpact>-30</goodwillImpact>
+    <targetingParameters>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetHumans>true</canTargetHumans>
+      <canTargetAnimals>true</canTargetAnimals>
+      <canTargetMechs>false</canTargetMechs>
+    </targetingParameters>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebSentinel</path>
+        <level>2</level>
+        <order>1</order>
+        <psyfocusCost>0.06</psyfocusCost>
+        <entropyGain>22</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Warp</li>
+        </prerequisites>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>MebBiotic_Reave</hediff>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>MebBiotic_ReaveVigor</hediff>
+        <applyToCaster>true</applyToCaster>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L3 Dark Channel: long DoT that leaps to a nearby member of the victim's group on death. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_DarkChannel</defName>
+    <label>dark channel</label>
+    <description>Plants a persistent lance of dark energy in a target. When its victim dies, the channel leaps to a nearby ally of theirs and keeps gnawing.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+    <castTime>25</castTime>
+    <range>24.9</range>
+    <durationTime>420</durationTime>
+    <goodwillImpact>-30</goodwillImpact>
+    <targetingParameters>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetHumans>true</canTargetHumans>
+      <canTargetAnimals>true</canTargetAnimals>
+      <canTargetMechs>false</canTargetMechs>
+    </targetingParameters>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebSentinel</path>
+        <level>3</level>
+        <order>1</order>
+        <psyfocusCost>0.08</psyfocusCost>
+        <entropyGain>30</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Reave</li>
+        </prerequisites>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>MebBiotic_DarkChannel</hediff>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L4 Warp Field: area Warp - DoT + armour shred over a zone. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_WarpField</defName>
+    <label>warp field</label>
+    <description>Blankets an area in tearing biotic energy, warping every enemy caught inside - continuous damage and shredded armour.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>MebBiotics.Ability_AoEHediff</abilityClass>
+    <castTime>25</castTime>
+    <range>24.9</range>
+    <radius>3.4</radius>
+    <durationTime>300</durationTime>
+    <durationTimeStatFactors>
+      <PsychicSensitivity>1</PsychicSensitivity>
+    </durationTimeStatFactors>
+    <goodwillImpact>-40</goodwillImpact>
+    <targetMode>Location</targetMode>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebSentinel</path>
+        <level>4</level>
+        <order>1</order>
+        <psyfocusCost>0.12</psyfocusCost>
+        <entropyGain>40</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Warp</li>
+        </prerequisites>
+      </li>
+      <li Class="MebBiotics.AbilityExtension_AoEHediff">
+        <hediff>MebBiotic_Warp</hediff>
+        <affectEnemies>true</affectEnemies>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L5 Cluster Ward: barrier every ally in the target area. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_ClusterWard</defName>
+    <label>cluster ward</label>
+    <description>Projects protective biotic barriers onto every ally in the target area at once.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>MebBiotics.Ability_AoEHediff</abilityClass>
+    <castTime>30</castTime>
+    <range>24.9</range>
+    <radius>3.4</radius>
+    <durationTime>1800</durationTime>
+    <durationTimeStatFactors>
+      <PsychicSensitivity>1</PsychicSensitivity>
+    </durationTimeStatFactors>
+    <targetMode>Location</targetMode>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebSentinel</path>
+        <level>5</level>
+        <order>1</order>
+        <psyfocusCost>0.30</psyfocusCost>
+        <entropyGain>55</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Ward</li>
+        </prerequisites>
+      </li>
+      <li Class="MebBiotics.AbilityExtension_AoEHediff">
+        <hediff>MebBiotic_Barrier</hediff>
+        <affectEnemies>false</affectEnemies>
+        <affectAllies>true</affectAllies>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- L5 Barrier Sphere (capstone): spawn a protective field zone. -->
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>MebBiotic_BarrierSphere</defName>
+    <label>barrier sphere</label>
+    <description>Raises a stationary dome of biotic energy. Anyone standing inside is wrapped in a protective barrier for as long as they remain.</description>
+    <iconPath>Abilities/Meb/BioticPlaceholder</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Spawn</abilityClass>
+    <needsTicking>true</needsTicking>
+    <castTime>60</castTime>
+    <range>24.9</range>
+    <radius>3.9</radius>
+    <targetMode>Location</targetMode>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_MebSentinel</path>
+        <level>5</level>
+        <order>2</order>
+        <psyfocusCost>0.30</psyfocusCost>
+        <entropyGain>60</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>MebBiotic_Ward</li>
+        </prerequisites>
+      </li>
+      <li Class="VEF.Abilities.AbilityExtension_Spawn">
+        <thing>MebBiotic_BarrierSphereField</thing>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+</Defs>

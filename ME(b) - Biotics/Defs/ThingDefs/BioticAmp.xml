@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Craftable implant item. -->
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>MebBiotic_AmpItem</defName>
+    <label>biotic amp</label>
+    <description>An implantable biotic amplifier. Installed in the brain, it lets a latent biotic (one carrying the eezo nodules gene) focus and channel mass effect fields, boosting their psychic sensitivity.</description>
+    <descriptionHyperlinks>
+      <HediffDef>MebBiotic_AmpImplant</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/BioticAmp</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1400</MarketValue>
+      <Mass>0.2</Mass>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <recipeMaker>
+      <researchPrerequisite>MebBiotic_AmpResearch</researchPrerequisite>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <workAmount>16000</workAmount>
+    </recipeMaker>
+    <costList>
+      <ComponentSpacer>2</ComponentSpacer>
+      <Plasteel>20</Plasteel>
+      <Gold>5</Gold>
+    </costList>
+  </ThingDef>
+
+  <!-- Install surgery: adds the amp hediff to the Brain. Inherits SurgeryInstallImplantBase, which
+       supplies recipeUsers (Human), the Recipe_InstallImplant worker, and the surgery defaults -
+       this is why the operation now shows up in a pawn's operations list. -->
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>MebBiotic_InstallAmp</defName>
+    <label>install biotic amp</label>
+    <description>Install a biotic amp in the brain.</description>
+    <descriptionHyperlinks>
+      <ThingDef>MebBiotic_AmpItem</ThingDef>
+      <HediffDef>MebBiotic_AmpImplant</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing biotic amp.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MebBiotic_AmpItem</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MebBiotic_AmpItem</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>MebBiotic_AmpImplant</addsHediff>
+    <researchPrerequisite>MebBiotic_AmpResearch</researchPrerequisite>
+  </RecipeDef>
+
+  <!-- Research to unlock crafting + installing the amp. -->
+  <ResearchProjectDef>
+    <defName>MebBiotic_AmpResearch</defName>
+    <label>biotic amplification</label>
+    <description>Reverse-engineer neural amplifier technology, letting latent biotics channel mass effect fields through an implanted biotic amp.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>Fabrication</li>
+      <li>Bionics</li>
+    </prerequisites>
+    <requiredResearchBuilding>FabricationBench</requiredResearchBuilding>
+    <researchViewX>11</researchViewX>
+    <researchViewY>3</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>
