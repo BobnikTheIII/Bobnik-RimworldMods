@@ -1,0 +1,48 @@
+[h1]ME(b) - Krogan[/h1]
+
+[i]"I am Urdnot Wrex, and this is my planet!"[/i]
+
+Adds the [b]krogan[/b] from BioWare's Mass Effect series to RimWorld as a [b]vanilla-oriented Biotech xenotype[/b] — no custom race framework, just genes.
+
+[h2]The krogan[/h2]
+
+Hulking, hyper-aggressive warriors designed for battle. They thrive where others die — and they never, ever stop coming.
+
+[list]
+[*][b]Built for war[/b] — hulk bodies, strong melee damage, robust constitution, reduced pain, unstoppable movement, and strong aptitude for both melee and shooting.
+[*][b]Survivors of Tuchanka[/b] — resistant to extreme heat and cold and completely immune to environmental toxins. A krogan walks through a toxic fallout like it's a light drizzle.
+[*][b]The genophage[/b] — every krogan carries the [i]genophaged[/i] gene, an engineered affliction that cuts fertility to a tenth. Krogan children are rare and precious, just as the lore demands.
+[*][b]A price for power[/b] — hyper-aggressive, psychically deaf, slow learners, mildly unstable, poor at social niceties and hopeless at art and research. Krogan solve problems with a headbutt.
+[*][b]Krogan looks[/b] — custom male and female krogan heads, [b]six colors of hard scaled head crests[/b] (white, red, blue, yellow, grey, dark), reptilian skin in five shades, and low guttural roaring voices.
+[*][b]Lore-friendly names[/b] — custom male and female krogan name generators (Urdnot, Wrex, Grunt... and many more).
+[/list]
+
+The xenotype is inheritable and fully playable — start as a krogan clan, recruit them, or gene-edit your own.
+
+[h2]Requirements[/h2]
+
+[list]
+[*]RimWorld [b]1.5[/b] / [b]1.6[/b]
+[*][b]Biotech[/b] (DLC)
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3524634575]ME(b) - Utilities[/url] (also hides crests under helmets)
+[/list]
+
+[h2]Recommended ME(b) addons[/h2]
+
+[list]
+[*][b]ME(b) - Factions[/b] — meet krogan clans out in the world.
+[*][b]ME(b) - Biotics[/b] (1.6) — give your krogan battlemaster real biotic powers.
+[*]The other ME(b) races — Asari, Turians, Salarians, Quarians.
+[/list]
+
+[h2]Compatibility[/h2]
+
+[list]
+[*]XML-only, built entirely from vanilla Biotech genes and mechanics — safe to add to an existing save, no known conflicts.
+[/list]
+
+[h2]Credits[/h2]
+
+Based on the [b]Mass Effect[/b] game series created by [b]BioWare[/b]. This is an unofficial fan mod — Mass Effect and all related names, characters and lore are the property of BioWare / Electronic Arts, and this mod is not affiliated with or endorsed by them.
+
+Part of the [b]ME(b)[/b] Mass Effect mod series by BobnikTheIII.

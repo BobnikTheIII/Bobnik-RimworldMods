@@ -154,6 +154,112 @@ namespace MebBiotics
     }
 
     // ============================================================================================
+    // Nova: consumes the caster's active barrier for a x1.5 damage bonus - the ME payoff for the
+    // Charge -> Barrier -> Nova loop. Ability_Explode reads its numbers from the shared
+    // AbilityExtension_Explosion instance, so the multiplier is applied by temporarily raising
+    // explosionDamageAmount around the (synchronous) base cast and restoring it in finally -
+    // the def is never left mutated. Consumes Reinforced Barrier too.
+    // ============================================================================================
+    public class Ability_BioticNova : VEF.Abilities.Ability_Explode
+    {
+        private const float ConsumeMultiplier = 1.5f;
+
+        public override void Cast(params GlobalTargetInfo[] targets)
+        {
+            Hediff barrier = FindBarrier();
+            if (barrier == null)
+            {
+                base.Cast(targets);
+                return;
+            }
+            pawn.health.RemoveHediff(barrier);
+            VEF.Abilities.AbilityExtension_Explosion ext =
+                def.GetModExtension<VEF.Abilities.AbilityExtension_Explosion>();
+            if (ext == null)
+            {
+                base.Cast(targets);
+                return;
+            }
+            int original = ext.explosionDamageAmount;
+            try
+            {
+                ext.explosionDamageAmount = Mathf.RoundToInt(original * ConsumeMultiplier);
+                base.Cast(targets);
+            }
+            finally
+            {
+                ext.explosionDamageAmount = original;
+            }
+        }
+
+        private Hediff FindBarrier()
+        {
+            HediffDef reinforced = DefDatabase<HediffDef>.GetNamed("MebBiotic_ReinforcedBarrier", false);
+            if (reinforced != null)
+            {
+                Hediff h = pawn.health.hediffSet.GetFirstHediffOfDef(reinforced);
+                if (h != null)
+                {
+                    return h;
+                }
+            }
+            HediffDef basic = DefDatabase<HediffDef>.GetNamed("MebBiotic_Barrier", false);
+            return basic != null ? pawn.health.hediffSet.GetFirstHediffOfDef(basic) : null;
+        }
+    }
+
+    // ============================================================================================
+    // Throw / Heavy Throw: the explosion handles damage + stagger; this subclass adds the actual
+    // knockback - the victim is shoved away from the caster along the throw line, stopping at the
+    // first non-standable cell. Same save-safe teleport pattern as Pull, opposite direction.
+    // ============================================================================================
+    public class AbilityExtension_Knockback : DefModExtension
+    {
+        public int cells = 4;
+    }
+
+    public class Ability_BioticThrow : VEF.Abilities.Ability_Explode
+    {
+        public override void Cast(params GlobalTargetInfo[] targets)
+        {
+            base.Cast(targets);
+            AbilityExtension_Knockback ext = def.GetModExtension<AbilityExtension_Knockback>();
+            int cells = ext != null ? ext.cells : 4;
+            foreach (GlobalTargetInfo target in targets)
+            {
+                Pawn victim = target.Thing as Pawn;
+                if (victim == null || victim.Dead || !victim.Spawned || victim == pawn)
+                {
+                    continue;
+                }
+                Map map = victim.Map;
+                Vector3 dir = (victim.Position - pawn.Position).ToVector3();
+                if (dir.sqrMagnitude < 0.01f)
+                {
+                    continue;
+                }
+                dir.Normalize();
+                IntVec3 dest = victim.Position;
+                for (int i = 1; i <= cells; i++)
+                {
+                    IntVec3 next = (victim.Position.ToVector3Shifted() + dir * i).ToIntVec3();
+                    if (!next.InBounds(map) || !next.Standable(map))
+                    {
+                        break;
+                    }
+                    dest = next;
+                }
+                if (dest != victim.Position)
+                {
+                    victim.Position = dest;
+                    victim.Notify_Teleported(true, true);
+                    FleckMaker.ThrowDustPuffThick(dest.ToVector3Shifted(), map, 2f, Color.white);
+                }
+            }
+        }
+    }
+
+    // ============================================================================================
     // Persistent biotic field (Singularity, Barrier Sphere). The ability side is just VEF's
     // Ability_Spawn dropping an ethereal Thing; this comp is the field behavior: every interval it
     // applies/refreshes a hediff on every pawn in radius. The hediff duration is kept short so the

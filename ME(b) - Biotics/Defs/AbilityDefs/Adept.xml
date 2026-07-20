@@ -5,9 +5,10 @@
   <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>MebBiotic_Throw</defName>
     <label>throw</label>
-    <description>Hurls a target with a burst of biotic force, dealing blunt damage and briefly staggering them. A cheap, spammable opener.</description>
+    <description>Hurls a target with a burst of biotic force, dealing blunt damage, knocking them back and briefly staggering them. A cheap, spammable opener. Detonates biotically charged targets in a bonus explosion.</description>
     <iconPath>Abilities/Meb/Throw</iconPath>
-    <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
+    <castSound>VPE_Bolt_Cast</castSound>
+    <abilityClass>MebBiotics.Ability_BioticThrow</abilityClass>
     <castTime>20</castTime>
     <range>24.9</range>
     <radius>1.9</radius>
@@ -35,8 +36,14 @@
         <explosionDamageAmount>8</explosionDamageAmount>
         <explosionSound>Explosion_Stun</explosionSound>
       </li>
+      <li Class="MebBiotics.AbilityExtension_Knockback">
+        <cells>4</cells>
+      </li>
       <li Class="VEF.Abilities.AbilityExtension_Stun">
         <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+      <li Class="MebBiotics.AbilityExtension_Combo">
+        <detonator>true</detonator>
       </li>
     </modExtensions>
   </VEF.Abilities.AbilityDef>
@@ -45,8 +52,9 @@
   <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>MebBiotic_Lift</defName>
     <label>lift</label>
-    <description>Suspends a target helplessly in a biotic field, unable to move or act for a few seconds. Duration scales with the caster's psychic sensitivity.</description>
+    <description>Suspends a target helplessly in a biotic field, unable to move or act for a few seconds. Duration scales with the caster's psychic sensitivity. Primes the target with unstable dark energy for a biotic detonation.</description>
     <iconPath>Abilities/Meb/Lift</iconPath>
+    <castSound>VPE_PowerLeap_Cast</castSound>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <castTime>25</castTime>
     <range>24.9</range>
@@ -74,6 +82,9 @@
         <hediff>MebBiotic_Lift</hediff>
         <durationMultiplier>PsychicSensitivity</durationMultiplier>
       </li>
+      <li Class="MebBiotics.AbilityExtension_Combo">
+        <primer>true</primer>
+      </li>
     </modExtensions>
   </VEF.Abilities.AbilityDef>
 
@@ -83,6 +94,7 @@
     <label>stasis</label>
     <description>Seals a target in a stasis bubble, removing them from the fight entirely for a short time. Deals no damage - pure lockdown.</description>
     <iconPath>Abilities/Meb/Stasis</iconPath>
+    <castSound>VPE_TimeSphere_Cast</castSound>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <castTime>25</castTime>
     <range>24.9</range>
@@ -118,6 +130,7 @@
     <label>biotic focus</label>
     <description>Focuses the caster's biotic potential, temporarily raising their psychic sensitivity so their powers hit harder and last longer.</description>
     <iconPath>Abilities/Meb/Focus</iconPath>
+    <castSound>VPE_Speedboost_Cast</castSound>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <targetMode>Self</targetMode>
     <castTime>15</castTime>
@@ -147,6 +160,7 @@
     <label>lash</label>
     <description>Snaps out a tendril of dark energy that batters a single target and staggers them.</description>
     <iconPath>Abilities/Meb/Lash</iconPath>
+    <castSound>VPE_Bolt_Cast</castSound>
     <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
     <castTime>20</castTime>
     <range>24.9</range>
@@ -188,9 +202,10 @@
   <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>MebBiotic_HeavyThrow</defName>
     <label>heavy throw</label>
-    <description>A far more powerful biotic throw, blasting a wider area for heavier damage and a stronger knockback.</description>
+    <description>A far more powerful biotic throw, blasting a wider area for heavier damage and a stronger knockback. Detonates biotically charged targets in a bonus explosion.</description>
     <iconPath>Abilities/Meb/HeavyThrow</iconPath>
-    <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
+    <castSound>VPE_Thunderbolt_Cast</castSound>
+    <abilityClass>MebBiotics.Ability_BioticThrow</abilityClass>
     <castTime>22</castTime>
     <range>24.9</range>
     <radius>2.4</radius>
@@ -222,8 +237,14 @@
         <explosionDamageAmount>16</explosionDamageAmount>
         <explosionSound>Explosion_Stun</explosionSound>
       </li>
+      <li Class="MebBiotics.AbilityExtension_Knockback">
+        <cells>5</cells>
+      </li>
       <li Class="VEF.Abilities.AbilityExtension_Stun">
         <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+      <li Class="MebBiotics.AbilityExtension_Combo">
+        <detonator>true</detonator>
       </li>
     </modExtensions>
   </VEF.Abilities.AbilityDef>
@@ -232,8 +253,9 @@
   <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>MebBiotic_Pull</defName>
     <label>pull</label>
-    <description>Yanks a target off their feet and drags them several cells toward the caster, interrupting whatever they were doing.</description>
+    <description>Yanks a target off their feet and drags them several cells toward the caster, interrupting whatever they were doing. Primes the target with unstable dark energy for a biotic detonation.</description>
     <iconPath>Abilities/Meb/Pull</iconPath>
+    <castSound>VPE_PowerLeap_Cast</castSound>
     <abilityClass>MebBiotics.Ability_Pull</abilityClass>
     <castTime>20</castTime>
     <range>24.9</range>
@@ -256,6 +278,9 @@
           <li>MebBiotic_Throw</li>
         </prerequisites>
       </li>
+      <li Class="MebBiotics.AbilityExtension_Combo">
+        <primer>true</primer>
+      </li>
     </modExtensions>
   </VEF.Abilities.AbilityDef>
 
@@ -263,8 +288,9 @@
   <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>MebBiotic_LiftGrenade</defName>
     <label>lift grenade</label>
-    <description>Detonates a burst of dark energy over an area, suspending every enemy caught in it. Duration scales with the caster's psychic sensitivity.</description>
+    <description>Detonates a burst of dark energy over an area, suspending every enemy caught in it. Duration scales with the caster's psychic sensitivity. Primes the target with unstable dark energy for a biotic detonation.</description>
     <iconPath>Abilities/Meb/LiftGrenade</iconPath>
+    <castSound>VPE_ParalysisPulse_Cast</castSound>
     <abilityClass>MebBiotics.Ability_AoEHediff</abilityClass>
     <castTime>30</castTime>
     <range>24.9</range>
@@ -292,6 +318,9 @@
         <hediff>MebBiotic_Lift</hediff>
         <affectEnemies>true</affectEnemies>
       </li>
+      <li Class="MebBiotics.AbilityExtension_Combo">
+        <primer>true</primer>
+      </li>
     </modExtensions>
   </VEF.Abilities.AbilityDef>
 
@@ -301,6 +330,7 @@
     <label>annihilation field</label>
     <description>Wreathes the caster in a seething field of dark energy that continuously tears at every enemy nearby while it lasts.</description>
     <iconPath>Abilities/Meb/AnnihilationField</iconPath>
+    <castSound>VPE_DrainPsyessence_Cast</castSound>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <targetMode>Self</targetMode>
     <castTime>25</castTime>
@@ -328,8 +358,9 @@
   <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>MebBiotic_Singularity</defName>
     <label>singularity</label>
-    <description>Launches a sphere of dark energy that warps gravity around it, suspending everyone nearby until it collapses. The singularity does not discriminate - keep your own people out of it.</description>
+    <description>Launches a sphere of dark energy that warps gravity around it, suspending everyone nearby until it collapses. The singularity does not discriminate - keep your own people out of it. Primes the target with unstable dark energy for a biotic detonation.</description>
     <iconPath>Abilities/Meb/Singularity</iconPath>
+    <castSound>VPE_Hurricane_Cast</castSound>
     <abilityClass>VEF.Abilities.Ability_Spawn</abilityClass>
     <needsTicking>true</needsTicking>
     <castTime>60</castTime>
@@ -352,6 +383,9 @@
       </li>
       <li Class="VEF.Abilities.AbilityExtension_Spawn">
         <thing>MebBiotic_SingularityField</thing>
+      </li>
+      <li Class="MebBiotics.AbilityExtension_Combo">
+        <primer>true</primer>
       </li>
     </modExtensions>
   </VEF.Abilities.AbilityDef>

@@ -1,0 +1,47 @@
+[h1]ME(b) - Salarians[/h1]
+
+[i]"Had to be me. Someone else might have gotten it wrong."[/i]
+
+Adds the [b]salarians[/b] from BioWare's Mass Effect series to RimWorld as a [b]vanilla-oriented Biotech xenotype[/b] — no custom race framework, just genes.
+
+[h2]The salarians[/h2]
+
+The galaxy's fast-talking scientists: a hyperfast metabolism that keeps them awake, energized and working — and burns their candle at both ends.
+
+[list]
+[*][b]Hyperfast metabolism[/b] — salarians barely need sleep and are naturally industrious workers. More hours awake, more hours in the lab.
+[*][b]A short, bright life[/b] — the price of that metabolism. Via Lifespan Expectancy Genes, salarians live drastically shorter lives than baseliners: they age fast, and their whole life curve (fertility, life stages, mortality) is compressed to match. Plan your colony around it.
+[*][b]Cold-blooded pragmatists[/b] — psychically dull and famously low-libido (salarians consider mating a practical matter of contracts).
+[*][b]Salarian looks[/b] — a custom salarian head, tall backward-swept horn crests, thin builds, and a wide palette of nine skin tones from ink black through blue to deep red and orange.
+[*][b]Lore-friendly names[/b] — custom male and female salarian name generators (Mordin, Kirrahe, and colleagues).
+[/list]
+
+The xenotype is inheritable and fully playable — start a salarian task force, recruit them, or gene-edit your own.
+
+[h2]Requirements[/h2]
+
+[list]
+[*]RimWorld [b]1.5[/b] / [b]1.6[/b]
+[*][b]Biotech[/b] (DLC)
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3524634575]ME(b) - Utilities[/url] (also hides crests under helmets)
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3364691662]Lifespan Expectancy Genes[/url] (drives the shortened lifespan)
+[/list]
+
+[h2]Recommended ME(b) addons[/h2]
+
+[list]
+[*][b]ME(b) - Factions[/b] — meet salarian factions out in the world.
+[*]The other ME(b) races — Asari, Krogan, Turians, Quarians.
+[/list]
+
+[h2]Compatibility[/h2]
+
+[list]
+[*]XML-only, built entirely from vanilla Biotech genes and mechanics — safe to add to an existing save, no known conflicts.
+[/list]
+
+[h2]Credits[/h2]
+
+Based on the [b]Mass Effect[/b] game series created by [b]BioWare[/b]. This is an unofficial fan mod — Mass Effect and all related names, characters and lore are the property of BioWare / Electronic Arts, and this mod is not affiliated with or endorsed by them.
+
+Part of the [b]ME(b)[/b] Mass Effect mod series by BobnikTheIII.

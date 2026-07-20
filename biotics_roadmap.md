@@ -122,9 +122,10 @@ actually requires to build.
 - **The amp scales rewards, not costs:** higher Psychic Sensitivity lengthens durations and DoT/CC
   effectiveness but does **not** reduce heat — so amped biotics hit harder yet still overheat,
   keeping them in check.
-- **Combo layer (optional v1.1):** primers [P] mark a target; detonators [D] consume the mark for a
-  ~14 blunt AoE burst (r~2.4). Priced into the *detonator*, not the primer, so combos reward setup
-  without making single casts free.
+- **Combo layer — ✅ implemented:** primers [P] mark a target ("biotically charged", ~15 s decay);
+  detonators [D] consume the mark for a 14-blunt AoE burst (r 2.4, caster-immune) centered on each
+  charged victim. Priced into the *detonator*, not the primer, so combos reward setup without
+  making single casts free. (`Combos.cs`, gated by `AbilityExtension_Combo` in XML.)
 
 ## Buildability — XML vs custom C# (verified against VEF/VPE source)
 

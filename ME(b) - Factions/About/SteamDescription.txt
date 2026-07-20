@@ -1,0 +1,50 @@
+[h1]ME(b) - Factions[/h1]
+
+Populates your Rim with factions inspired by BioWare's [b]Mass Effect[/b] game series, built on the ME(b) xenotype races. Meet them as neighbors, trade partners — or the reason your colony needs better turrets.
+
+[h2]The factions[/h2]
+
+[list]
+[*][b]Asari Republics[/b] — founded by crashlanded asari with a mission to shelter anyone in need. Their open door made them a major power, though not everyone loves the mission.
+[*][b]Asari Empire[/b] — born from an extremist asari mercenary band chasing the image of lost Thessia. Hostile to almost everyone, armed with super-tech... but they reward their sympathizers generously.
+[*][b]Turian-Salarian Union[/b] — salarian science wedded to turian discipline; a strong, technological society.
+[*][b]Quarian Conclave[/b] — a unified quarian nation, forged by hardship and marginalization into master cooperators and new-tech tinkerers.
+[*][b]Krogan Empire[/b] — a brutal but resilient warrior state under a single emperor, with fortress cities and a citizenry born for war.
+[*][b]Cerberus[/b] — the human-supremacist paramilitary. Permanently hostile, utterly convinced that humanity's ascension justifies everything.
+[/list]
+
+Each racial faction fields a lore-appropriate mix of pawns — a Turian-Salarian Union caravan is mostly salarians and turians with the odd quarian or asari tagging along, and so on.
+
+[h2]Fully modular[/h2]
+
+The mod adapts to whatever ME(b) race mods you have installed:
+
+[list]
+[*]Each racial faction only appears if its race mod is loaded (Asari factions need ME(b) - Asari, the Krogan Empire needs ME(b) - Krogan, etc.).
+[*]Cerberus is pure human and works with no race mods at all.
+[*]The cross-race sprinkling inside each faction also adjusts automatically to your installed race mods.
+[*]With [b]Royalty[/b], the vanilla Empire treats the ME(b) factions as proper diplomatic entities, and the Asari Empire and Cerberus come with their own full rank hierarchies — troopers, janissaries, stellic guards, nobles and stellarchs.
+[*]With [b]Ideology[/b], each faction gets fitting ideoligion presets.
+[/list]
+
+[h2]Requirements[/h2]
+
+[list]
+[*]RimWorld [b]1.5[/b] / [b]1.6[/b]
+[*][b]Biotech[/b] (DLC)
+[*]At least one ME(b) race mod is strongly recommended — Asari, Krogan, Salarians, Turians, Quarians — otherwise only Cerberus will show up.
+[/list]
+
+[h2]Compatibility[/h2]
+
+[list]
+[*]XML-only — factions, pawn kinds and name makers. No Harmony patches.
+[*]New factions appear on world generation; to add them to an existing save, use a mod like Vanilla Expanded Framework's "add factions" feature or start a new world.
+[*]No known conflicts.
+[/list]
+
+[h2]Credits[/h2]
+
+Based on the [b]Mass Effect[/b] game series created by [b]BioWare[/b]. This is an unofficial fan mod — Mass Effect and all related names, characters and lore are the property of BioWare / Electronic Arts, and this mod is not affiliated with or endorsed by them.
+
+Part of the [b]ME(b)[/b] Mass Effect mod series by BobnikTheIII.

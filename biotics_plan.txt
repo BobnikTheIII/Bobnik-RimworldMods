@@ -68,3 +68,27 @@ Longertm fixes and plans: (a note to not forget about them, necessary before pub
   -> Already covered since slice 1: Patches/Asari_Xenotype.xml injects MebBioticGene into the
      Asari XenotypeDef whenever ME(b) - Asari is loaded, so all asari (including newborns) carry
      the gene. They still need an amp installed to cast safely (strain applies otherwise).
+
+Polish pass (quick steps, all done):
+[DONE] Nova consumes an active Barrier/Reinforced Barrier for x1.5 damage (Ability_BioticNova).
+[DONE] Throw / Heavy Throw now physically knock the target back 4/5 cells (Ability_BioticThrow).
+[DONE] Lifted targets take +25% incoming damage (IncomingDamageFactor 1.25 on the Lift hediff).
+[DONE] Cast sounds on all 30 powers (reused VPE sound defs, mapped by theme - placeholder
+       choices made by name, re-map by ear if any feels wrong).
+[DONE] About/Preview.png (640x360) + About/ModIcon.png for the mod list / Workshop page.
+
+[DONE] Biotic Combos (primer/detonator detonations):
+  -> PRIMERS (Pull, Lift, Lift Grenade, Singularity, Warp, Reave, Dark Channel, Warp Field) leave
+     a decaying "biotically charged" mark (~15 s, refreshed on re-prime). DETONATORS (Throw, Heavy
+     Throw, Charge, Heavy Charge, Slam, Shockwave, Nova, Flare) consume the mark for a bonus
+     biotic explosion (14 blunt, r2.4, caster-immune) centered on each charged victim. Works for
+     single-target and area casts alike (area casts sweep the ability radius). Implemented in
+     Combos.cs via the same Ability.Cast postfix as strain, gated by AbilityExtension_Combo in
+     XML - regular psycasts untouched. Stasis is intentionally not a primer. Note: pawns caught
+     by the Singularity FIELD after the cast get Lifted but not primed (cast-time priming only).
+
+Remaining for later (bigger items):
+-Stasis true invulnerability/untargetability (currently a long stun+incapacitate).
+-Backlash true frontal-only deflection (currently all-round armour buff).
+-Hand-made art to replace the programmatic icons/backgrounds (same file paths).
+-Balance tuning after real playtests.

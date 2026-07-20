@@ -1,0 +1,36 @@
+[h1]ME(b) - Asari Parthenogenesis Addon[/h1]
+
+In the lore of BioWare's [b]Mass Effect[/b] games, the asari reproduce through a form of parthenogenesis — an asari can conceive a daughter with a partner of any species and any gender. This addon brings that missing piece to the [b]ME(b) - Asari[/b] mod: [b]asari can now have children with female partners[/b].
+
+[h2]How it works[/h2]
+
+[list]
+[*]Adds the [b]Asari Parthenogenesis[/b] gene, automatically part of the asari xenotype. Any other pawn can also acquire the gene through gene editing.
+[*]A gene carrier in a relationship with another woman can [b]get pregnant from lovin'[/b], just like a vanilla opposite-sex couple.
+[*]All the vanilla rules still apply — fertility, age, sterility and pregnancy approach are checked exactly like in an ordinary couple, and the same UI messages are used. This is not a "free babies" button.
+[*]Combined with the asari [b]Matriarchal Genome[/b], the child is a true asari, inheriting her mother's genes and xenotype.
+[/list]
+
+[h2]Requirements[/h2]
+
+[list]
+[*]RimWorld [b]1.6[/b] (1.6 only!)
+[*][b]Biotech[/b] (DLC)
+[*][url=https://steamcommunity.com/workshop/filedetails/?id=2009463077]Harmony[/url]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3524634575]ME(b) - Utilities[/url]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3567441469]ME(b) - Asari[/url]
+[/list]
+
+[h2]Compatibility[/h2]
+
+[list]
+[*]Safe to add to an existing save.
+[*]The patches only activate for [b]female-female couples where a partner carries the parthenogenesis gene[/b] — every other pregnancy goes through untouched vanilla logic.
+[*]No known conflicts.
+[/list]
+
+[h2]Credits[/h2]
+
+Based on the [b]Mass Effect[/b] game series created by [b]BioWare[/b]. This is an unofficial fan mod — Mass Effect and all related names, characters and lore are the property of BioWare / Electronic Arts, and this mod is not affiliated with or endorsed by them.
+
+Part of the [b]ME(b)[/b] Mass Effect mod series by BobnikTheIII.

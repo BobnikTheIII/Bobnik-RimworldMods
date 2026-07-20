@@ -1,0 +1,47 @@
+[h1]ME(b) - Turians[/h1]
+
+[i]"I'm Garrus Vakarian, and this is now my favorite spot on the Rim."[/i]
+
+Adds the [b]turians[/b] from BioWare's Mass Effect series to RimWorld as a [b]vanilla-oriented Biotech xenotype[/b] — no custom race framework, just genes.
+
+[h2]The turians[/h2]
+
+The galaxy's most disciplined soldiers: born marksmen with plated hides and a soldier's tolerance for pain.
+
+[list]
+[*][b]Best snipers on the Rim[/b] — a remarkable natural aptitude for shooting. Hand a turian a rifle and watch them do calibrations in real time.
+[*][b]Plated and hardened[/b] — reduced pain sensitivity; their metallic carapace shrugs off what would drop a baseliner.
+[*][b]Soldier's temperament[/b] — natural optimists who keep morale up through the worst tours of duty... but ask them to make art and you'll get a disciplinary report instead.
+[*][b]Children of Palaven[/b] — a hot homeworld left them slightly vulnerable to cold. Pack warm clothes for winter deployments.
+[*][b]Turian looks[/b] — a custom avian head with mandibles and prominent facial plating (male and female variants), and six skin tones from slate gray and sheer white to blue, brown and green.
+[*][b]Lore-friendly names[/b] — custom male and female turian name generators (Garrus, Saren, Victus...).
+[/list]
+
+The xenotype is inheritable and fully playable — start a turian frontier outpost, recruit them, or gene-edit your own.
+
+[h2]Requirements[/h2]
+
+[list]
+[*]RimWorld [b]1.5[/b] / [b]1.6[/b]
+[*][b]Biotech[/b] (DLC)
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3524634575]ME(b) - Utilities[/url]
+[/list]
+
+[h2]Recommended ME(b) addons[/h2]
+
+[list]
+[*][b]ME(b) - Factions[/b] — meet turian factions out in the world.
+[*]The other ME(b) races — Asari, Krogan, Salarians, Quarians.
+[/list]
+
+[h2]Compatibility[/h2]
+
+[list]
+[*]XML-only, built entirely from vanilla Biotech genes and mechanics — safe to add to an existing save, no known conflicts.
+[/list]
+
+[h2]Credits[/h2]
+
+Based on the [b]Mass Effect[/b] game series created by [b]BioWare[/b]. This is an unofficial fan mod — Mass Effect and all related names, characters and lore are the property of BioWare / Electronic Arts, and this mod is not affiliated with or endorsed by them.
+
+Part of the [b]ME(b)[/b] Mass Effect mod series by BobnikTheIII.

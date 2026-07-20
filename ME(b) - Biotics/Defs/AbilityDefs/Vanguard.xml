@@ -7,6 +7,7 @@
     <label>barrier</label>
     <description>Wraps the caster in a biotic barrier, granting extra armour against all damage for a time. The foundation of the vanguard's aggressive style.</description>
     <iconPath>Abilities/Meb/Barrier</iconPath>
+    <castSound>VPE_Overshield_Cast</castSound>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <targetMode>Self</targetMode>
     <castTime>15</castTime>
@@ -31,8 +32,9 @@
   <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>MebBiotic_Slam</defName>
     <label>slam</label>
-    <description>Lifts a single enemy and smashes them into the ground for heavy blunt damage and a knockdown.</description>
+    <description>Lifts a single enemy and smashes them into the ground for heavy blunt damage and a knockdown. Detonates biotically charged targets in a bonus explosion.</description>
     <iconPath>Abilities/Meb/Slam</iconPath>
+    <castSound>VPE_Thunderbolt_Cast</castSound>
     <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
     <castTime>25</castTime>
     <range>24.9</range>
@@ -67,6 +69,9 @@
       <li Class="VEF.Abilities.AbilityExtension_Stun">
         <durationMultiplier>PsychicSensitivity</durationMultiplier>
       </li>
+      <li Class="MebBiotics.AbilityExtension_Combo">
+        <detonator>true</detonator>
+      </li>
     </modExtensions>
   </VEF.Abilities.AbilityDef>
 
@@ -74,8 +79,9 @@
   <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>MebBiotic_Shockwave</defName>
     <label>shockwave</label>
-    <description>Sends out a wave of biotic detonations, knocking up and staggering everyone caught in the blast.</description>
+    <description>Sends out a wave of biotic detonations, knocking up and staggering everyone caught in the blast. Detonates biotically charged targets in a bonus explosion.</description>
     <iconPath>Abilities/Meb/Shockwave</iconPath>
+    <castSound>VPE_StaticPulse_Cast</castSound>
     <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
     <castTime>30</castTime>
     <range>24.9</range>
@@ -111,6 +117,9 @@
       <li Class="VEF.Abilities.AbilityExtension_Stun">
         <durationMultiplier>PsychicSensitivity</durationMultiplier>
       </li>
+      <li Class="MebBiotics.AbilityExtension_Combo">
+        <detonator>true</detonator>
+      </li>
     </modExtensions>
   </VEF.Abilities.AbilityDef>
 
@@ -118,9 +127,10 @@
   <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>MebBiotic_Nova</defName>
     <label>nova</label>
-    <description>Discharges biotic energy in a violent explosion around the caster. The vanguard's signature finisher.</description>
+    <description>Discharges biotic energy in a violent explosion around the caster. If a biotic barrier is active, it is consumed to amplify the blast by half again. The vanguard's signature finisher. Detonates biotically charged targets in a bonus explosion.</description>
     <iconPath>Abilities/Meb/Nova</iconPath>
-    <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
+    <castSound>VPE_SelfExplosion_Cast</castSound>
+    <abilityClass>MebBiotics.Ability_BioticNova</abilityClass>
     <targetMode>Self</targetMode>
     <castTime>20</castTime>
     <radius>3.4</radius>
@@ -144,6 +154,9 @@
         <explosionDamageAmount>14</explosionDamageAmount>
         <explosionSound>Explosion_Stun</explosionSound>
       </li>
+      <li Class="MebBiotics.AbilityExtension_Combo">
+        <detonator>true</detonator>
+      </li>
     </modExtensions>
   </VEF.Abilities.AbilityDef>
 
@@ -153,6 +166,7 @@
     <label>biotic flux</label>
     <description>Channels mass effect fields into the legs for a short burst of movement speed - ideal for closing distance or repositioning.</description>
     <iconPath>Abilities/Meb/Flux</iconPath>
+    <castSound>VPE_Speedboost_Cast</castSound>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <targetMode>Self</targetMode>
     <castTime>15</castTime>
@@ -181,8 +195,9 @@
   <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>MebBiotic_Charge</defName>
     <label>biotic charge</label>
-    <description>Hurls the caster through space into a target, striking them on arrival and re-energizing the caster's biotic barrier. If the target dies, the charge carries on to the next nearest enemy.</description>
+    <description>Hurls the caster through space into a target, striking them on arrival and re-energizing the caster's biotic barrier. If the target dies, the charge carries on to the next nearest enemy. Detonates biotically charged targets in a bonus explosion.</description>
     <iconPath>Abilities/Meb/Charge</iconPath>
+    <castSound>VPE_PowerLeap_Cast</castSound>
     <abilityClass>MebBiotics.Ability_BioticCharge</abilityClass>
     <castTime>25</castTime>
     <range>15.5</range>
@@ -200,6 +215,9 @@
         <prerequisites>
           <li>MebBiotic_Barrier</li>
         </prerequisites>
+      </li>
+      <li Class="MebBiotics.AbilityExtension_Combo">
+        <detonator>true</detonator>
       </li>
     </modExtensions>
   </VEF.Abilities.AbilityDef>
@@ -239,6 +257,7 @@
     <label>reinforced barrier</label>
     <description>A denser biotic barrier that absorbs far more punishment and holds for longer.</description>
     <iconPath>Abilities/Meb/ReinforcedBarrier</iconPath>
+    <castSound>VPE_Overshield_Cast</castSound>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <targetMode>Self</targetMode>
     <castTime>15</castTime>
@@ -266,8 +285,9 @@
   <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>MebBiotic_HeavyCharge</defName>
     <label>heavy charge</label>
-    <description>A more powerful biotic charge that crosses greater distances, re-energizes the caster's barrier, and keeps chaining between kills.</description>
+    <description>A more powerful biotic charge that crosses greater distances, re-energizes the caster's barrier, and keeps chaining between kills. Detonates biotically charged targets in a bonus explosion.</description>
     <iconPath>Abilities/Meb/HeavyCharge</iconPath>
+    <castSound>VPE_PowerLeap_Cast</castSound>
     <abilityClass>MebBiotics.Ability_BioticCharge</abilityClass>
     <castTime>20</castTime>
     <range>22</range>
@@ -287,6 +307,9 @@
           <li>MebBiotic_Leap</li>
         </prerequisites>
       </li>
+      <li Class="MebBiotics.AbilityExtension_Combo">
+        <detonator>true</detonator>
+      </li>
     </modExtensions>
   </VEF.Abilities.AbilityDef>
 
@@ -294,8 +317,9 @@
   <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>MebBiotic_Flare</defName>
     <label>flare</label>
-    <description>Concentrates an enormous amount of dark energy into a single point and releases it in a devastating explosion.</description>
+    <description>Concentrates an enormous amount of dark energy into a single point and releases it in a devastating explosion. Detonates biotically charged targets in a bonus explosion.</description>
     <iconPath>Abilities/Meb/Flare</iconPath>
+    <castSound>VPE_MeteorShower_Cast</castSound>
     <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
     <castTime>30</castTime>
     <range>24.9</range>
@@ -327,6 +351,9 @@
         <casterImmune>true</casterImmune>
         <explosionDamageAmount>26</explosionDamageAmount>
         <explosionSound>Explosion_Bomb</explosionSound>
+      </li>
+      <li Class="MebBiotics.AbilityExtension_Combo">
+        <detonator>true</detonator>
       </li>
     </modExtensions>
   </VEF.Abilities.AbilityDef>

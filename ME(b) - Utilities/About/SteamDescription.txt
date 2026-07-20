@@ -1,0 +1,35 @@
+[h1]ME(b) - Utilities[/h1]
+
+The shared foundation of the [b]ME(b)[/b] mod series, based on BioWare's [b]Mass Effect[/b] games — a small utility mod that the ME(b) race mods (Asari, Krogan, Salarians, Turians, Quarians) build on.
+
+[b]This mod does very little on its own.[/b] Subscribe to it because one of the ME(b) race mods requires it.
+
+[h2]What it provides[/h2]
+
+[list]
+[*][b]Crests hide under headwear[/b] — a lightweight Harmony patch that hides the alien head crests from the ME(b) race mods (asari scalp crests, krogan head plates, salarian horns) whenever the pawn wears a hat or helmet. No more clipping through armor.
+[*][b]ME(b) Utility gene category[/b] — a shared gene-tab category used across the series, plus the common base definition all race crest genes inherit from.
+[*][b]Two small utility genes[/b] used by the series' xenotypes: [i]Bisexual[/i] (carriers always get the Bisexual trait) and [i]Industrious[/i] (carriers always get the Industrious trait).
+[/list]
+
+[h2]Requirements[/h2]
+
+[list]
+[*]RimWorld [b]1.5[/b] / [b]1.6[/b]
+[*][b]Biotech[/b] (DLC)
+[*][url=https://steamcommunity.com/workshop/filedetails/?id=2009463077]Harmony[/url]
+[/list]
+
+[h2]Compatibility[/h2]
+
+[list]
+[*]Safe to add to an existing save.
+[*]The crest-hiding patch only touches head-attachment rendering for the specific ME(b) crest genes — everything else renders exactly as vanilla.
+[*]No known conflicts.
+[/list]
+
+[h2]Credits[/h2]
+
+Based on the [b]Mass Effect[/b] game series created by [b]BioWare[/b]. This is an unofficial fan mod — Mass Effect and all related names, characters and lore are the property of BioWare / Electronic Arts, and this mod is not affiliated with or endorsed by them.
+
+Part of the [b]ME(b)[/b] Mass Effect mod series by BobnikTheIII.

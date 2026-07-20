@@ -1,6 +1,7 @@
 using System;
 using HarmonyLib;
 using RimWorld;
+using RimWorld.Planet;
 using Verse;
 
 namespace MebBiotics
@@ -56,7 +57,9 @@ namespace MebBiotics
     {
         private const float SeverityPerCast = 0.34f;
 
-        public static void Postfix(VEF.Abilities.Ability __instance)
+        // One postfix, two concerns: the primer/detonator combo layer (self-gated by its own
+        // AbilityExtension_Combo, see Combos.cs) and the ampless-casting strain below.
+        public static void Postfix(VEF.Abilities.Ability __instance, GlobalTargetInfo[] targets)
         {
             try
             {
@@ -64,6 +67,7 @@ namespace MebBiotics
                 {
                     return;
                 }
+                BioticCombos.HandleCast(__instance, targets);
                 VanillaPsycastsExpanded.AbilityExtension_Psycast ext =
                     __instance.def.GetModExtension<VanillaPsycastsExpanded.AbilityExtension_Psycast>();
                 if (ext == null || ext.path == null)

@@ -1,0 +1,58 @@
+[h1]ME(b) - Biotics[/h1]
+
+[i]"I'm a biotic god!"[/i]
+
+Brings [b]Mass Effect biotic powers[/b] to RimWorld as three full [b]Vanilla Psycasts Expanded[/b] paths — [b]30 powers[/b] straight from the trilogy (plus a few Andromeda favorites), from Throw and Barrier all the way to Singularity, Nova and Flare.
+
+Biotics are not just another psycaster reskin: becoming one takes both the right [b]biology[/b] (a gene) and the right [b]hardware[/b] (a brain implant) — just like in Mass Effect.
+
+[h2]Three biotic paths, 10 powers each[/h2]
+
+[b]⚛ Adept — Biotic Control[/b]
+Keep enemies helpless. Throw, Pull, Lash, Heavy Throw, Lift, Stasis, Lift Grenade, Biotic Focus, Annihilation Field and the capstone [b]Singularity[/b] — a gravity well that suspends every enemy caught inside it.
+
+[b]⚡ Vanguard — Biotic Assault[/b]
+Dive in, hit hard, survive on Barrier. Barrier, Biotic Flux, Biotic Charge, Biotic Leap, Slam, Reinforced Barrier, Shockwave, Heavy Charge, Flare — and [b]Nova[/b]. Charging refreshes your Barrier, so the iconic [b]Charge → Nova[/b] loop works exactly the way you remember it.
+
+[b]🛡 Sentinel — Warp & Wards[/b]
+Attrition and protection. Warp, Reave, Lance, Dark Channel, Backlash, Warp Field, Biotic Mending, Biotic Ward, Cluster Ward and Barrier Sphere. Biotic damage-over-time [b]ignores armor[/b] — your anti-mechanoid answer — and [b]Dark Channel jumps to a new victim[/b] when its target dies.
+
+[h2]Becoming a biotic[/h2]
+
+[list]
+[*][b]Eezo Nodules (gene)[/b] — element zero woven through the nervous system. This is biotic [i]potential[/i]: only carriers can see and unlock the three biotic paths. Acquire it through the gene assembler or extract it from a natural biotic — any pawn can become one.
+[*][b]Biotic Amp (implant)[/b] — a craftable Spacer-tech brain implant (research: Biotic Amplification). Installing it grants a psylink and boosts psychic sensitivity, making your powers stronger and last longer.
+[*][b]Casting without an amp hurts.[/b] A latent biotic can still force raw mass effect fields through bare nerve tissue — but every cast builds up [b]biotic strain[/b]: pain, then dulled consciousness, fading over a few hours. Install the amp. Trust me.
+[/list]
+
+[h2]Balance[/h2]
+
+Every power is a real VPE psycast: costs psyfocus, generates neural heat, and scales with psychic sensitivity. Numbers are calibrated against Vanilla Psycasts Expanded's own abilities — cheap spammable casts at level 1, expensive once-per-fight capstones at level 5, and hard crowd control always costs more than raw damage. Kinetic powers deal blunt damage; warp-type powers tear through armor directly.
+
+[h2]Requirements[/h2]
+
+[list]
+[*]RimWorld [b]1.6[/b]
+[*][b]Royalty[/b] + [b]Biotech[/b] (DLC)
+[*][url=https://steamcommunity.com/workshop/filedetails/?id=2009463077]Harmony[/url]
+[*][url=https://steamcommunity.com/workshop/filedetails/?id=2023507013]Vanilla Expanded Framework[/url]
+[*][url=https://steamcommunity.com/workshop/filedetails/?id=2842502659]Vanilla Psycasts Expanded[/url]
+[/list]
+
+[h2]ME(b) series integration[/h2]
+
+Fully standalone — no other ME(b) mod is required. But with [b]ME(b) - Asari[/b] installed, asari are [b]natural biotics[/b]: every asari is born with the Eezo Nodules gene, exactly as the lore demands.
+
+[h2]Compatibility[/h2]
+
+[list]
+[*]Should be safe to add to an existing save (new paths appear for gene carriers).
+[*]Adds new defs and one small, tightly-scoped Harmony patch — no vanilla or VPE behavior is overwritten, so conflicts are unlikely.
+[*]Non-biotic psycasters are completely unaffected: the biotic paths are invisible without the gene.
+[/list]
+
+[h2]Credits[/h2]
+
+Based on the [b]Mass Effect[/b] game series created by [b]BioWare[/b]. This is an unofficial fan mod — Mass Effect and all related names, characters and lore are the property of BioWare / Electronic Arts, and this mod is not affiliated with or endorsed by them.
+
+Part of the [b]ME(b)[/b] Mass Effect mod series by BobnikTheIII.

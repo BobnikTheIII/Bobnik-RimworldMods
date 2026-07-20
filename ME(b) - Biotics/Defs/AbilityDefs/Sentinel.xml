@@ -5,8 +5,9 @@
   <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>MebBiotic_Warp</defName>
     <label>warp</label>
-    <description>Tears at a target with an unstable biotic field, stripping their armour and leaving them exposed to follow-up damage. Especially effective against armoured and mechanoid foes.</description>
+    <description>Tears at a target with an unstable biotic field, stripping their armour and leaving them exposed to follow-up damage. Especially effective against armoured and mechanoid foes. Primes the target with unstable dark energy for a biotic detonation.</description>
     <iconPath>Abilities/Meb/Warp</iconPath>
+    <castSound>VPE_Liferot_Cast</castSound>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <castTime>20</castTime>
     <range>24.9</range>
@@ -31,6 +32,9 @@
         <hediff>MebBiotic_Warp</hediff>
         <durationMultiplier>PsychicSensitivity</durationMultiplier>
       </li>
+      <li Class="MebBiotics.AbilityExtension_Combo">
+        <primer>true</primer>
+      </li>
     </modExtensions>
   </VEF.Abilities.AbilityDef>
 
@@ -40,6 +44,7 @@
     <label>biotic ward</label>
     <description>Projects a protective biotic barrier onto an ally, granting them extra armour for a time.</description>
     <iconPath>Abilities/Meb/Ward</iconPath>
+    <castSound>VPE_Overshield_Cast</castSound>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <castTime>30</castTime>
     <range>24.9</range>
@@ -76,6 +81,7 @@
     <label>lance</label>
     <description>Fires a tight lance of dark energy at a single target for concentrated biotic damage.</description>
     <iconPath>Abilities/Meb/Lance</iconPath>
+    <castSound>VPE_EyeBlast_Cast</castSound>
     <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
     <castTime>20</castTime>
     <range>28</range>
@@ -115,6 +121,7 @@
     <label>backlash</label>
     <description>Throws up a focused biotic guard that briefly deflects most incoming damage. (For now a strong all-round armour buff; true directional deflection comes with the C# slice.)</description>
     <iconPath>Abilities/Meb/Backlash</iconPath>
+    <castSound>VPE_Overshield_Cast</castSound>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <targetMode>Self</targetMode>
     <castTime>15</castTime>
@@ -144,6 +151,7 @@
     <label>biotic mending</label>
     <description>Carefully modulated mass effect fields knit an ally's wounds closed over time. Cannot cure disease or regrow what is lost.</description>
     <iconPath>Abilities/Meb/Mending</iconPath>
+    <castSound>VPE_WordOfHealing_Cast</castSound>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <castTime>30</castTime>
     <range>24.9</range>
@@ -174,8 +182,9 @@
   <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>MebBiotic_Reave</defName>
     <label>reave</label>
-    <description>Siphons the target's life force with dark energy - damaging them over time while the stolen vitality knits the caster's own wounds.</description>
+    <description>Siphons the target's life force with dark energy - damaging them over time while the stolen vitality knits the caster's own wounds. Primes the target with unstable dark energy for a biotic detonation.</description>
     <iconPath>Abilities/Meb/Reave</iconPath>
+    <castSound>VPE_StealVitality_Cast</castSound>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <castTime>20</castTime>
     <range>12.9</range>
@@ -208,6 +217,9 @@
         <applyToCaster>true</applyToCaster>
         <durationMultiplier>PsychicSensitivity</durationMultiplier>
       </li>
+      <li Class="MebBiotics.AbilityExtension_Combo">
+        <primer>true</primer>
+      </li>
     </modExtensions>
   </VEF.Abilities.AbilityDef>
 
@@ -215,8 +227,9 @@
   <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>MebBiotic_DarkChannel</defName>
     <label>dark channel</label>
-    <description>Plants a persistent lance of dark energy in a target. When its victim dies, the channel leaps to a nearby ally of theirs and keeps gnawing.</description>
+    <description>Plants a persistent lance of dark energy in a target. When its victim dies, the channel leaps to a nearby ally of theirs and keeps gnawing. Primes the target with unstable dark energy for a biotic detonation.</description>
     <iconPath>Abilities/Meb/DarkChannel</iconPath>
+    <castSound>VPE_Liferot_Cast</castSound>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <castTime>25</castTime>
     <range>24.9</range>
@@ -245,6 +258,9 @@
         <hediff>MebBiotic_DarkChannel</hediff>
         <durationMultiplier>PsychicSensitivity</durationMultiplier>
       </li>
+      <li Class="MebBiotics.AbilityExtension_Combo">
+        <primer>true</primer>
+      </li>
     </modExtensions>
   </VEF.Abilities.AbilityDef>
 
@@ -252,8 +268,9 @@
   <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>MebBiotic_WarpField</defName>
     <label>warp field</label>
-    <description>Blankets an area in tearing biotic energy, warping every enemy caught inside - continuous damage and shredded armour.</description>
+    <description>Blankets an area in tearing biotic energy, warping every enemy caught inside - continuous damage and shredded armour. Primes the target with unstable dark energy for a biotic detonation.</description>
     <iconPath>Abilities/Meb/WarpField</iconPath>
+    <castSound>VPE_Liferot_Cast</castSound>
     <abilityClass>MebBiotics.Ability_AoEHediff</abilityClass>
     <castTime>25</castTime>
     <range>24.9</range>
@@ -280,6 +297,9 @@
         <hediff>MebBiotic_Warp</hediff>
         <affectEnemies>true</affectEnemies>
       </li>
+      <li Class="MebBiotics.AbilityExtension_Combo">
+        <primer>true</primer>
+      </li>
     </modExtensions>
   </VEF.Abilities.AbilityDef>
 
@@ -289,6 +309,7 @@
     <label>cluster ward</label>
     <description>Projects protective biotic barriers onto every ally in the target area at once.</description>
     <iconPath>Abilities/Meb/ClusterWard</iconPath>
+    <castSound>VPE_Overshield_Cast</castSound>
     <abilityClass>MebBiotics.Ability_AoEHediff</abilityClass>
     <castTime>30</castTime>
     <range>24.9</range>
@@ -324,6 +345,7 @@
     <label>barrier sphere</label>
     <description>Raises a stationary dome of biotic energy. Anyone standing inside is wrapped in a protective barrier for as long as they remain.</description>
     <iconPath>Abilities/Meb/BarrierSphere</iconPath>
+    <castSound>VPE_GuardianSkipbarrier_Cast</castSound>
     <abilityClass>VEF.Abilities.Ability_Spawn</abilityClass>
     <needsTicking>true</needsTicking>
     <castTime>60</castTime>

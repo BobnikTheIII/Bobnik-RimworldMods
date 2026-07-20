@@ -1,0 +1,54 @@
+[h1]ME(b) - Asari[/h1]
+
+[i]"Embrace eternity!"[/i]
+
+Adds the [b]asari[/b] from BioWare's Mass Effect series to RimWorld as a [b]vanilla-oriented Biotech xenotype[/b] — no custom race framework, just genes.
+
+[h2]The asari[/h2]
+
+A mono-gendered xenotype, distinctly feminine in appearance, renowned for elegance, psychic prowess and a lifespan measured in centuries.
+
+[list]
+[*][b]Female-only[/b] — every asari is born female (via Gender Genes).
+[*][b]Extreme longevity[/b] — asari live for close to a millennium (via Lifespan Expectancy Genes): they age slowly, stay fertile far longer, and their life stages stretch to match. Newly generated asari can be anywhere from 18 to a [i]thousand[/i] years old.
+[*][b]Matriarchal genome[/b] — children carried by an asari inherit an exact copy of their mother's genes and xenotype. The asari line always breeds true.
+[*][b]Enhanced psychic ability[/b] — a natural affinity for the psychic (and, with the ME(b) - Biotics addon, full biotic powers).
+[*][b]Asari looks[/b] — blue, purple or green skin, semi-flexible cartilage scalp crests (skin-colored, hidden under helmets thanks to ME(b) - Utilities), and [b]16 asari facial-marking tattoos[/b].
+[*][b]Lore-friendly names[/b] — a custom asari name generator (Liara, Benezia, Aria... and many more).
+[*][b]Bisexual by nature[/b] — as the lore demands.
+[/list]
+
+The xenotype is inheritable and fully playable — start with asari colonists, recruit them, or gene-edit your own.
+
+[h2]Requirements[/h2]
+
+[list]
+[*]RimWorld [b]1.5[/b] / [b]1.6[/b]
+[*][b]Biotech[/b] (DLC)
+[*][url=https://steamcommunity.com/workshop/filedetails/?id=2009463077]Harmony[/url]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3524634575]ME(b) - Utilities[/url]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3364691662]Lifespan Expectancy Genes[/url]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3367533244]Gender Genes[/url]
+[/list]
+
+[h2]Recommended ME(b) addons[/h2]
+
+[list]
+[*][b]ME(b) - Asari Parthenogenesis Addon[/b] (1.6) — lore-accurate same-sex asari reproduction.
+[*][b]ME(b) - Biotics[/b] (1.6) — asari become natural biotics with three full psycast paths.
+[*][b]ME(b) - Factions[/b] — meet asari factions out in the world.
+[/list]
+
+[h2]Compatibility[/h2]
+
+[list]
+[*]Safe to add to an existing save (asari will appear in newly generated pawns).
+[*]Built almost entirely from vanilla Biotech mechanics — genes, xenotypes, tattoos and name makers — plus two small Harmony patches (matriarchal inheritance and lore-accurate age generation).
+[*]No known conflicts.
+[/list]
+
+[h2]Credits[/h2]
+
+Based on the [b]Mass Effect[/b] game series created by [b]BioWare[/b]. This is an unofficial fan mod — Mass Effect and all related names, characters and lore are the property of BioWare / Electronic Arts, and this mod is not affiliated with or endorsed by them.
+
+Part of the [b]ME(b)[/b] Mass Effect mod series by BobnikTheIII.

@@ -49,6 +49,9 @@
             <setMax>0</setMax>
           </li>
         </capMods>
+        <statFactors>
+          <IncomingDamageFactor>1.25</IncomingDamageFactor>
+        </statFactors>
       </li>
     </stages>
   </HediffDef>
@@ -209,6 +212,26 @@
         </capMods>
       </li>
     </stages>
+  </HediffDef>
+
+  <!-- Biotically charged: the combo PRIMER marker (see Combos.cs). Left by Pull, Lift, Lift
+       Grenade, Singularity, Warp, Reave, Dark Channel and Warp Field; consumed by detonator
+       powers for a bonus biotic explosion. Decays on its own after ~15 s. Standalone def (not
+       PsycastHediffBase) so its lifetime is exactly the explicit Disappears comp below. -->
+  <HediffDef>
+    <defName>MebBiotic_Charged</defName>
+    <label>biotically charged</label>
+    <description>Unstable dark energy clings to this creature. A biotic detonator power (throw, charge, slam, shockwave, nova...) will consume the charge in a violent biotic explosion.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 0.5, 1)</defaultLabelColor>
+    <isBad>true</isBad>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>900</disappearsAfterTicks>
+      </li>
+    </comps>
   </HediffDef>
 
   <!-- ===== Expansion self-buffs ===== -->
