@@ -48,7 +48,7 @@ Fully standalone — no other ME(b) mod is required. But with [b]ME(b) - Asari[/
 [list]
 [*]Should be safe to add to an existing save (new paths appear for gene carriers).
 [*]Adds new defs and one small, tightly-scoped Harmony patch — no vanilla or VPE behavior is overwritten, so conflicts are unlikely.
-[*]Non-biotic psycasters are completely unaffected: the biotic paths are invisible without the gene.
+[*]Non-biotic psycasters are completely unaffected: the biotic paths are unavalaible without the gene.
 [/list]
 
 [h2]Credits[/h2]
